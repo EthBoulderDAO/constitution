@@ -1,0 +1,48 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/snippets/
+.obsidian/hotkeys.json
+.obsidian/appearance.json
+.obsidian/community-plugins.json
+.obsidian/graph.json
+
+# Keep core Obsidian config
+!.obsidian/app.json
+!.obsidian/core-plugins.json
+
+# Claude Code
+.claude/
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Node modules (if any tooling added later)
+node_modules/
