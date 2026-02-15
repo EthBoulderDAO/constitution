@@ -1,107 +1,110 @@
 ---
 id: role-steward
 type: role
-membrane: 3
-requires: "[[Member]]"
-discord_role: "@Steward"
-nft_token: "stewardship-nft"
-multisig_access: signer
+entry: council-election
 kg_entity: "kg://ethboulder/role/steward"
 ---
-Rotating curators with the highest trust level — those entrusted to tend conditions for the network to self-govern while maintaining facilitation authority, moderation tools, and multisig signing power.
+A **Steward** is a Member elected to the Steward Council. The council consists of 5-7 members who provide oversight, handle emergencies, resolve disputes, and facilitate elections.
 
-## Purpose
+## Entry Requirements
 
-Stewards are curators, not gatekeepers. They tend conditions for the network to self-govern. The moment stewardship becomes governance, it has failed. Monthly rotation ensures no one accumulates positional power.
+| Requirement | Verification |
+|-------------|--------------|
+| **Member status** | Active Member in good standing |
+| **Nomination** | Self-nomination or Member nomination |
+| **Election** | Member Assembly consent when seat opens |
 
-## Criteria
+## Rights
 
-- [[Member]] in good standing
-- Deep commitment to network purpose, values, and democratic accountability
-- Demonstrated facilitation capacity
-- Willingness to serve in rotating curator role
-- Not seeking to accumulate positional power
+| Right | Description |
+|-------|-------------|
+| **All Member rights** | Full governance participation |
+| **Emergency authority** | Make urgent decisions with council |
+| **Dispute resolution** | Mediate conflicts between participants |
+| **Election facilitation** | Oversee elections and transitions |
+| **Oversight access** | Review Function Lead reports |
 
 ## Responsibilities
 
-**Facilitation:** Ensure consent processes are followed, call for escalation when consent is ambiguous
+| Responsibility | Description |
+|----------------|-------------|
+| **Council participation** | Attend council meetings, contribute to decisions |
+| **Oversight** | Monitor Function Leads, ensure accountability |
+| **Emergency response** | Be available for urgent situations |
+| **Impartiality** | Act in network interest, not personal interest |
+| **Mentorship** | Support new Members and Leads |
 
-**Constitution:** Merge governance PRs after consent is documented
+## Steward Council
 
-**Accountability:** Facilitate accountability processes when triggered per [[3. Protocols/Cultural Protocols/Accountability Protocol|Accountability Protocol]]
-
-**Treasury:** Sign multisig transactions after proper approval
-
-**Documentation:** Maintain `#stewardship` channel with transparent documentation
-
-**Rotation:** Complete knowledge transfer during monthly handoff
-
-**Event Coordination:** Lead event circle during Pre-Event and Event phases, ensure convening execution
-
-**Knowledge Graph Moderation:** Authority to revert contested edits, protect critical entities, manage entity disputes
-
-## What Stewards Do NOT Have
-
-- Tiebreaker power
-- Veto authority
-- Final say on content or direction
-- Greater weight in consent processes
-
-## Benefits
-
-| Category | Access |
-|----------|--------|
-| **Authority** | Facilitation authority, moderation tools (serve network, not person) |
-| **Channels** | Full admin all channels including `#multisig-ops` |
-| **Treasury** | Signer access — approve/reject proposed transactions |
-| **Knowledge Graph** | Moderation authority — revert edits, protect entities, resolve disputes |
-| **Governance** | Same as Member — no additional voting weight |
-
-**Note:** As a Steward, you are also a [[Member]] and retain all Member rights.
-
-## Participation Expectations
-
-![[3. Protocols/Cultural Protocols/Participation Cadence Protocol#Steward]]
-
-## Event Cycle Responsibilities
-
-| Phase | Steward Expectations |
-|-------|---------------------|
-| **Inter-Event** | Normal stewardship duties, third space relationship maintenance |
-| **Pre-Event** | Lead Event Circle, coordinate logistics, facilitate session QV |
-| **Event** | Full presence, real-time coordination, emergency decision authority |
-| **Post-Event** | Lead retrospective, ensure knowledge graph enrichment, facilitate fast-track memberships |
-
-## Term Structure
+The council operates as a collective body:
 
 | Aspect | Detail |
 |--------|--------|
-| Term Length | 1 month |
-| Rotation | Monthly handoff with knowledge transfer |
-| Re-selection | May serve again after at least 1 month gap |
-| Council Size | 2-3 active Stewards at any time |
+| **Size** | 5-7 members |
+| **Term** | 12 months (staggered for continuity) |
+| **Meetings** | Monthly minimum, emergency as needed |
+| **Decisions** | Consent-based within council |
+| **Quorum** | Majority of seated Stewards |
 
-## On-Chain Verification
+## Council Functions
 
-| Platform | Permission | Mechanism |
-|----------|------------|-----------|
-| Discord | @Steward role | Bot upgrade on consent completion |
-| Multi-sig | Signer | Gnosis Safe signer (threshold: majority must sign) |
-| NFT | Stewardship NFT | Time-limited, minted on selection, burned on rotation |
+### Oversight
+- Review monthly reports from Function Leads
+- Ensure leads are following protocols
+- Address performance concerns
 
-## Emergency Authority
+### Emergency Authority
+- Make urgent decisions affecting network safety
+- Temporary actions subject to Member Assembly ratification (24h)
+- Cannot unilaterally change constitution
 
-For actions posing immediate harm (doxxing, harassment, treasury theft):
-- Any Steward can initiate immediate temporary suspension
-- Post-hoc ratification by [[Stewardship]] within 48h
-- Full accountability process follows
-- Documented with emergency rationale
+### Dispute Resolution
+- Mediate conflicts between participants
+- Facilitate dialogue before formal action
+- Escalate to Member Assembly if needed
 
-## Related Protocols
+### Elections
+- Announce open seats
+- Facilitate nomination period
+- Oversee consent process
+- Certify results
 
-- [[3. Protocols/Role Protocols/Steward Protocol|Steward Protocol]]
-- [[3. Protocols/Group Protocols/Stewardship Protocol|Stewardship Protocol]]
-- [[3. Protocols/Asset Protocols/Treasury Management Protocol|Treasury Management Protocol]]
-- [[3. Protocols/Cultural Protocols/Accountability Protocol|Accountability Protocol]]
-- [[3. Protocols/Group Protocols/Event Circle Protocol|Event Circle Protocol]]
-- [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]]
+## Knowledge Graph Permissions
+
+| Permission | Allowed |
+|------------|---------|
+| Read | ✅ All entities |
+| Write | ✅ Create and edit |
+| Curate | ✅ Reconcile duplicates |
+| Moderate | ✅ Revert edits, protect entities (as council) |
+
+## Term and Rotation
+
+| Phase | Duration | Action |
+|-------|----------|--------|
+| **Nomination** | 1 week | Open nominations for seats |
+| **Election** | 48h | Member Assembly consent |
+| **Transition** | 2 weeks | Outgoing briefs incoming |
+| **Term** | 12 months | Active service |
+
+Staggered terms ensure continuity — not all seats open simultaneously.
+
+## Accountability
+
+Stewards remain accountable to the Member Assembly:
+
+- Can be recalled via consent process
+- Actions subject to review
+- Must recuse from conflicts of interest
+- Emergency actions require ratification
+
+## Agreement
+
+All Stewards affirm the [[4. Agreements/Steward Agreement|Steward Agreement]].
+
+## Related
+
+- [[Member]] — Prior role
+- [[Steward Council]] — Collective body
+- [[Member Assembly]] — Electing body
+- [[Function Leads]] — Oversight targets

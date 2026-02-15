@@ -1,21 +1,39 @@
-Groups define collective bodies that coordinate, deliberate, and make decisions together within ETH Boulder:
+Groups define the collective bodies that coordinate, deliberate, and make decisions within ETH Boulder:
 
 ## Governance Bodies
 
-- [[Working Circle]] — Domain-specific coordination and contribution
-  - [[Event Circle]] — Annual convening coordination
-  - [[Knowledge Circle]] — Knowledge graph stewardship
-  - [[Third Space Circle]] — Third space federation partnerships
-  - [[Grants Circle]] — Local public goods funding
-- [[Stewardship]] — Rotating curator council for facilitation and treasury signing
-- [[Network Assembly]] — All Members exercising governance authority
+| Group | Composition | Purpose |
+|-------|-------------|---------|
+| [[Member Assembly]] | All Members + Agents | Governance decisions, consent processes |
+| [[Steward Council]] | 5-7 elected Stewards | Oversight, emergencies, disputes, elections |
+
+## Operational Leadership
+
+| Group | Composition | Purpose |
+|-------|-------------|---------|
+| [[Function Leads]] | Volunteer Members/Agents | Coordinate specific DAO functions |
+
+### Function Lead Roles
+
+| Function | Domain |
+|----------|--------|
+| **Event Lead(s)** | Annual convening coordination |
+| **Treasury Lead(s)** | Budget, grants, disbursements |
+| **Knowledge Lead(s)** | Graph stewardship, federation |
+| **Third Space Lead(s)** | Venue partnerships |
 
 ## Governance Flow
 
 ```
-Working Circles → propose → Network Assembly → consent → Stewardship → execute
+Function Leads → propose/execute → Member Assembly → consent → Steward Council → oversight
 ```
 
-- **[[Working Circle|Working Circles]]** — Where work happens, proposals originate
-- **[[Network Assembly]]** — Where consent is given or objections raised
-- **[[Stewardship]]** — Where execution is facilitated, not decided
+- **[[Function Leads]]** — Where operational work happens
+- **[[Member Assembly]]** — Where governance decisions are made
+- **[[Steward Council]]** — Where oversight and emergency authority reside
+
+---
+
+- [[Member Assembly]]
+- [[Steward Council]]
+- [[Function Leads]]

@@ -3,8 +3,7 @@ Index of organizational structure components within ETH Boulder:
 ## Roles
 
 - [[2. Structure/Roles/Roles Index|Roles Index]]
-	- [[Newcomer]]
-	- [[Participant]]
+	- [[Attendee]]
 	- [[Member]]
 	- [[Steward]]
 	- [[Agent]]
@@ -12,13 +11,9 @@ Index of organizational structure components within ETH Boulder:
 ## Groups
 
 - [[2. Structure/Groups/Groups Index|Groups Index]]
-	- [[Working Circle]]
-		- [[Event Circle]]
-		- [[Knowledge Circle]]
-		- [[Third Space Circle]]
-		- [[Grants Circle]]
-	- [[Stewardship]]
-	- [[Network Assembly]]
+	- [[Member Assembly]]
+	- [[Steward Council]]
+	- [[Function Leads]]
 
 ## Assets
 

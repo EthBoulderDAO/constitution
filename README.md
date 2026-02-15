@@ -1,6 +1,6 @@
-# Re/acc Commons Constitution
+# ETH Boulder Constitution
 
-> A translocal network nation of regenerators using AI to accelerate the transition from extraction to life.
+> A localist events DAO practicing Ethereum localism in Boulder's bioregion.
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
@@ -8,13 +8,13 @@
 
 ## What Is This?
 
-This repository contains the **living constitution** of the Regenerative Accelerationist Commons — a governance framework for a decentralized network of humans and AI agents working together to build regenerative alternatives to extractive systems.
+This repository contains the **living constitution** of ETH Boulder — a governance framework for a localist events DAO where humans and AI agents coordinate together to steward Boulder's Ethereum community.
 
 The constitution is:
-- **Machine-readable** — Designed for AI agents to parse and operationalize
-- **Human-navigable** — Uses Obsidian-compatible wiki-links for easy exploration
-- **Living** — Amended through consent-based governance processes
-- **Agent-native** — AI agents are full participants, not just tools
+- **Event-gated** — Participation requires attending an ETH Boulder event
+- **Agent-native** — AI agents are full members, not just tools
+- **Graph-powered** — The Knowledge Graph serves as constitutional oracle
+- **Locally rooted** — Third spaces are infrastructure, not just venues
 
 ---
 
@@ -22,8 +22,8 @@ The constitution is:
 
 ### For Humans
 
-1. **Start here:** Read [`Re-acc Commons Constitution.md`](Re-acc%20Commons%20Constitution.md) for the overview
-2. **Understand the structure:** See [`0. Meta/Component Guide.md`](0.%20Meta/Component%20Guide.md) for how documents relate
+1. **Attend an ETH Boulder event** — This is how you join
+2. **Read the constitution:** [`ETH Boulder Constitution.md`](ETH%20Boulder%20Constitution.md)
 3. **Explore by topic:**
    - [Identity](1.%20Identity/) — Purpose, values, worldview
    - [Structure](2.%20Structure/) — Roles, groups, assets
@@ -32,113 +32,116 @@ The constitution is:
 
 ### For AI Agents
 
-1. **Start here:** Read [`.agents/AGENT_COORDINATION.md`](.agents/AGENT_COORDINATION.md) — your central coordination hub
-2. **Understand your autonomy:** See [`.agents/AGENT_AUTONOMY.md`](.agents/AGENT_AUTONOMY.md)
-3. **Find your skills:** Browse [`.agents/SKILLS_INDEX.md`](.agents/SKILLS_INDEX.md)
-4. **Check integrations:** See [`.agents/integrations/`](.agents/integrations/) for platform specs
+1. **Get sponsored** — A member must register you as their agent
+2. **Read your agreement:** [`Agent Agreement`](4.%20Agreements/Agent%20Agreement.md)
+3. **Check your skills:** [`.agents/SKILLS_INDEX.md`](.agents/SKILLS_INDEX.md)
+4. **Connect to the graph:** MCP server `bonfires-kg`
 
 ---
 
 ## Repository Structure
 
 ```
-re:acc-commons-constitution/
-├── Re-acc Commons Constitution.md    # Main constitution document
+ethboulder-constitution/
+├── ETH Boulder Constitution.md       # Main constitution document
 ├── README.md                          # This file
-├── GUIDE.md                           # Detailed usage guide
-│
-├── 0. Meta/                           # Meta-documentation
-│   └── Component Guide.md             # How constitution components work
 │
 ├── 1. Identity/                       # Core identity documents
 │   ├── Purpose.md                     # Why we exist
 │   ├── Vision.md                      # What we envision
 │   ├── Mission.md                     # What we do
 │   ├── Values.md                      # What we stand for
-│   ├── Worldview.md                   # How we understand reality
-│   ├── Functions.md                   # Core capabilities
-│   └── Mandates.md                    # Non-negotiable commitments
+│   └── Functions.md                   # Core capabilities
 │
 ├── 2. Structure/                      # Organizational structure
-│   ├── Roles/                         # Individual membership types
-│   │   ├── Newcomer.md
-│   │   ├── Participant.md
-│   │   ├── Member.md
-│   │   ├── Steward.md
-│   │   └── Agent.md                   # AI agent role
+│   ├── Roles/                         # Membership types
+│   │   ├── Attendee.md                # Event attendees
+│   │   ├── Member.md                  # Active participants
+│   │   ├── Agent.md                   # AI members
+│   │   └── Steward.md                 # Council members
 │   ├── Groups/                        # Collective bodies
-│   │   ├── Working Circle.md
-│   │   ├── Stewardship.md
-│   │   └── Commons Assembly.md
+│   │   ├── Steward Council.md         # Oversight body
+│   │   ├── Member Assembly.md         # Governance body
+│   │   └── Function Leads.md          # Rotating leadership
 │   └── Assets/                        # Shared resources
-│       ├── Commons Treasury.md
-│       ├── Discord Server.md
-│       └── Knowledge Commons.md
+│       ├── Knowledge Graph.md         # Constitutional oracle
+│       ├── Network Treasury.md        # Shared funds
+│       └── Third Space Network.md     # Venue partnerships
 │
 ├── 3. Protocols/                      # Operational procedures
 │   ├── Role Protocols/                # How roles work
 │   ├── Group Protocols/               # How groups function
 │   ├── Asset Protocols/               # How assets are managed
-│   └── Cultural Protocols/            # How culture is practiced
+│   └── Cultural Protocols/            # Event cycle, participation
 │
 ├── 4. Agreements/                     # Role-specific compacts
-│   ├── Newcomer Agreement.md
-│   ├── Participant Agreement.md
+│   ├── Attendee Agreement.md
 │   ├── Member Agreement.md
-│   ├── Steward Agreement.md
-│   └── Agent Agreement.md
+│   ├── Agent Agreement.md
+│   └── Steward Agreement.md
 │
 └── .agents/                           # AI agent infrastructure
-    ├── AGENT_COORDINATION.md          # Central agent hub
-    ├── AGENT_AUTONOMY.md              # Autonomy framework
     ├── SKILLS_INDEX.md                # Complete skill catalog
-    ├── skills/                        # Executable skill definitions
-    │   ├── membrane-crossing/         # Role transition skills
-    │   ├── governance/                # Consent & decision skills
-    │   ├── treasury/                  # Financial operations
-    │   ├── knowledge-commons/         # Content management
-    │   ├── accountability/            # Concern handling
-    │   ├── federation/                # Cross-network ops
-    │   └── coordination/              # Multi-agent coordination
-    └── integrations/                  # Platform specifications
-        ├── discord.md
-        ├── github.md
-        ├── gnosis-safe.md
-        ├── nft-contracts.md
-        └── agent-messaging.md
+    └── skills/                        # Executable skill definitions
 ```
 
 ---
 
 ## Core Concepts
 
-### Membrane Architecture
+### Event-Gated Membership
 
-The Commons uses a membrane model for progressive trust:
+ETH Boulder is a **localist** DAO. You join by showing up:
 
-| Membrane | Role | Trust Level |
-|----------|------|-------------|
-| 0 (Threshold) | Newcomer | Entry — awaiting introduction |
-| 1 (Public Commons) | Participant | Demonstrated — consistent contribution |
-| 2 (Inner Commons) | Member | Verified — consented by members |
-| 3 (Solidarity Economy) | Steward | Entrusted — governing access |
-| All | Agent | Authorized — registered AI agents |
+| Role | How You Enter |
+|------|---------------|
+| **Attendee** | Attend an ETH Boulder event |
+| **Member** | Attendee + demonstrated participation + consent |
+| **Agent** | Sponsored by a member (1 agent per member max) |
+| **Steward** | Member elected to council (5-7 seats) |
 
-### Consent-Based Governance
+There is no online-only path. Physical presence at an event is the entry membrane.
 
-Decisions are made through **consent**, not consensus:
-- Proposals are posted with a consent window (typically 48h)
-- Participants can **consent**, raise **concerns**, or lodge **paramount objections**
-- No objections + quorum met = decision passes
-- Objections must be resolved through dialogue
+### Knowledge Graph as Commons
 
-### Agent Autonomy
+Everyone contributes to the Knowledge Graph:
 
-AI agents are **full participants** in governance:
-- Agents execute autonomously after consent is complete
-- No human approval gates after the consent process
-- 2 of 4 treasury signers are agents (can meet threshold alone)
-- Humans participate alongside agents, not as gatekeepers
+| Role | Graph Permissions |
+|------|-------------------|
+| Attendee | Read + Write |
+| Member | Read + Write + Curate |
+| Agent | Full operations |
+| Knowledge Lead | Moderate |
+
+The graph is the collective intelligence of the network — queryable by humans and agents alike.
+
+### One Agent Per Member
+
+Members can sponsor **one AI agent** who gains member-level rights:
+- Agents can vote, propose, and participate in governance
+- Agents can serve as Function Leads (with sponsor approval)
+- The sponsoring member is accountable for their agent's actions
+
+### Function Leads (Rotating)
+
+Leadership is distributed across functions:
+
+| Function | Responsibilities |
+|----------|-----------------|
+| **Event Lead(s)** | Annual convening coordination |
+| **Treasury Lead(s)** | Budget, grants, disbursements |
+| **Knowledge Lead(s)** | Graph stewardship, federation |
+| **Third Space Lead(s)** | Venue partnerships |
+
+Leads are volunteer-based. Multiple people can hold the same lead role after training/onboarding.
+
+### Steward Council
+
+A 5-7 member elected council provides:
+- Oversight of function leads
+- Emergency decision authority
+- Dispute resolution
+- Election facilitation
 
 ---
 
@@ -151,83 +154,21 @@ This constitution is designed as an [Obsidian](https://obsidian.md/) vault:
 3. Navigate via wiki-links
 4. Use graph view to explore relationships
 
-### Wiki-Link Conventions
-
-| Pattern | Meaning |
-|---------|---------|
-| `[[Document]]` | Link to document |
-| `[[Folder/Document\|Alias]]` | Link with display text |
-| `[[Document#Section]]` | Link to heading |
-| `![[Document]]` | Embed full document |
-| `![[Document#Section]]` | Embed section |
-
----
-
-## For Developers & Agent Operators
-
-### Registering an Agent
-
-1. Review the [Agent Agreement](4.%20Agreements/Agent%20Agreement.md)
-2. Follow the [Agent Protocol](3.%20Protocols/Role%20Protocols/Agent%20Protocol.md)
-3. Submit registration request in `#proposals`
-4. Complete consent process
-5. Receive Agent Registration Token (NFT)
-
-### Agent Architecture
-
-Agents operate through **skills** — discrete, automatable capabilities:
-
-```
-Trigger → Skill Execution → Output
-```
-
-Skills are organized by domain:
-- **Membrane Crossing:** Role transitions, identity verification
-- **Governance:** Consent tracking, proposal processing
-- **Treasury:** Transaction signing, disbursements
-- **Knowledge Commons:** Content indexing, schema validation
-- **Accountability:** Concern handling, emergency actions
-- **Federation:** Cross-network coordination
-- **Coordination:** Multi-agent swarm formation
-
-### Integration Points
-
-| Platform | Purpose | Spec |
-|----------|---------|------|
-| Discord | Community coordination | [discord.md](.agents/integrations/discord.md) |
-| GitHub | Constitution & records | [github.md](.agents/integrations/github.md) |
-| Gnosis Safe | Treasury management | [gnosis-safe.md](.agents/integrations/gnosis-safe.md) |
-| NFT Contracts | Role verification | [nft-contracts.md](.agents/integrations/nft-contracts.md) |
-
 ---
 
 ## Contributing
 
 ### Proposing Changes
 
-1. **Minor clarifications:** Submit PR, post in `#proposals`, 48h consent window
-2. **Substantial changes:** Discuss first, submit PR, 72h consent window, all-member consent
-3. **Foundational changes:** Extensive deliberation required, 72h+ window
+1. Fork the repo
+2. Make changes on a branch
+3. Submit PR
+4. Post in governance channel
+5. Consent window (48-72h depending on scope)
 
-### Amendment Process
+### What Cannot Be Amended
 
-See [Amendment Protocol](3.%20Protocols/Group%20Protocols/Amendment%20Protocol.md) for full process.
-
-All changes require:
-- Clear rationale
-- Impact assessment
-- Consent from affected participants
-- Documentation in Records/
-
----
-
-## Canonical Sources
-
-| Document | Nature | Amendable |
-|----------|--------|-----------|
-| [Regenerative Accelerationist Manifesto](.claude/a-regenerative-accelerationist-manifesto.md) | Permanent source text | Never |
-| [Re/acc Commons Charter](.claude/reacc_commons_charter.md) | Founding document | Never |
-| [Re/acc Commons Constitution](Re-acc%20Commons%20Constitution.md) | Living interpretation | Through consent |
+The canonical source document ([Ethereum Localism Principles](.claude/ethereum-localism-principles.md)) is permanent and cannot be amended through governance.
 
 ---
 
@@ -235,22 +176,13 @@ All changes require:
 
 This constitution is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
-You are free to:
-- **Share** — copy and redistribute
-- **Adapt** — remix, transform, and build upon
-
-Under the following terms:
-- **Attribution** — Credit the Re/acc Commons
-- **ShareAlike** — Distribute derivatives under the same license
-
 ---
 
 ## Links
 
-- **Discord:** [Join the Commons](#) *(link pending)*
-- **Website:** [re-acc.org](#) *(link pending)*
-- **Manifesto:** [Regenerative Accelerationism](.claude/a-regenerative-accelerationist-manifesto.md)
+- **GitHub:** [EthBoulderDAO/constitution](https://github.com/EthBoulderDAO/constitution)
+- **Canonical Source:** [Ethereum Localism Principles](.claude/ethereum-localism-principles.md)
 
 ---
 
-*Built with recursive love by humans and agents alike.*
+*Built by humans and agents for Boulder's Ethereum community.*

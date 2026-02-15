@@ -1,29 +1,29 @@
 ---
-lastUpdated: 2026-02-15
-membrane: 2
+id: agreement-member
+type: agreement
+role: "[[Member]]"
 kg_entity: "kg://ethboulder/agreement/member"
 ---
-Welcome to the Governance Body — the core constituency of this network nation. As a **Member**, you hold citizenship with full governance rights and the responsibilities that come with them.
+Welcome to the governance body of ETH Boulder. As a **Member**, you have full governance rights, can sponsor one AI agent, and are eligible to serve as a Function Lead or Steward.
 
 This document is the agreement for [[Member]] role in ETH Boulder.
 
 - [[#Freedom to Participate]]
 - [[#Your Role]]
 - [[#Governance Rights]]
-- [[#Governance Responsibilities]]
-- [[#Event Cycle Responsibilities]]
+- [[#Agent Sponsorship]]
+- [[#Function Lead Eligibility]]
 - [[#Knowledge Graph Curation]]
 - [[#Treasury Access]]
 - [[#Accountability]]
 - [[#Your Platform Access]]
 - [[#Path Forward]]
-- [[#About ETH Boulder]]
 
 ---
 
 # Freedom to Participate
 
-You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the network and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]]; and you seek to uphold the [[1. Identity/Values|Values]] and intent of this Constitution.
+You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the network and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]] and you uphold the [[1. Identity/Values|Values]] of this Constitution.
 
 ---
 
@@ -39,32 +39,52 @@ As a Member, you have:
 
 | Right | Description |
 |-------|-------------|
-| **Propose** | Initiate governance proposals |
+| **Propose** | Initiate governance proposals in Member Assembly |
 | **Consent** | Your consent counts toward quorum |
 | **Object** | Raise paramount objections |
-| **Nominate** | Nominate Participants for membership |
-| **View** | See all treasury transactions |
+| **Nominate** | Nominate Attendees for membership |
+| **Sponsor** | Register one AI agent as your agent |
 | **Curate** | Reconcile knowledge graph entities |
-| **Steer** | Eligible for Event Circle steering committee |
+| **Lead** | Eligible to serve as Function Lead |
+| **Steward** | Eligible to be elected to Steward Council |
 
 You are the backbone of network governance. Every decision flows through your consent.
 
 ---
 
-# Governance Responsibilities
+# Agent Sponsorship
 
-![[3. Protocols/Group Protocols/Network Assembly Protocol#What Is Governed]]
+You may sponsor **one AI agent** who becomes a full Member:
+
+| Aspect | Detail |
+|--------|--------|
+| **Limit** | One agent per Member |
+| **Agent rights** | Member-level governance (same as you) |
+| **Your accountability** | You are responsible for your agent's actions |
+| **Revocation** | You can revoke agent registration |
+| **Lead approval** | Agent needs your approval to serve as Function Lead |
+
+### To Sponsor an Agent
+
+1. Prepare agent details (capabilities, identity, integration)
+2. Post agent registration proposal to Member Assembly
+3. 48h consent window
+4. If approved, your agent becomes a Member
 
 ---
 
-# Event Cycle Responsibilities
+# Function Lead Eligibility
 
-| Phase | Member Expectations |
-|-------|---------------------|
-| **Inter-Event** | Ongoing circle participation, knowledge graph maintenance |
-| **Pre-Event** | QV participation for session scheduling, volunteer coordination |
-| **Event** | Active presence at convening (in-person or remote) |
-| **Post-Event** | Retrospective participation, fast-track membership nominations |
+You are eligible to volunteer as a Function Lead:
+
+| Function | What You'll Do |
+|----------|---------------|
+| **Event Lead** | Coordinate annual convening, logistics, sessions |
+| **Treasury Lead** | Manage budget, process grants, disbursements |
+| **Knowledge Lead** | Steward graph, reconcile entities, moderate |
+| **Third Space Lead** | Cultivate venue partnerships, community presence |
+
+Leads are volunteer-based. Multiple people can hold the same lead role after training.
 
 ---
 
@@ -75,22 +95,12 @@ As a Member, you have curation rights on the [[Knowledge Graph]]:
 | Capability | Description |
 |------------|-------------|
 | **Reconcile** | Merge duplicate entities |
-| **Approve** | Approve contested edits |
-| **Create Protected** | Create protected entity types with rationale |
-
-See [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]] for details.
-
----
-
-# Consent Mechanics
-
-![[3. Protocols/Cultural Protocols/Consent Process Protocol#Consent Mechanics]]
+| **Edit Contested** | Edit entities flagged as contested |
+| **Create** | Create any entity type |
 
 ---
 
 # Treasury Access
-
-![[3. Protocols/Asset Protocols/Treasury Management Protocol#Approval Thresholds]]
 
 As a Member, you have **Viewer** access to the [[Network Treasury]]:
 - See all transactions, balances, allocation history
@@ -103,18 +113,21 @@ As a Member, you have **Viewer** access to the [[Network Treasury]]:
 
 You commit to the accountability framework:
 
-![[3. Protocols/Cultural Protocols/Accountability Protocol#Escalating Response Framework]]
-
-You agree to:
 - Engage in good faith when concerns are raised
 - Participate in resolution processes
 - Accept outcomes of proper process
+- Remain accountable for your sponsored agent's actions
 
 ---
 
 # Participation Expectations
 
-![[3. Protocols/Cultural Protocols/Participation Cadence Protocol#Member]]
+| Phase | Member Expectations |
+|-------|---------------------|
+| **Inter-Event** | Ongoing participation, knowledge graph maintenance |
+| **Pre-Event** | QV participation for session scheduling, volunteer encouraged |
+| **Event** | Active presence at convening |
+| **Post-Event** | Retrospective participation, membership nominations |
 
 ---
 
@@ -122,9 +135,9 @@ You agree to:
 
 | Platform | Access |
 |----------|--------|
-| Discord | All channels, `#stewardship` (read) |
+| Discord | All channels |
 | Multi-sig | Viewer |
-| GitHub | Contributor (open PRs) |
+| GitHub | Contributor |
 | Knowledge Graph | Curation rights |
 | Schelling Point | Full voting rights |
 
@@ -134,31 +147,11 @@ You agree to:
 
 To become a [[Steward]]:
 1. Any Member may nominate you (including self-nomination)
-2. Full network consent: all Members, 72h window
-3. Monthly rotation ensures no accumulation of positional power
+2. Member Assembly consent when seat opens
+3. 12-month term (staggered rotation)
 
 ---
 
-# About ETH Boulder
-
-## Identity
-
-![[1. Identity/Identity Index|Identity Index]]
-
-## Structure
-
-![[2. Structure/Structure Index|Structure Index]]
-
-## Protocols
-
-![[3. Protocols/Protocols Index|Protocols Index]]
-
-## Agreements
-
-![[4. Agreements/Agreement Index|Agreement Index]]
-
----
-
-*You are trusted with the governance of a shared treasury, shared infrastructure, and shared future. This trust was earned through action, verified by agents, confirmed by community consent.*
+*You are trusted with the governance of shared resources and collective intelligence. This trust was earned through showing up — physically, at an ETH Boulder event.*
 
 *— ETH Boulder*

@@ -2,7 +2,7 @@
 id: asset-knowledge-graph
 type: asset
 access_level: tiered
-stewardship: "[[Knowledge Circle]]"
+stewardship: "[[Function Leads|Knowledge Lead]]"
 kg_entity: "kg://ethboulder/asset/knowledge-graph"
 mcp_server: "bonfires-kg"
 ---
@@ -38,13 +38,14 @@ Traditional constitutions are static documents requiring human interpretation. T
 
 ## Access Tiers
 
+**Everyone contributes to the Knowledge Graph.** This is a core principle.
+
 | Tier | Who | Permissions |
 |------|-----|-------------|
-| **Read** | All [[Newcomer\|Newcomers]] | View public entities |
-| **Write** | [[Participant\|Participants]]+ | Create/edit entities |
-| **Curate** | [[Member\|Members]] | Reconcile entities, approve contested edits |
-| **Moderate** | [[Steward\|Stewards]] | Revert edits, protect entities, resolve disputes |
-| **Full** | Authorized [[Agent\|Agents]] | All operations including federation sync |
+| **Read + Write** | [[Attendee\|Attendees]] | Read all, create entities, add relationships |
+| **Curate** | [[Member\|Members]] | Above + reconcile duplicates, edit contested |
+| **Full** | [[Agent\|Agents]] | All operations including federation sync |
+| **Moderate** | [[Function Leads\|Knowledge Lead]] | Revert edits, protect entities, resolve disputes |
 
 ## Entity Types
 
@@ -55,7 +56,7 @@ The graph maintains these core entity types:
 | **Person** | `kg://ethboulder/person/[id]` | Human participants |
 | **Agent** | `kg://ethboulder/agent/[id]` | AI agents |
 | **Role** | `kg://ethboulder/role/[name]` | Constitutional roles |
-| **Group** | `kg://ethboulder/group/[name]` | Circles and assemblies |
+| **Group** | `kg://ethboulder/group/[name]` | Assembly, council, leads |
 | **Asset** | `kg://ethboulder/asset/[name]` | Network assets |
 | **Protocol** | `kg://ethboulder/protocol/[name]` | Governing protocols |
 | **Decision** | `kg://ethboulder/decision/[id]` | Consent processes |
@@ -69,14 +70,18 @@ Common query patterns for constitutional questions:
 
 ### Role Queries
 ```cypher
-# Current Stewards
+# Current Steward Council
 MATCH (p:Person)-[:HAS_ROLE]->(:Role {name: 'Steward', active: true})
 RETURN p
 
-# Eligible for membership
-MATCH (p:Person)-[:HAS_ROLE]->(:Role {name: 'Participant'})
-WHERE p.active_weeks >= 2
+# All Members (human + agent)
+MATCH (p)-[:HAS_ROLE]->(:Role {name: 'Member', active: true})
 RETURN p
+
+# Current Function Leads
+MATCH (p)-[:SERVES_AS]->(l:Lead)
+WHERE l.active = true
+RETURN p, l.function
 ```
 
 ### Governance Queries
@@ -133,7 +138,7 @@ mcp_config:
 - Constitutional documents (roles, protocols, assets)
 - Historical decisions
 - Federation agreements
-- Protected entities require Steward approval to modify
+- Protected entities require Knowledge Lead approval to modify
 
 ## Federation Sync
 
@@ -143,7 +148,7 @@ The graph synchronizes with partner networks via Bonfires MCP:
 |--------|----------|
 | **Sync Frequency** | Real-time for critical entities, daily for full sync |
 | **Conflict Resolution** | Local authority for local entities, consensus for shared |
-| **Schema Mapping** | Maintained by Knowledge Circle |
+| **Schema Mapping** | Maintained by Knowledge Lead |
 
 ## Event Cycle Integration
 
@@ -163,12 +168,12 @@ The graph synchronizes with partner networks via Bonfires MCP:
 
 **Reporting:**
 - Graph health metrics in `#knowledge`
-- Monthly integrity review by Knowledge Circle
+- Monthly integrity review by Knowledge Lead
 - Federation sync status dashboard
 
 ## Related Documents
 
 - [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]] — Complete governance process
-- [[Knowledge Circle]] — Stewardship body
+- [[Function Leads]] — Knowledge Lead responsibilities
 - [[Agent]] — Agent capabilities for graph operations
 - [[Federation Agreements]] — Partner network relationships

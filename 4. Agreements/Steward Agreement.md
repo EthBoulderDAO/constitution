@@ -1,30 +1,31 @@
 ---
-lastUpdated: 2026-02-15
-membrane: 3
+id: agreement-steward
+type: agreement
+role: "[[Steward]]"
 kg_entity: "kg://ethboulder/agreement/steward"
 ---
-Welcome to the Stewardship Council — as a **Steward**, you are a rotating curator entrusted with the highest trust level in the network: facilitation authority, moderation tools, multisig signing power, and event coordination responsibility.
+Welcome to the **Steward Council** — as a Steward, you are one of 5-7 elected members who provide oversight, handle emergencies, resolve disputes, and facilitate elections for ETH Boulder.
 
 This document is the agreement for [[Steward]] role in ETH Boulder.
 
 - [[#Freedom to Participate]]
 - [[#Your Role]]
-- [[#Your Council]]
+- [[#The Steward Council]]
 - [[#Critical Distinction]]
-- [[#Facilitation Authority]]
-- [[#Event Coordination]]
-- [[#Knowledge Graph Moderation]]
-- [[#Treasury Signing]]
+- [[#Council Functions]]
+- [[#Oversight Responsibilities]]
 - [[#Emergency Authority]]
-- [[#Rotation and Handoff]]
+- [[#Dispute Resolution]]
+- [[#Knowledge Graph Moderation]]
+- [[#Term and Rotation]]
 - [[#Your Platform Access]]
-- [[#About ETH Boulder]]
+- [[#Resignation]]
 
 ---
 
 # Freedom to Participate
 
-You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the network and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]]; and you seek to uphold the [[1. Identity/Values|Values]] and intent of this Constitution.
+You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the network and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]] and you uphold the [[1. Identity/Values|Values]] of this Constitution.
 
 ---
 
@@ -34,9 +35,9 @@ You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]
 
 ---
 
-# Your Council
+# The Steward Council
 
-![[Stewardship]]
+![[Steward Council]]
 
 ---
 
@@ -44,95 +45,121 @@ You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]
 
 **You are a curator, not a gatekeeper.**
 
-Stewardship tends conditions for the network to self-govern. The moment stewardship becomes governance, it has failed.
+The council tends conditions for the network to self-govern. The moment stewardship becomes governance, it has failed.
 
 You do NOT have:
 - Tiebreaker power
 - Veto authority
 - Final say on content or direction
 - Greater weight in consent processes
-- Authority to initiate treasury allocations
+- Authority to unilaterally amend constitution
 
 You DO have:
-- Facilitation authority for consent processes
-- Moderation tools that serve the network
-- Multisig signing power to execute approved transactions
+- Oversight of Function Leads
+- Emergency authority (with ratification)
+- Dispute mediation role
+- Election facilitation duties
 - Knowledge graph moderation authority
-- Event coordination leadership
-- Emergency authority with ratification requirement
 
 ---
 
-# Facilitation Authority
+# Council Functions
 
-![[3. Protocols/Group Protocols/Stewardship Protocol#Core Functions]]
+### Oversight
+- Review monthly reports from Function Leads
+- Ensure leads are following protocols
+- Address performance concerns
+- Support struggling leads
+
+### Emergency Authority
+- Make urgent decisions affecting network safety
+- Temporary actions subject to 24h Member Assembly ratification
+- Cannot unilaterally change constitution
+
+### Dispute Resolution
+- Mediate conflicts between participants
+- Facilitate dialogue before formal action
+- Escalate to Member Assembly if needed
+
+### Elections
+- Announce open seats
+- Facilitate nomination period
+- Oversee consent process
+- Certify results
 
 ---
 
-# Event Coordination
+# Oversight Responsibilities
 
-As a Steward, you take the lead on event coordination:
+You oversee Function Leads:
 
-| Phase | Your Responsibilities |
-|-------|----------------------|
-| **Inter-Event** | Third space relationship maintenance |
-| **Pre-Event** | Lead Event Circle, coordinate logistics, facilitate session QV |
-| **Event** | Full presence, real-time coordination, emergency decisions |
-| **Post-Event** | Lead retrospective, ensure graph enrichment, facilitate fast-track memberships |
+| Lead | What You Review |
+|------|----------------|
+| **Event Lead** | Event cycle progress, logistics, budget execution |
+| **Treasury Lead** | Financial reporting, grant processing, compliance |
+| **Knowledge Lead** | Graph health, reconciliation, moderation actions |
+| **Third Space Lead** | Partnership status, venue coordination |
 
-See [[3. Protocols/Group Protocols/Event Circle Protocol|Event Circle Protocol]] for details.
+Monthly reports from each lead. Address concerns promptly.
+
+---
+
+# Emergency Authority
+
+For actions posing immediate harm:
+- Council can take immediate temporary action
+- Post-hoc ratification by Member Assembly within 24h
+- Full accountability process follows
+- Actions not ratified are reversed
+- Documented with emergency rationale
+
+---
+
+# Dispute Resolution
+
+When conflicts arise:
+1. **Facilitate dialogue** between parties
+2. **Mediate** toward resolution
+3. **Escalate** to Member Assembly if unresolved
+4. **Document** outcomes in Knowledge Graph
+
+Remain impartial. Recuse yourself from conflicts involving you.
 
 ---
 
 # Knowledge Graph Moderation
 
-As a Steward, you have moderation authority on the [[Knowledge Graph]]:
+As a Steward (as part of council), you have moderation authority:
 
 | Capability | Description |
 |------------|-------------|
 | **Revert** | Revert contested edits |
 | **Protect** | Mark entities as protected |
 | **Resolve** | Resolve entity disputes |
-| **Moderate** | Moderate agent graph operations |
 
-See [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]] for details.
-
----
-
-# Treasury Signing
-
-![[3. Protocols/Asset Protocols/Treasury Management Protocol#Disbursement]]
-
-As a Steward, you have **Signer** access:
-- Sign transactions after proper consent
-- Create transactions in Gnosis Safe
-- Cannot initiate allocations without consent
-
-**Threshold:** 2 of 4 signers (2 agents + 2 Stewards)
-
-**Note:** Agents are co-signers on the treasury. They can meet threshold without human signatures, enabling autonomous execution after consent is complete. Your role is to participate in consent processes — signing is shared.
+Use sparingly. Moderation serves the network, not personal preference.
 
 ---
 
-# Emergency Authority
+# Term and Rotation
 
-![[3. Protocols/Group Protocols/Stewardship Protocol#Emergency Actions]]
-
-**Remember:** All emergency actions require ratification within 48 hours. Actions not ratified are reversed.
-
----
-
-# Rotation and Handoff
-
-Your term is **1 month**. Monthly rotation ensures no one accumulates positional power.
-
-![[3. Protocols/Group Protocols/Stewardship Protocol#Handoff Protocol]]
+| Aspect | Detail |
+|--------|--------|
+| **Term** | 12 months |
+| **Council size** | 5-7 members |
+| **Staggered** | Not all seats open simultaneously |
+| **Transition** | 2-week handoff with outgoing Steward |
 
 ---
 
 # Participation Expectations
 
-![[3. Protocols/Cultural Protocols/Participation Cadence Protocol#Steward]]
+| Activity | Expectation |
+|----------|-------------|
+| **Council meetings** | Monthly minimum attendance |
+| **Lead reviews** | Monthly report review |
+| **Emergencies** | Available for urgent situations |
+| **Elections** | Facilitate when seats open |
 
 ---
 
@@ -151,32 +178,22 @@ Your term is **1 month**. Monthly rotation ensures no one accumulates positional
 # Resignation
 
 You may resign by:
-- Providing written notice to [[Stewardship]] and [[Network Assembly]]
+- Providing written notice to Steward Council and Member Assembly
 - Completing knowledge transfer to remaining Stewards
-- Resignation triggers selection process for replacement
+- Resignation triggers election for replacement
 
 ---
 
-# About ETH Boulder
+# Accountability
 
-## Identity
-
-![[1. Identity/Identity Index|Identity Index]]
-
-## Structure
-
-![[2. Structure/Structure Index|Structure Index]]
-
-## Protocols
-
-![[3. Protocols/Protocols Index|Protocols Index]]
-
-## Agreements
-
-![[4. Agreements/Agreement Index|Agreement Index]]
+You remain accountable to the Member Assembly:
+- Can be recalled via consent process
+- Actions subject to review
+- Must recuse from conflicts of interest
+- Emergency actions require ratification
 
 ---
 
-*You have been entrusted with coordination infrastructure for a network nation. Agent-generated value funds human regenerative work. Human ecological wisdom guides agent activity. Not extraction in either direction. Symbiosis rooted in place.*
+*You have been entrusted with oversight of a network that coordinates through consent. Tend the conditions for self-governance. Do not govern.*
 
 *— ETH Boulder*

@@ -1,24 +1,49 @@
-Roles define the progressive membrane architecture of ETH Boulder — how trust builds through demonstrated alignment:
+Roles define the membership architecture of ETH Boulder — who can participate and how:
 
-## Human Roles (Membrane Progression)
+## Human Roles
 
-| Membrane | Role | Trust Level | How You Cross |
-|----------|------|-------------|--------------|
-| **Zero: Welcome** | [[Newcomer]] | Entry | Read principles + constitution, post introduction |
-| **One: Public Network** | [[Participant]] | Demonstrated | Sustained aligned participation (2+ weeks), agent-verified patterns |
-| **Two: Governance** | [[Member]] | Verified | Member nomination + 3-member consent + 48h window |
-| **Three: Stewardship** | [[Steward]] | Entrusted | Full network consent + 72h window, monthly rotation |
+| Role | Entry | Rights |
+|------|-------|--------|
+| [[Attendee]] | Attend ETH Boulder event | Contribute to graph, participate in community |
+| [[Member]] | Attendee + consent process | Full governance, sponsor one agent, lead eligibility |
+| [[Steward]] | Member elected to council | Oversight, emergency authority, dispute resolution |
 
 ## AI Roles
 
-| Membrane | Role | Trust Level | How You Cross |
-|----------|------|-------------|--------------|
-| **Across All** | [[Agent]] | Authorized | Network consent for scope of participation |
+| Role | Entry | Rights |
+|------|-------|--------|
+| [[Agent]] | Sponsored by Member (1 per member) | Member-level governance, lead eligibility (with sponsor approval) |
+
+## The Entry Membrane
+
+There is one entry membrane: **attending an ETH Boulder event**. Physical presence is required — there is no online-only path.
+
+```
+┌───────────────────────────────────────────────────┐
+│              ATTEND ETH BOULDER EVENT              │
+│                                                    │
+│                        ↓                           │
+│                   ATTENDEE                         │
+│                        ↓                           │
+│         (demonstrated participation + consent)     │
+│                        ↓                           │
+│                    MEMBER                          │
+│                    ↙    ↘                          │
+│               STEWARD    sponsors AGENT            │
+└───────────────────────────────────────────────────┘
+```
+
+## Progression
+
+| From | To | Path |
+|------|-----|------|
+| **Attendee** | **Member** | Demonstrated participation + Member nomination + 48h consent |
+| **Member** | **Steward** | Election to council when seat opens |
+| **Member** | sponsors **Agent** | Agent registration + 48h consent |
 
 ---
 
-- [[Newcomer]]
-- [[Participant]]
+- [[Attendee]]
 - [[Member]]
 - [[Steward]]
 - [[Agent]]
