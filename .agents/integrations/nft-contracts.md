@@ -1,6 +1,6 @@
 # NFT Contracts Integration Specification
 
-Technical specification for minting and managing membership NFTs in the Re/acc Commons.
+Technical specification for minting and managing membership NFTs in ETH Boulder.
 
 ---
 
@@ -10,27 +10,27 @@ Technical specification for minting and managing membership NFTs in the Re/acc C
 network: ethereum  # or preferred L2
 contracts:
   membership_nft:
-    name: "Re/acc Membership"
-    symbol: "REACC-M"
+    name: "ETH Boulder Membership"
+    symbol: "ETHBLD-M"
     address: ${MEMBERSHIP_NFT_ADDRESS}
     standard: ERC-721
 
   stewardship_nft:
-    name: "Re/acc Stewardship"
-    symbol: "REACC-S"
+    name: "ETH Boulder Stewardship"
+    symbol: "ETHBLD-S"
     address: ${STEWARDSHIP_NFT_ADDRESS}
     standard: ERC-721
     features: [time_limited, burnable]
 
-  participation_nft:
-    name: "Re/acc Participation"
-    symbol: "REACC-P"
-    address: ${PARTICIPATION_NFT_ADDRESS}
+  attendee_nft:
+    name: "ETH Boulder Attendee"
+    symbol: "ETHBLD-A"
+    address: ${ATTENDEE_NFT_ADDRESS}
     standard: ERC-721
 
   agent_registration:
-    name: "Re/acc Agent Registry"
-    symbol: "REACC-A"
+    name: "ETH Boulder Agent Registry"
+    symbol: "ETHBLD-AG"
     address: ${AGENT_REGISTRY_ADDRESS}
     standard: ERC-721
     features: [scope_metadata]
@@ -55,14 +55,14 @@ private_key: ${AGENT_MINTER_KEY}  # Secure storage required
 
 ```json
 {
-  "name": "Re/acc Commons Member #{{tokenId}}",
-  "description": "Verified membership in the Re/acc Commons network nation.",
+  "name": "ETH Boulder Member #{{tokenId}}",
+  "description": "Verified membership in the ETH Boulder network nation.",
   "image": "ipfs://{{membershipImageCID}}",
-  "external_url": "https://reacc.commons/member/{{address}}",
+  "external_url": "https://ethboulder.com/member/{{address}}",
   "attributes": [
     {
       "trait_type": "Membrane",
-      "value": "Inner Commons (2)"
+      "value": "Member (2)"
     },
     {
       "trait_type": "Join Date",
@@ -85,14 +85,14 @@ private_key: ${AGENT_MINTER_KEY}  # Secure storage required
 
 ```json
 {
-  "name": "Re/acc Commons Steward #{{tokenId}}",
-  "description": "Active Stewardship role in the Re/acc Commons.",
+  "name": "ETH Boulder Steward #{{tokenId}}",
+  "description": "Active Stewardship role in ETH Boulder.",
   "image": "ipfs://{{stewardshipImageCID}}",
-  "external_url": "https://reacc.commons/steward/{{address}}",
+  "external_url": "https://ethboulder.com/steward/{{address}}",
   "attributes": [
     {
       "trait_type": "Membrane",
-      "value": "Solidarity Economy (3)"
+      "value": "Steward (3)"
     },
     {
       "trait_type": "Term Start",
@@ -121,10 +121,10 @@ private_key: ${AGENT_MINTER_KEY}  # Secure storage required
 
 ```json
 {
-  "name": "Re/acc Agent: {{agentName}}",
-  "description": "Registered AI agent in the Re/acc Commons.",
+  "name": "ETH Boulder Agent: {{agentName}}",
+  "description": "Registered AI agent in ETH Boulder.",
   "image": "ipfs://{{agentImageCID}}",
-  "external_url": "https://reacc.commons/agent/{{agentId}}",
+  "external_url": "https://ethboulder.com/agent/{{agentId}}",
   "attributes": [
     {
       "trait_type": "Agent Type",
@@ -210,7 +210,7 @@ async def mint_membership_nft(
         # Notify Discord
         await notify_commons_floor(
             f"🎉 **New Member**\n"
-            f"<@{get_discord_id(recipient)}> has joined the Inner Commons!\n"
+            f"<@{get_discord_id(recipient)}> has become a full Member of ETH Boulder!\n"
             f"Membership NFT: `{token_id}`"
         )
 

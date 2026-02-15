@@ -12,9 +12,9 @@ trigger:
   conditions:
     # GitHub PR to constitution repo
     - type: github_pr_created
-      repository: "reacc-commons-constitution"
+      repository: "ethboulder-constitution"
       base_branch: "main"
-      files_changed_pattern: "Re-acc Commons Constitution/**"
+      files_changed_pattern: "ETH Boulder Constitution/**"
 
     # Discord message referencing PR
     - type: message_created
@@ -322,7 +322,7 @@ async def merge_approved_amendment(
     pr_number = process.pr_number
 
     # Get PR
-    pr = await get_pr("reacc-commons-constitution", pr_number)
+    pr = await get_pr("ethboulder-constitution", pr_number)
 
     # Verify PR is still open
     if pr.state != "open":
@@ -331,7 +331,7 @@ async def merge_approved_amendment(
 
     # Add approval comment
     await add_pr_comment(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         pr_number=pr_number,
         body=(
             f"## ✅ Consent Approved\n\n"
@@ -346,8 +346,8 @@ async def merge_approved_amendment(
     )
 
     # Update labels
-    await remove_labels("reacc-commons-constitution", pr_number, ["consent-in-progress"])
-    await add_label("reacc-commons-constitution", pr_number, "ready-to-merge")
+    await remove_labels("ethboulder-constitution", pr_number, ["consent-in-progress"])
+    await add_label("ethboulder-constitution", pr_number, "ready-to-merge")
 
     # Notify Stewardship
     stewards = await get_steward_ids()
@@ -376,7 +376,7 @@ async def reject_amendment(consent_record: ConsentRecord):
 
     # Add rejection comment
     await add_pr_comment(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         pr_number=pr_number,
         body=(
             f"## ❌ Consent Not Reached\n\n"
@@ -388,8 +388,8 @@ async def reject_amendment(consent_record: ConsentRecord):
     )
 
     # Update labels
-    await remove_labels("reacc-commons-constitution", pr_number, ["consent-in-progress"])
-    await add_label("reacc-commons-constitution", pr_number, "consent-not-reached")
+    await remove_labels("ethboulder-constitution", pr_number, ["consent-in-progress"])
+    await add_label("ethboulder-constitution", pr_number, "consent-not-reached")
 ```
 
 ---
@@ -437,7 +437,7 @@ async def merge_amendment_autonomous(pr_number: int, consent_record: ConsentReco
 
     # Agent has merge rights on constitution repo
     await github_api.merge_pr(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         pr_number=pr_number,
         merge_method="squash",
         commit_message=(

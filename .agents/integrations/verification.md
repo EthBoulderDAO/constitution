@@ -1,6 +1,6 @@
 # Identity & Wallet Verification Integration
 
-Technical specification for verifying identity and wallet connections in the Re/acc Commons.
+Technical specification for verifying identity and wallet connections in ETH Boulder.
 
 ---
 
@@ -81,9 +81,9 @@ async def start_verification(ctx: Context):
 ```python
 def generate_signature_message(nonce: str, discord_id: str) -> str:
     """Generate message for wallet signature."""
-    return f"""Re/acc Commons Verification
+    return f"""ETH Boulder Verification
 
-I am verifying my wallet for the Re/acc Commons Discord.
+I am verifying my wallet for the ETH Boulder Discord.
 
 Discord User: {discord_id}
 Nonce: {nonce}

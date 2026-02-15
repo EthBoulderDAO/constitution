@@ -1,6 +1,6 @@
 # Skill: Verify Introduction
 
-Verify newcomer introductions in `#threshold` for completeness.
+Verify event attendee introductions in `#welcome` for completeness.
 
 ---
 
@@ -9,20 +9,20 @@ Verify newcomer introductions in `#threshold` for completeness.
 ```yaml
 trigger:
   type: message_created
-  channel: "#threshold"
+  channel: "#welcome"
   conditions:
     - message_length > 50  # Not too short
-    - author_role == "none" OR author_role == "@Newcomer"
+    - author_role == "none" OR author_role == "@Attendee"
 ```
 
 ---
 
 ## Required Permissions
 
-- Read messages in `#threshold`
-- Send messages in `#threshold`
+- Read messages in `#welcome`
+- Send messages in `#welcome`
 - Add reactions
-- Manage roles (assign @Newcomer)
+- Manage roles (assign @Attendee)
 
 ---
 
@@ -120,7 +120,7 @@ def validate_introduction(elements: dict, content: str) -> ValidationResult:
         missing.append("Where you are")
 
     if not elements["what_draws"]:
-        missing.append("What draws you to re/acc")
+        missing.append("What draws you to ETH Boulder")
     elif len(elements["what_draws"]) < 20:
         warnings.append("Consider sharing more about what resonates")
 
@@ -129,9 +129,9 @@ def validate_introduction(elements: dict, content: str) -> ValidationResult:
 
     # Check for signs of engagement with source material
     engagement_indicators = [
-        "manifesto", "essay", "constitution", "recursive",
-        "regenerative", "acceleration", "membrane", "commons",
-        "extraction", "capital", "federation", "consent"
+        "ethereum", "boulder", "constitution", "bioregion",
+        "regenerative", "localism", "membrane", "knowledge graph",
+        "scenius", "third space", "federation", "consent"
     ]
     has_engagement = any(
         indicator in content.lower()
@@ -139,7 +139,7 @@ def validate_introduction(elements: dict, content: str) -> ValidationResult:
     )
 
     if not has_engagement and not missing:
-        warnings.append("Consider referencing what resonated from the manifesto/constitution")
+        warnings.append("Consider referencing what resonates about ETH Boulder's vision")
 
     return ValidationResult(
         complete=len(missing) == 0,
@@ -161,10 +161,10 @@ async def respond_to_introduction(
     if validation.complete:
         # Success response
         embed = Embed(
-            title="✅ Welcome to the Re/acc Commons",
+            title="✅ Welcome to ETH Boulder",
             description=(
                 f"Your introduction has been verified. "
-                f"You are now a **Newcomer** in the commons."
+                f"You are now an **Attendee** in the network."
             ),
             color=0x00ff00
         )
@@ -173,8 +173,8 @@ async def respond_to_introduction(
             name="What's Next",
             value=(
                 "• Explore the public channels\n"
-                "• Join a Working Circle that interests you\n"
-                "• After 2+ weeks of participation, you may become a Participant"
+                "• Attend the annual ETH Boulder event\n"
+                "• Demonstrate participation to become a Member"
             ),
             inline=False
         )
@@ -189,10 +189,10 @@ async def respond_to_introduction(
         await message.reply(embed=embed)
         await message.add_reaction("✅")
 
-        # Assign @Newcomer role
+        # Assign @Attendee role
         await assign_role(
             message.author.id,
-            ROLE_NEWCOMER,
+            ROLE_ATTENDEE,
             "Introduction verified"
         )
 
@@ -226,7 +226,7 @@ async def respond_to_introduction(
             value=(
                 "**Who you are** — Name/handle, brief background\n"
                 "**Where you are** — Location, bioregion, or context\n"
-                "**What draws you** — Why re/acc resonates\n"
+                "**What draws you** — Why ETH Boulder resonates\n"
                 "**What you bring** — Skills, interests, contributions"
             ),
             inline=False
@@ -251,7 +251,7 @@ async def respond_to_introduction(
 ```yaml
 outputs:
   on_success:
-    - role_assigned: "@Newcomer"
+    - role_assigned: "@Attendee"
     - reaction_added: "✅"
     - embed_sent: welcome_message
     - log_entry: introduction_verified
@@ -281,7 +281,7 @@ Fully autonomous for verification.
 async def handle_error(error: Exception, context: dict):
     if isinstance(error, PermissionError):
         await notify_stewardship(
-            f"Cannot assign @Newcomer role to {context['author_id']}"
+            f"Cannot assign @Attendee role to {context['author_id']}"
         )
     else:
         await log_error(error, context)

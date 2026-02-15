@@ -30,11 +30,11 @@ trigger:
 
 ```yaml
 repositories:
-  - reacc-commons-constitution    # Governance docs
-  - reacc-essays                  # Canonical essays, manifestos
-  - reacc-research                # Research notes, analysis
-  - reacc-protocols               # Technical protocols
-  - reacc-media                   # Media assets metadata
+  - ethboulder-constitution    # Governance docs
+  - ethboulder-essays                  # Canonical essays, manifestos
+  - ethboulder-research                # Research notes, analysis
+  - ethboulder-protocols               # Technical protocols
+  - ethboulder-media                   # Media assets metadata
 ```
 
 ---
@@ -211,7 +211,7 @@ async def update_content_index(
     # Load current index
     try:
         index = json.loads(await read_file(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             path=index_path
         ))
     except FileNotFoundError:
@@ -246,7 +246,7 @@ async def update_content_index(
         index["graph"] = rebuild_graph(index["documents"])
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=index_path,
         content=json.dumps(index, indent=2),
         message=f"Index: {action} {metadata.path}"
@@ -303,7 +303,7 @@ async def update_type_indexes(metadata: ContentMetadata):
 
     try:
         current = await read_file(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             path=type_index_path
         )
     except FileNotFoundError:
@@ -330,7 +330,7 @@ Documents of type: **{metadata.type}**
         current = current.rstrip() + entry + "\n"
 
         await write_file(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             path=type_index_path,
             content=current,
             message=f"Index {metadata.type}: add {metadata.title}"

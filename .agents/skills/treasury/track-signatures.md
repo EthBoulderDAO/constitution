@@ -48,7 +48,7 @@ async def get_pending_transactions() -> List[PendingTx]:
     # Filter to transactions proposed by agent
     agent_proposed = [
         tx for tx in pending
-        if tx.origin and "Re/acc Commons Consent" in tx.origin
+        if tx.origin and "ETH Boulder Consent" in tx.origin
     ]
 
     return [
@@ -192,7 +192,7 @@ async def update_transaction_record(status: SignatureStatus):
 
     try:
         current = await read_file(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             path=record_path
         )
 
@@ -215,7 +215,7 @@ async def update_transaction_record(status: SignatureStatus):
         )
 
         await write_file(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             path=record_path,
             content=updated,
             message=f"Update tx status: {status.current_count}/{status.threshold} signatures"

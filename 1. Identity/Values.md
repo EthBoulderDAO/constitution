@@ -1,21 +1,34 @@
 **Core Principles**
 *These are not aspirational. They are operational commitments. Every participant upholds them. Violation triggers accountability.*
 
-## Scenius Cultivation
+## Institutional Localism
 
-We nurture the conditions for collective genius to emerge. Boulder's scenius is not individual brilliance but the intelligence that arises from the right people in the right place, cross-pollinating ideas through proximity and serendipity. We protect and extend this ecology.
+Grounding digital sovereignty in physical, legal cooperative structures. We do not build abstractions — we build the RegenHub LCA, a Colorado cooperative that can sign contracts, hold property, and interface with existing institutions. Digital coordination without legal grounding is vapor.
 
-## Bioregional Solidarity
+## Collective Intelligence
 
-Our work serves this place — the Front Range, its watersheds, its communities, its future. Global coordination capacity is valuable only insofar as it strengthens local resilience and regeneration. We are rooted, not abstracted.
+Prioritizing AI for sensemaking and group problem-solving over simple automation. Agents don't replace humans — they augment collective IQ. The knowledge graph is infrastructure for collective intelligence, not just data storage. We are an Augmented Community Pilot.
+
+## Regenerative d/acc
+
+Using defensive acceleration to protect and grow the commons. This means:
+- Agroforestry, biodiversity, and ecological public goods
+- Infrastructure that resists extraction
+- Technology that strengthens rather than atomizes community
+- Acceleration in service of life, not capital
+
+## Controlled Chaos
+
+Maintaining a high-signal, low-friction "scenius" that allows for organic community shaping. We are not bureaucrats. The best ideas emerge from serendipitous collision in third spaces. We create conditions for emergence while maintaining enough structure for coordination.
+
+---
+
+**Secondary Values**
+*Extensions of core principles into practice.*
 
 ## Quadratic Fairness
 
 Voice should scale with genuine commitment, not wealth or position. Quadratic mechanisms — for voting, for funding, for session scheduling — prevent plutocratic capture while honoring differential engagement. Many small voices outweigh few large ones.
-
-## Third Space Culture
-
-The best ideas emerge between — between work and home, between disciplines, between strangers who become collaborators. We invest in the physical and digital third spaces where serendipity lives.
 
 ## Federation Over Consolidation
 
@@ -27,11 +40,11 @@ Knowledge is free. Sharing it costs nothing and creates compounding value. We co
 
 ## Leaderful, Not Leaderless
 
-Authority flows by context and competence, not position. Multiple centers of leadership coexist. Different people — and agents — lead in different domains according to demonstrated capacity. We reject both domination culture and performative diminishment.
+Authority flows by context and competence, not position. Multiple centers of leadership coexist. Different people — and agents — lead in different domains according to demonstrated capacity.
 
 ## Consent, Not Consensus
 
-We coordinate through alignment beyond agreement. Consent means no one with relevant stake has a paramount objection. It does not require enthusiasm. This enables functional pluralism — multiple strategic approaches coexisting, sharing learnings, resilient through diversity.
+We coordinate through alignment beyond agreement. Consent means no one with relevant stake has a paramount objection. It does not require enthusiasm. This enables functional pluralism.
 
 ---
 

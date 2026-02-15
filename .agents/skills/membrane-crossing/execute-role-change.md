@@ -10,7 +10,7 @@ Execute role transitions after consent is complete, including Discord role assig
 trigger:
   type: consent_complete
   conditions:
-    - consent_type in ["member_nomination", "steward_selection", "participant_verification"]
+    - consent_type in ["member_nomination", "steward_selection", "attendee_verification"]
     - status == "approved"
     - window_complete == true
     - no_unresolved_objections == true
@@ -33,7 +33,7 @@ trigger:
 ```yaml
 inputs:
   consent_process_id: string
-  role_type: "participant" | "member" | "steward"
+  role_type: "attendee" | "member" | "steward"
   subject_id: string  # Discord ID of person changing role
   subject_wallet: string  # Wallet address (if known)
   consent_record: ConsentRecord
@@ -88,8 +88,8 @@ async def execute_role_change(
 ) -> RoleChangeResult:
     """Execute the appropriate role change."""
 
-    if role_type == "participant":
-        return await execute_participant_promotion(
+    if role_type == "attendee":
+        return await execute_attendee_promotion(
             subject_id, subject_wallet, consent_record
         )
     elif role_type == "member":
@@ -104,15 +104,15 @@ async def execute_role_change(
         raise ValueError(f"Unknown role type: {role_type}")
 ```
 
-### Participant Promotion
+### Attendee Promotion
 
 ```python
-async def execute_participant_promotion(
+async def execute_attendee_promotion(
     subject_id: str,
     wallet: Optional[str],
     consent_record: ConsentRecord
 ) -> RoleChangeResult:
-    """Promote Newcomer to Participant."""
+    """Promote newcomer to Attendee after event attendance."""
 
     results = {
         "discord_role": False,
@@ -121,16 +121,15 @@ async def execute_participant_promotion(
 
     # 1. Assign Discord role
     try:
-        await assign_discord_role(subject_id, ROLE_PARTICIPANT)
-        await remove_discord_role(subject_id, ROLE_NEWCOMER)
+        await assign_discord_role(subject_id, ROLE_ATTENDEE)
         results["discord_role"] = True
     except Exception as e:
         await log_error("discord_role_failed", subject_id, e)
 
-    # 2. Mint Participation NFT (if wallet connected)
+    # 2. Mint Attendee NFT (if wallet connected)
     if wallet:
         try:
-            mint_result = await mint_participation_nft(
+            mint_result = await mint_attendee_nft(
                 recipient=wallet,
                 consent_reference=consent_record.id
             )
@@ -140,15 +139,15 @@ async def execute_participant_promotion(
             await log_error("nft_mint_failed", wallet, e)
 
     # 3. Notify
-    await post_to_commons_floor(
-        f"🌱 **New Participant**\n"
-        f"<@{subject_id}> has joined the Public Commons!\n\n"
-        f"Welcome to active participation in the re/acc movement."
+    await post_to_member_floor(
+        f"🌱 **New Attendee**\n"
+        f"<@{subject_id}> has attended ETH Boulder!\n\n"
+        f"Welcome to the network. Demonstrate participation to become a Member."
     )
 
     return RoleChangeResult(
         success=results["discord_role"],
-        role="participant",
+        role="attendee",
         results=results
     )
 ```
@@ -161,7 +160,7 @@ async def execute_member_promotion(
     wallet: Optional[str],
     consent_record: ConsentRecord
 ) -> RoleChangeResult:
-    """Promote Participant to Member."""
+    """Promote Attendee to Member."""
 
     results = {
         "discord_role": False,
@@ -209,9 +208,9 @@ async def execute_member_promotion(
             await log_error("multisig_access_failed", wallet, e)
 
     # 4. Post announcement
-    await post_to_commons_floor(
+    await post_to_member_floor(
         f"🎉 **New Member**\n"
-        f"<@{subject_id}> has joined the Inner Commons with full governance rights!\n\n"
+        f"<@{subject_id}> has become a full Member with governance rights!\n\n"
         f"Consent record: `{consent_record.id}`"
     )
 
@@ -219,11 +218,11 @@ async def execute_member_promotion(
     try:
         await send_dm(
             subject_id,
-            f"**Welcome to the Inner Commons**\n\n"
-            f"You are now a Member of the Re/acc Commons with full governance rights.\n\n"
+            f"**Welcome to ETH Boulder Membership**\n\n"
+            f"You are now a Member of ETH Boulder with full governance rights.\n\n"
             f"Please review your Member Agreement:\n"
-            f"https://github.com/{GITHUB_ORG}/reacc-commons-constitution/blob/main/"
-            f"Re-acc%20Commons%20Constitution/4.%20Agreements/Member%20Agreement.md\n\n"
+            f"https://github.com/{GITHUB_ORG}/ethboulder-constitution/blob/main/"
+            f"ETH%20Boulder%20Constitution/4.%20Agreements/Member%20Agreement.md\n\n"
             f"By continuing to participate, you affirm this agreement."
         )
     except Exception as e:
@@ -301,7 +300,7 @@ async def execute_steward_promotion(
             )
 
     # 4. Post announcement
-    await post_to_commons_floor(
+    await post_to_member_floor(
         f"🌟 **New Steward**\n"
         f"<@{subject_id}> has been selected for Stewardship!\n\n"
         f"Term: Until <t:{int(term_end.timestamp())}:D>\n"

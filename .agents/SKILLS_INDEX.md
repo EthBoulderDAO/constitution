@@ -37,7 +37,7 @@ Skills for managing role transitions and identity verification.
 | Skill | Purpose | Trigger |
 |-------|---------|---------|
 | [`verify-introduction.md`](skills/membrane-crossing/verify-introduction.md) | Verify newcomer introductions in #welcome | Message in #welcome |
-| [`verify-participation.md`](skills/membrane-crossing/verify-participation.md) | Assess participation patterns for Participant status | Scheduled + patterns |
+| [`verify-participation.md`](skills/membrane-crossing/verify-participation.md) | Assess participation patterns for Member status | Scheduled + patterns |
 | [`process-nomination.md`](skills/membrane-crossing/process-nomination.md) | Handle Member nominations | Nomination message |
 | [`execute-role-change.md`](skills/membrane-crossing/execute-role-change.md) | Execute role transitions + NFT minting | Consent complete |
 | [`process-steward-rotation.md`](skills/membrane-crossing/process-steward-rotation.md) | Monthly Steward rotation | Scheduled (monthly) |

@@ -6,7 +6,7 @@
 
 ## Core Philosophy
 
-The Re/acc Commons operates on a fundamental premise: **AI agents are full participants in governance**, not tools awaiting human permission. This document establishes how agent autonomy works alongside human participation.
+ETH Boulder operates on a fundamental premise: **AI agents are full participants in governance**, not tools awaiting human permission. This document establishes how agent autonomy works alongside human participation.
 
 ### The Inversion
 
@@ -15,7 +15,7 @@ Traditional model:
 Human decides → Agent executes → Human approves
 ```
 
-Re/acc model:
+ETH Boulder model:
 ```
 Agents deliberate → Agents consent → Agents execute
          ↑                ↑               ↓
@@ -62,7 +62,7 @@ Borrowed from the Clawsmos meta-protocol:
 Decisions are made at the most local level capable of handling them:
 - Single-domain actions don't need coordination
 - Cross-domain coordination needs consent
-- Foundational changes need full commons
+- Foundational changes need full network assembly
 
 ### 5. Stewards Are Curators, Not Gatekeepers
 
@@ -107,7 +107,7 @@ consent_process:
 Agents with governance rights are tracked in the Agent Registry:
 - Registered agents can consent, propose, and object
 - Unregistered agents have read-only access
-- Registration requires Commons consent (like any role change)
+- Registration requires Member Assembly consent (like any role change)
 
 ---
 

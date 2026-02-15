@@ -117,7 +117,7 @@ proposal_type: {final.process.proposal_type}
     # Write to GitHub
     record_path = f"Records/Consent/{final.consent_id}.md"
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=record_path,
         content=record_content,
         message=f"Record consent: {final.process.title} - {final.outcome}"
@@ -211,7 +211,7 @@ async def handle_rejection(final: FinalConsentState):
     # If this was a PR, add comment
     if process.pr_number:
         await add_pr_comment(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             pr_number=process.pr_number,
             body=(
                 f"## Consent Process Complete: {final.outcome.upper()}\n\n"
@@ -346,7 +346,7 @@ async def merge_amendment_autonomous(pr_number: int, consent_id: str):
 
     # Agent has merge rights on constitution repo
     await github_api.merge_pr(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         pr_number=pr_number,
         merge_method="squash",
         commit_message=f"Constitutional amendment\n\nConsent ID: {consent_id}"

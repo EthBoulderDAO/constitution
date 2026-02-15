@@ -1,6 +1,6 @@
 # GitHub Integration Specification
 
-Technical specification for agent operations on the Re/acc Commons GitHub organization.
+Technical specification for agent operations on the ETH Boulder GitHub organization.
 
 ---
 
@@ -22,19 +22,19 @@ required_scopes:
 ## Repository Structure
 
 ```yaml
-organization: ${REACC_GITHUB_ORG}
+organization: ${ETHBOULDER_GITHUB_ORG}
 
 repositories:
   constitution:
-    name: "reacc-commons-constitution"
+    name: "ethboulder-constitution"
     purpose: "Constitutional record and governance documents"
     path_structure:
-      - "Re-acc Commons Constitution/"  # Main constitution
+      - "ETH Boulder Constitution/"  # Main constitution
       - "Records/"                       # Amendment, accountability, treasury records
       - "logs/agents/"                   # Agent action logs
 
   knowledge_commons:
-    name: "reacc-knowledge-commons"
+    name: "ethboulder-knowledge-commons"
     purpose: "Patterns, protocols, and shared documentation"
     path_structure:
       - "patterns/"
@@ -43,11 +43,11 @@ repositories:
       - "learnings/"
 
   agent_infrastructure:
-    name: "reacc-agent-infra"
+    name: "ethboulder-agent-infra"
     purpose: "Agent code, configurations, and coordination"
 
   federation:
-    name: "reacc-federation"
+    name: "ethboulder-federation"
     purpose: "Federation agreements and schema bridges"
 ```
 
@@ -266,7 +266,7 @@ async def write_agent_log(action: AgentAction) -> str:
 
     # Read existing log
     try:
-        existing = await read_file("reacc-commons-constitution", log_path)
+        existing = await read_file("ethboulder-constitution", log_path)
         content = existing.content + "\n" + json.dumps(action.to_dict())
         sha = existing.sha
     except NotFoundError:
@@ -274,7 +274,7 @@ async def write_agent_log(action: AgentAction) -> str:
         sha = None
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=log_path,
         content=content,
         message=f"Log: {action.action_type}",
@@ -340,7 +340,7 @@ pr_number: {pr.number}
 """
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=record_path,
         content=content,
         message=f"Record amendment: {amendment.title}"

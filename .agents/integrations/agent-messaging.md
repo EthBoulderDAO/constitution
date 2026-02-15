@@ -7,7 +7,7 @@ Standardized messaging protocol for agent-to-agent and agent-to-human communicat
 ## Purpose
 
 Enable reliable, traceable communication between:
-- Local agents within the Re/acc Commons
+- Local agents within the ETH Boulder
 - Federation agents from partner networks
 - Agents and human members
 - Agents and external services
@@ -27,7 +27,7 @@ message:
   sender:
     type: "agent" | "human" | "system"
     id: string        # Agent ID or Discord ID
-    network: string   # "reacc-commons" or federation network
+    network: string   # "ethboulder" or federation network
 
   recipient:
     type: "agent" | "human" | "channel" | "broadcast"
@@ -220,12 +220,12 @@ class DiscordMessageBridge:
             sender={
                 "type": "human",
                 "id": str(discord_msg.author.id),
-                "network": "reacc-commons"
+                "network": "ethboulder"
             },
             recipient={
                 "type": "agent",
                 "id": determine_target_agent(discord_msg),
-                "network": "reacc-commons"
+                "network": "ethboulder"
             },
             content={
                 "type": "human_input",
@@ -260,7 +260,7 @@ class FederationMessageGateway:
 
         # Prepare federation envelope
         envelope = FederationEnvelope(
-            source_network="reacc-commons",
+            source_network="ethboulder",
             target_network=target_network,
             message=message,
             timestamp=datetime.now().isoformat()
@@ -493,8 +493,8 @@ alerts:
 ```python
 # Agent A triggers consent tracking
 await message_queue.publish(Message(
-    sender={"type": "agent", "id": "governance-agent", "network": "reacc-commons"},
-    recipient={"type": "agent", "id": "consent-tracker", "network": "reacc-commons"},
+    sender={"type": "agent", "id": "governance-agent", "network": "ethboulder"},
+    recipient={"type": "agent", "id": "consent-tracker", "network": "ethboulder"},
     content={
         "type": "skill_invocation",
         "payload": {
@@ -513,8 +513,8 @@ await message_queue.publish(Message(
 ```python
 # Agent posts proposal for consent (humans and agents participate)
 await message_queue.publish(Message(
-    sender={"type": "agent", "id": "treasury-agent", "network": "reacc-commons"},
-    recipient={"type": "channel", "id": PROPOSALS_CHANNEL_ID, "network": "reacc-commons"},
+    sender={"type": "agent", "id": "treasury-agent", "network": "ethboulder"},
+    recipient={"type": "channel", "id": PROPOSALS_CHANNEL_ID, "network": "ethboulder"},
     content={
         "type": "consent_request",
         "payload": {

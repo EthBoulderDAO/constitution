@@ -1,6 +1,6 @@
 # Discord Integration Specification
 
-Technical specification for agent operations on the Re/acc Commons Discord server.
+Technical specification for agent operations on the ETH Boulder Discord server.
 
 ---
 
@@ -25,21 +25,21 @@ required_intents:
 ### Guild Configuration
 
 ```yaml
-guild_id: ${REACC_DISCORD_GUILD_ID}
-guild_name: "Re/acc Commons"
+guild_id: ${ETHBOULDER_DISCORD_GUILD_ID}
+guild_name: "ETH Boulder"
 ```
 
 ### Channel IDs
 
 ```yaml
 channels:
-  threshold: ${CHANNEL_THRESHOLD}
-  commons_floor: ${CHANNEL_COMMONS_FLOOR}
-  knowledge_commons: ${CHANNEL_KNOWLEDGE_COMMONS}
+  welcome: ${CHANNEL_WELCOME}
+  member_floor: ${CHANNEL_MEMBER_FLOOR}
+  knowledge_graph: ${CHANNEL_KNOWLEDGE_GRAPH}
   proposals: ${CHANNEL_PROPOSALS}
   accountability: ${CHANNEL_ACCOUNTABILITY}
-  agent_commons: ${CHANNEL_AGENT_COMMONS}
-  stewardship: ${CHANNEL_STEWARDSHIP}
+  agent_ops: ${CHANNEL_AGENT_OPS}
+  steward_council: ${CHANNEL_STEWARD_COUNCIL}
   treasury: ${CHANNEL_TREASURY}
   multisig_ops: ${CHANNEL_MULTISIG_OPS}
 ```
@@ -48,8 +48,7 @@ channels:
 
 ```yaml
 roles:
-  newcomer: ${ROLE_NEWCOMER}
-  participant: ${ROLE_PARTICIPANT}
+  attendee: ${ROLE_ATTENDEE}
   member: ${ROLE_MEMBER}
   steward: ${ROLE_STEWARD}
   agent: ${ROLE_AGENT}
@@ -120,7 +119,7 @@ async def remove_role(user_id: str, role_id: str, reason: str):
 ```python
 def parse_introduction(message: Message) -> IntroductionData:
     """
-    Parse introduction in #threshold for required elements.
+    Parse introduction in #welcome for required elements.
     Returns structured data or validation errors.
     """
     content = message.content.lower()
@@ -232,7 +231,7 @@ def verification_embed(result: VerificationResult) -> Embed:
 
     if result.passed:
         embed.description = "✅ Introduction verified. Welcome to the commons!"
-        embed.add_field(name="Next Steps", value="You now have @Newcomer role...")
+        embed.add_field(name="Next Steps", value="You now have @Attendee role...")
     else:
         embed.description = "❌ Introduction incomplete."
         embed.add_field(

@@ -172,7 +172,7 @@ async def submit_to_safe(
         nonce=tx.nonce,
         signature=agent_signature,
         sender=AGENT_WALLET_ADDRESS,
-        origin=f"Re/acc Commons Consent: {details.consent_id}"
+        origin=f"ETH Boulder Consent: {details.consent_id}"
     )
 
     return SubmissionResult(
@@ -235,7 +235,7 @@ Safe TX Hash: `{result.safe_tx_hash}`
 """
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=f"Records/Treasury/{generate_tx_id()}.md",
         content=record_content,
         message=f"Record treasury tx: {details.purpose[:50]}"

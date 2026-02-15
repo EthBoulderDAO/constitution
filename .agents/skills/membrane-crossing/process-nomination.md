@@ -1,6 +1,6 @@
 # Skill: Process Member Nomination
 
-Process nomination of Participant for Member status through consent workflow.
+Process nomination of Attendee for Member status through consent workflow.
 
 ---
 
@@ -59,16 +59,16 @@ async def validate_nomination(
     if ROLE_MEMBER not in nominator_roles:
         errors.append("Nominator must be a Member")
 
-    # Check nominee is Participant
+    # Check nominee is Attendee
     nominee_roles = await get_user_roles(nominee_id)
-    if ROLE_PARTICIPANT not in nominee_roles:
-        errors.append("Nominee must be a Participant")
+    if ROLE_ATTENDEE not in nominee_roles:
+        errors.append("Nominee must be an Attendee")
 
     if ROLE_MEMBER in nominee_roles:
         errors.append("Nominee is already a Member")
 
     # Check nominee has been flagged as ready
-    readiness = await get_participant_readiness(nominee_id)
+    readiness = await get_attendee_readiness(nominee_id)
     if not readiness or not readiness.ready:
         warnings.append(
             "Nominee has not been flagged as ready by pattern recognition. "

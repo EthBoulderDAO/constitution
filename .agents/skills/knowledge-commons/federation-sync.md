@@ -66,7 +66,7 @@ async def load_active_federations() -> List[FederationAgreement]:
     agreements_path = "5. Federation/Agreements/"
 
     agreement_files = await list_files(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=agreements_path,
         pattern="*.md"
     )
@@ -75,7 +75,7 @@ async def load_active_federations() -> List[FederationAgreement]:
 
     for file in agreement_files:
         content = await read_file(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             path=file
         )
 
@@ -118,7 +118,7 @@ async def authenticate_with_partner(
     response = await http_post(
         f"{agreement.partner_endpoint}/federation/authenticate",
         json={
-            "commons_id": "reacc-commons",
+            "commons_id": "ethboulder",
             "agent_id": AGENT_ID,
             "challenge": challenge,
             "signature": signature,
@@ -272,7 +272,7 @@ async def sync_cross_references(
 
     # Get partner's references to us
     response = await http_get(
-        f"{agreement.partner_endpoint}/federation/references/reacc-commons",
+        f"{agreement.partner_endpoint}/federation/references/ethboulder",
         headers={"Authorization": f"Bearer {session.session_token}"}
     )
     partner_refs = response.json()["references"]
@@ -291,7 +291,7 @@ async def sync_cross_references(
 
     # Push our references
     await http_post(
-        f"{agreement.partner_endpoint}/federation/references/reacc-commons",
+        f"{agreement.partner_endpoint}/federation/references/ethboulder",
         headers={"Authorization": f"Bearer {session.session_token}"},
         json={"references": sign_references(our_refs)}
     )
@@ -308,7 +308,7 @@ async def record_sync_result(
 
     # Update agreement with last_sync
     await update_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=f"5. Federation/Agreements/{agreement.id}.md",
         updates={"last_sync": datetime.now().isoformat()}
     )
@@ -347,7 +347,7 @@ timestamp: {datetime.now().isoformat()}
 """
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=f"Records/Federation/{agreement.id}-{datetime.now().strftime('%Y%m%d')}.md",
         content=log_entry,
         message=f"Federation sync: {agreement.partner}"

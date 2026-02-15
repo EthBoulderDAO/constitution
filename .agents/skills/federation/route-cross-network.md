@@ -16,7 +16,7 @@ trigger:
 
     - type: agent_message
       source_type: "federation_agent"
-      destination: "reacc-commons"
+      destination: "ethboulder"
 
     - type: webhook
       source: federation_partner
@@ -313,7 +313,7 @@ async def send_cross_network_request(
         body=body,
         headers={
             "X-Federation-Token": our_agent.token,
-            "X-Source-Network": "reacc-commons"
+            "X-Source-Network": "ethboulder"
         }
     )
 

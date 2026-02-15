@@ -1,6 +1,6 @@
 # Skill: Execute Accountability Action
 
-Execute approved accountability actions after Commons consent.
+Execute approved accountability actions after Network consent.
 
 ---
 
@@ -45,7 +45,7 @@ action_types:
     reversible: true
 
   suspension:
-    description: "Temporary removal from Commons"
+    description: "Temporary removal from Network"
     discord_action: remove_all_roles
     record_action: log_suspension
     nft_action: pause
@@ -53,7 +53,7 @@ action_types:
     reversible: true
 
   removal:
-    description: "Permanent removal from Commons"
+    description: "Permanent removal from Network"
     discord_action: remove_and_ban
     record_action: log_removal
     nft_action: revoke
@@ -167,7 +167,7 @@ async def execute_warning(
     await send_dm(
         action.subject_id,
         f"**Formal Warning**\n\n"
-        f"The Commons has issued a formal warning based on the accountability review.\n\n"
+        f"The Network has issued a formal warning based on the accountability review.\n\n"
         f"**Details:** {action.raw_action}\n\n"
         f"This warning is on your record. Future concerns may be viewed in this context.\n\n"
         f"If you'd like to discuss this or appeal, please reach out to Stewardship."
@@ -209,7 +209,7 @@ async def execute_probation(
     await send_dm(
         action.subject_id,
         f"**Probation Period**\n\n"
-        f"The Commons has placed you on probation for {duration} days.\n\n"
+        f"The Network has placed you on probation for {duration} days.\n\n"
         f"**Period:** Until <t:{int(end_date.timestamp())}:D>\n"
         f"**Reason:** {action.raw_action}\n\n"
         f"During probation, you retain access but:\n"
@@ -246,7 +246,7 @@ async def execute_suspension(
     current_roles = await get_user_roles(action.subject_id)
     await store_suspended_roles(action.subject_id, current_roles)
 
-    # Remove all Commons roles
+    # Remove all Network roles
     for role in current_roles:
         if role in COMMONS_ROLES:
             await remove_discord_role(action.subject_id, role)
@@ -280,14 +280,14 @@ async def execute_suspension(
     # Notify subject
     await send_dm(
         action.subject_id,
-        f"**Suspension from Commons**\n\n"
-        f"The Commons has suspended your participation for {duration} days.\n\n"
+        f"**Suspension from Network**\n\n"
+        f"The Network has suspended your participation for {duration} days.\n\n"
         f"**Period:** Until <t:{int(end_date.timestamp())}:D>\n"
         f"**Reason:** {action.raw_action}\n\n"
         f"During suspension:\n"
         f"- Your roles have been removed\n"
         f"- Your NFT privileges are paused\n"
-        f"- You cannot participate in Commons activities\n\n"
+        f"- You cannot participate in Network activities\n\n"
         f"At the end of this period, your roles will be restored.\n\n"
         f"If you wish to appeal, you may contact Stewardship."
     )
@@ -306,7 +306,7 @@ async def execute_suspension(
     # Announce (anonymized if configured)
     await post_to_channel(
         COMMONS_FLOOR_CHANNEL_ID,
-        f"📢 A member has been suspended from the Commons for {duration} days "
+        f"📢 A member has been suspended from the Network for {duration} days "
         f"following an accountability process.\n\n"
         f"Consent ID: `{action.consent_id}`"
     )
@@ -318,7 +318,7 @@ async def execute_removal(
     action: ActionDetails,
     subject: User
 ) -> dict:
-    """Execute permanent removal from Commons."""
+    """Execute permanent removal from Network."""
 
     results = {}
 
@@ -369,19 +369,19 @@ async def execute_removal(
     # Notify subject
     await send_dm(
         action.subject_id,
-        f"**Removal from Commons**\n\n"
-        f"The Commons has decided to remove your participation.\n\n"
+        f"**Removal from Network**\n\n"
+        f"The Network has decided to remove your participation.\n\n"
         f"**Reason:** {action.raw_action}\n\n"
         f"Your roles and NFT privileges have been revoked.\n\n"
         f"This decision was made through the accountability process with "
-        f"full Commons consent."
+        f"full Network consent."
     )
     results["notifications"] = True
 
     # Public announcement
     await post_to_channel(
         COMMONS_FLOOR_CHANNEL_ID,
-        f"📢 A member has been removed from the Commons following an "
+        f"📢 A member has been removed from the Network following an "
         f"accountability process.\n\n"
         f"Consent ID: `{action.consent_id}`"
     )
@@ -437,7 +437,7 @@ executed_at: {datetime.now().isoformat()}
 """
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=f"Records/Accountability/{action.consent_id}.md",
         content=record_content,
         message=f"Record accountability action: {action.type}"
@@ -500,8 +500,8 @@ async def restore_from_suspension(data: dict):
     await send_dm(
         subject_id,
         f"**Suspension Period Complete**\n\n"
-        f"Your suspension has ended and your Commons privileges have been restored.\n\n"
-        f"Welcome back. We hope you'll continue to thrive in the Commons."
+        f"Your suspension has ended and your Network privileges have been restored.\n\n"
+        f"Welcome back. We hope you'll continue to thrive in the Network."
     )
 
     await log_action("suspension_restored", subject_id)
@@ -551,7 +551,7 @@ outputs:
 **All actions execute immediately after consent is complete.**
 
 Accountability actions are executed autonomously because:
-1. Full Commons consent has been obtained (foundational decision)
+1. Full Network consent has been obtained (foundational decision)
 2. The consent process included all participants (humans and agents)
 3. No paramount objections remain unresolved
 

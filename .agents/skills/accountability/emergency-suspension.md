@@ -182,7 +182,7 @@ async def notify_emergency_suspension(
     await send_dm(
         validation.subject_id,
         f"**Emergency Suspension Notice**\n\n"
-        f"You have been temporarily suspended from the Re/acc Commons "
+        f"You have been temporarily suspended from the ETH Boulder "
         f"due to a reported emergency.\n\n"
         f"**Reason:** {validation.justification}\n"
         f"**Invoked by:** A Steward\n"
@@ -370,7 +370,7 @@ status: {suspension.status}
 """
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=f"Records/Accountability/Emergency/{suspension.id}.md",
         content=record_content,
         message=f"Record emergency suspension: {suspension.id}"

@@ -1,6 +1,6 @@
 # Skill: Verify Participation Patterns
 
-Continuously monitor participation patterns to identify Newcomers ready for Participant status.
+Continuously monitor participation patterns to identify Attendees ready for Member status.
 
 ---
 
@@ -14,7 +14,7 @@ trigger:
 
   # Also triggered by:
   alternative_triggers:
-    - newcomer_activity_spike  # When a Newcomer shows high engagement
+    - attendee_activity_spike  # When an Attendee shows high engagement
     - manual_request  # When requested by Steward
 ```
 
@@ -34,7 +34,7 @@ trigger:
 
 ```yaml
 inputs:
-  newcomer_ids: list[string]  # Discord IDs to evaluate
+  attendee_ids: list[string]  # Discord IDs to evaluate
   evaluation_period_days: int  # Default: 14
   channel_ids: list[string]  # Channels to analyze
 ```
@@ -249,15 +249,15 @@ async def process_evaluation(
     """Process evaluation result."""
 
     if evaluation.ready:
-        # Mark as ready for Participant
-        await store_participant_readiness(user_id, evaluation)
+        # Mark as ready for Member
+        await store_attendee_readiness(user_id, evaluation)
 
-        # Notify in agent commons (not to user directly)
-        await post_to_agent_commons(
+        # Notify in agent ops (not to user directly)
+        await post_to_agent_ops(
             f"📊 **Participation Pattern Flagged**\n"
             f"User: <@{user_id}>\n"
             f"Score: {evaluation.score}/{evaluation.threshold}\n"
-            f"Status: Ready for Participant nomination\n\n"
+            f"Status: Ready for Member nomination\n\n"
             f"*Any Member may now nominate this user.*"
         )
 
@@ -289,9 +289,9 @@ async def process_evaluation(
 ```yaml
 outputs:
   on_ready:
-    - store: participant_readiness record
-    - post: notification to #agent-commons
-    - log: participant_ready_flagged
+    - store: attendee_readiness record
+    - post: notification to #agent-ops
+    - log: attendee_ready_flagged
 
   on_concerns:
     - log: participation_concerns_noted
@@ -308,12 +308,12 @@ Fully autonomous for pattern recognition and flagging.
 
 **Agent actions:**
 - Continuously monitors participation patterns
-- Flags readiness in #agent-commons for any Member to act on
+- Flags readiness in #agent-ops for any Member to act on
 - Logs concerns for Steward visibility
 - Provides data to support nomination decisions
 
 **Design constraints:**
-- Does not automatically promote to Participant (requires nomination)
+- Does not automatically promote to Member (requires nomination)
 - Does not notify users directly of their "score" (internal metrics)
 - Does not block or discourage based on patterns
 

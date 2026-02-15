@@ -151,7 +151,7 @@ async def update_treasury_ledger(
 
     try:
         current = await read_file(
-            repo="reacc-commons-constitution",
+            repo="ethboulder-constitution",
             path=month_file
         )
         updated = current + "\n" + ledger_entry
@@ -168,7 +168,7 @@ month: {execution.timestamp.strftime('%Y-%m')}
 """
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=month_file,
         content=updated,
         message=f"Ledger: {consent.transaction_details.purpose[:30]}"
@@ -195,7 +195,7 @@ async def finalize_transaction_record(
     record_path = f"Records/Treasury/{execution.consent_id}-tx.md"
 
     current = await read_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=record_path
     )
 
@@ -226,7 +226,7 @@ async def finalize_transaction_record(
     )
 
     await write_file(
-        repo="reacc-commons-constitution",
+        repo="ethboulder-constitution",
         path=record_path,
         content=updated,
         message=f"Transaction executed: {execution.tx_hash[:10]}"

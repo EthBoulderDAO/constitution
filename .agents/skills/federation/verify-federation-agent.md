@@ -1,6 +1,6 @@
 # Skill: Verify Federation Agent
 
-Verify agents from federated networks seeking to operate within the Re/acc Commons.
+Verify agents from federated networks seeking to operate within the ETH Boulder.
 
 ---
 

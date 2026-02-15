@@ -1,6 +1,6 @@
 # Gnosis Safe Integration Specification
 
-Technical specification for agent operations on the Re/acc Commons treasury multi-signature wallet.
+Technical specification for agent operations on the ETH Boulder treasury multi-signature wallet.
 
 ---
 
@@ -20,7 +20,7 @@ auth_type: api_key + signed_messages
 ## Safe Configuration
 
 ```yaml
-safe_address: ${REACC_TREASURY_SAFE_ADDRESS}
+safe_address: ${ETHBOULDER_TREASURY_SAFE_ADDRESS}
 chain_id: 8453  # Base mainnet
 
 threshold: 2 of 4
@@ -165,8 +165,8 @@ async def propose_and_sign_transaction(
             "contractTransactionHash": safe_tx_hash,
             "sender": AGENT_ADDRESS,  # Agent's address
             "origin": json.dumps({
-                "name": "Re/acc Commons Agent",
-                "url": "https://reacc.commons"
+                "name": "ETH Boulder Agent",
+                "url": "https://ethboulder.com"
             })
         }
     )
