@@ -33,7 +33,7 @@ Session scheduling follows the event cycle:
 
 ### Who Can Propose
 
-- [[Participant|Participants]] and above can propose sessions
+- [[Attendee|Attendees]] and above can propose sessions
 - Proposals must identify a facilitator (can be proposer or invited)
 - Multiple proposals per person allowed
 
@@ -119,9 +119,9 @@ After voting closes:
 | 1 | Calculate QV scores | Agent |
 | 2 | Rank proposals by score | Agent |
 | 3 | Generate initial schedule | Agent |
-| 4 | Apply logistical constraints | Event Circle |
-| 5 | Resolve conflicts | Event Circle |
-| 6 | Finalize schedule | Event Circle |
+| 4 | Apply logistical constraints | Event Lead |
+| 5 | Resolve conflicts | Event Lead |
+| 6 | Finalize schedule | Event Lead |
 
 ### QV Score Calculation
 
@@ -131,7 +131,7 @@ Session Score = Σ √(credits_allocated_by_each_voter)
 
 ### Logistical Constraints
 
-Event Circle applies constraints:
+Event Lead applies constraints:
 - Venue capacity limits
 - Equipment availability
 - Facilitator conflicts (can't lead overlapping sessions)
@@ -142,7 +142,7 @@ Event Circle applies constraints:
 
 When constraints prevent scheduling:
 1. Higher-scored session gets preference
-2. If tied, Event Circle discretion
+2. If tied, Event Lead discretion
 3. Lower-scored sessions offered alternate slots
 4. Sessions that can't be scheduled notified
 
@@ -189,5 +189,5 @@ Sessions are represented in the graph:
 ## Related Protocols
 
 - [[3. Protocols/Cultural Protocols/Event Cycle Protocol|Event Cycle Protocol]] — Overall event timeline
-- [[3. Protocols/Group Protocols/Event Circle Protocol|Event Circle Protocol]] — Event coordination
+- [[Function Lead Protocol]] — Event Lead coordination
 - [[Schelling Point App]] — Voting platform

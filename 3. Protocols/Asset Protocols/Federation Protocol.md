@@ -70,9 +70,9 @@ This protocol governs the formation and operation of federation relationships wi
 | 3 | Draft federation agreement | Circle with partner network | As needed |
 | 4 | Internal review | Both networks | 1 week |
 | 5 | Post proposal in `#proposals` | Circle | Initiates consent |
-| 6 | Consent window | [[Commons Assembly]] | 48h or 72h |
+| 6 | Consent window | [[Member Assembly]] | 48h or 72h |
 | 7 | Partner network approval | Partner network | Per their process |
-| 8 | Sign/ratify agreement | [[Stewardship]] | After mutual consent |
+| 8 | Sign/ratify agreement | [[Steward Council]] | After mutual consent |
 | 9 | Document in [[GitHub Repository]] | [[Steward]] | Post-signing |
 | 10 | Implement integration | Federation Commons Circle | Per agreement |
 
@@ -450,6 +450,6 @@ Before federation, verify alignment on:
 
 ## Related Protocols
 
-- [[3. Protocols/Asset Protocols/Knowledge Commons Protocol|Knowledge Commons Protocol]] — Knowledge sharing
+- [[Knowledge Graph Protocol]] — Knowledge sharing
 - [[3. Protocols/Role Protocols/Agent Protocol|Agent Protocol]] — Agent federation
 - [[2. Structure/Assets/Federation Agreements|Federation Agreements]] — Asset documentation

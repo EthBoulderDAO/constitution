@@ -2,7 +2,7 @@
 id: asset-third-space-network
 type: asset
 access_level: internal
-stewardship: "[[Third Space Circle]]"
+stewardship: "[[Function Leads]]"
 kg_entity: "kg://ethboulder/asset/third-space-network"
 ---
 Registry of federation partnerships with Boulder's third spaces — the physical venues where scenius happens and digital coordination meets bioregional reality.
@@ -22,7 +22,7 @@ The Third Space Network maintains formal relationships with these venues.
 Scenius — collective genius — requires physical co-presence. Boulder's density of cafes, coworking spaces, makerspaces, and gathering places creates the substrate for emergent collaboration.
 
 The network cannot be purely digital. Third spaces are where:
-- Newcomers first encounter the network
+- Attendees first encounter the network
 - Ideas cross-pollinate through chance encounter
 - Trust builds through repeated face-to-face interaction
 - The annual convening physically manifests
@@ -91,15 +91,14 @@ Third spaces are represented in the knowledge graph:
 
 New third space partnerships develop through:
 
-1. **Introduction** — Third Space Circle member introduces network to venue
+1. **Introduction** — Third Space Lead introduces network to venue
 2. **Informal Use** — Network members begin frequenting venue
-3. **Partnership Proposal** — Circle proposes formal agreement
-4. **Consent** — Network Assembly approves per federation protocol
+3. **Partnership Proposal** — Third Space Lead proposes formal agreement
+4. **Consent** — Member Assembly approves per federation protocol
 5. **Integration** — Venue added to graph, agreement documented
 
 ## Related Documents
 
 - [[3. Protocols/Asset Protocols/Third Space Federation Protocol|Third Space Federation Protocol]]
-- [[Third Space Circle]] — Stewardship body
+- [[Function Leads]] — Third Space Lead stewardship
 - [[Federation Agreements]] — General federation framework
-- [[Event Circle]] — Venue coordination for events
