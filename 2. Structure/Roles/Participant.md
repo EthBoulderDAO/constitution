@@ -6,8 +6,9 @@ requires: "[[Newcomer]]"
 discord_role: "@Participant"
 nft_token: "participation-nft"
 multisig_access: none
+kg_entity: "kg://ethboulder/role/participant"
 ---
-Active contributors demonstrating alignment through sustained participation in the public commons — the visible life of the nation where coordination, working circles, and knowledge commoning happens in the open.
+Active contributors demonstrating alignment through sustained participation in the public network — the visible life of the nation where coordination, circles, and knowledge commoning happens in the open.
 
 ## Purpose
 
@@ -20,13 +21,25 @@ Participants have demonstrated that they can show up consistently, contribute co
 - Contribution to at least one [[Working Circle]]
 - Agent-verified contribution patterns demonstrating alignment
 
+## Participation Pathways
+
+Alignment can be demonstrated through multiple pathways:
+
+**Circle Contribution:** Active participation in Event, Knowledge, Third Space, or Grants circles
+
+**Knowledge Graph Contribution:** Creating or enriching entities in the knowledge graph
+
+**Event Participation:** Contributing to annual convening (session proposals, volunteering, hackathon)
+
+**Third Space Cultivation:** Active presence in Boulder's third spaces, introducing the network to others
+
 ## Responsibilities
 
-**Contribution:** Active participation in at least one working circle
+**Contribution:** Active participation in at least one circle
 
 **Alignment:** Uphold principles in practice — in how you engage, handle disagreement, and show up for others
 
-**Knowledge Commoning:** Contribute to shared documentation and pattern development
+**Knowledge Commoning:** Contribute to the knowledge graph and shared documentation
 
 **Governance Participation:** Raise objections in consent processes (not yet counted in quorum)
 
@@ -37,9 +50,9 @@ Participants have demonstrated that they can show up consistently, contribute co
 | **Channels** | All public channels (read/write), working circles |
 | **Governance** | Raise objections, participate in discussions, not counted in quorum |
 | **Treasury** | None |
-| **Knowledge Commons** | Full read/write access to public documentation |
+| **Knowledge Graph** | Full read/write access to public entities, create new entities |
 
-**Note:** Participants can raise objections but are not counted in governance quorum. This recognizes that consent without context is hollow — you need to know the commons before you can meaningfully govern it.
+**Note:** Participants can raise objections but are not counted in governance quorum. This recognizes that consent without context is hollow — you need to know the network before you can meaningfully govern it.
 
 ## What Agents Look For
 
@@ -48,6 +61,7 @@ Pattern recognition across channels assesses:
 - Do they engage with disagreement constructively?
 - Do they uphold the principles when it costs them something?
 - Do they show up consistently, not just when it's exciting?
+- Do they contribute to the knowledge graph with accuracy and care?
 
 ## Membrane Crossing
 

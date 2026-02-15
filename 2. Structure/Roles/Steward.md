@@ -6,17 +6,18 @@ requires: "[[Member]]"
 discord_role: "@Steward"
 nft_token: "stewardship-nft"
 multisig_access: signer
+kg_entity: "kg://ethboulder/role/steward"
 ---
-Rotating curators with the highest trust level — those entrusted to tend conditions for the commons to self-govern while maintaining facilitation authority, moderation tools, and multisig signing power.
+Rotating curators with the highest trust level — those entrusted to tend conditions for the network to self-govern while maintaining facilitation authority, moderation tools, and multisig signing power.
 
 ## Purpose
 
-Stewards are curators, not gatekeepers. They tend conditions for the commons to self-govern. The moment stewardship becomes governance, it has failed. Monthly rotation ensures no one accumulates positional power.
+Stewards are curators, not gatekeepers. They tend conditions for the network to self-govern. The moment stewardship becomes governance, it has failed. Monthly rotation ensures no one accumulates positional power.
 
 ## Criteria
 
 - [[Member]] in good standing
-- Deep commitment to commons purpose, values, and democratic accountability
+- Deep commitment to network purpose, values, and democratic accountability
 - Demonstrated facilitation capacity
 - Willingness to serve in rotating curator role
 - Not seeking to accumulate positional power
@@ -35,6 +36,10 @@ Stewards are curators, not gatekeepers. They tend conditions for the commons to 
 
 **Rotation:** Complete knowledge transfer during monthly handoff
 
+**Event Coordination:** Lead event circle during Pre-Event and Event phases, ensure convening execution
+
+**Knowledge Graph Moderation:** Authority to revert contested edits, protect critical entities, manage entity disputes
+
 ## What Stewards Do NOT Have
 
 - Tiebreaker power
@@ -46,9 +51,10 @@ Stewards are curators, not gatekeepers. They tend conditions for the commons to 
 
 | Category | Access |
 |----------|--------|
-| **Authority** | Facilitation authority, moderation tools (serve commons, not person) |
+| **Authority** | Facilitation authority, moderation tools (serve network, not person) |
 | **Channels** | Full admin all channels including `#multisig-ops` |
 | **Treasury** | Signer access — approve/reject proposed transactions |
+| **Knowledge Graph** | Moderation authority — revert edits, protect entities, resolve disputes |
 | **Governance** | Same as Member — no additional voting weight |
 
 **Note:** As a Steward, you are also a [[Member]] and retain all Member rights.
@@ -56,6 +62,15 @@ Stewards are curators, not gatekeepers. They tend conditions for the commons to 
 ## Participation Expectations
 
 ![[3. Protocols/Cultural Protocols/Participation Cadence Protocol#Steward]]
+
+## Event Cycle Responsibilities
+
+| Phase | Steward Expectations |
+|-------|---------------------|
+| **Inter-Event** | Normal stewardship duties, third space relationship maintenance |
+| **Pre-Event** | Lead Event Circle, coordinate logistics, facilitate session QV |
+| **Event** | Full presence, real-time coordination, emergency decision authority |
+| **Post-Event** | Lead retrospective, ensure knowledge graph enrichment, facilitate fast-track memberships |
 
 ## Term Structure
 
@@ -88,3 +103,5 @@ For actions posing immediate harm (doxxing, harassment, treasury theft):
 - [[3. Protocols/Group Protocols/Stewardship Protocol|Stewardship Protocol]]
 - [[3. Protocols/Asset Protocols/Treasury Management Protocol|Treasury Management Protocol]]
 - [[3. Protocols/Cultural Protocols/Accountability Protocol|Accountability Protocol]]
+- [[3. Protocols/Group Protocols/Event Circle Protocol|Event Circle Protocol]]
+- [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]]

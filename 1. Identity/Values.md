@@ -1,21 +1,29 @@
 **Core Principles**
 *These are not aspirational. They are operational commitments. Every participant upholds them. Violation triggers accountability.*
 
-## Life-Affirming Acceleration
+## Scenius Cultivation
 
-Every tool, protocol, and agent we deploy serves the regeneration of living systems. We do not accelerate for its own sake. We accelerate because the crises demand that alternatives emerge faster than the systems destroying us can adapt.
+We nurture the conditions for collective genius to emerge. Boulder's scenius is not individual brilliance but the intelligence that arises from the right people in the right place, cross-pollinating ideas through proximity and serendipity. We protect and extend this ecology.
 
-## The Recursive Criterion
+## Bioregional Solidarity
 
-Our work must compound. Each contribution makes the next easier. Each participant makes participation more valuable. Each project strengthens conditions for others. If it doesn't self-amplify, it doesn't belong here. This distinguishes r/acc from lifestyle environmentalism.
+Our work serves this place — the Front Range, its watersheds, its communities, its future. Global coordination capacity is valuable only insofar as it strengthens local resilience and regeneration. We are rooted, not abstracted.
+
+## Quadratic Fairness
+
+Voice should scale with genuine commitment, not wealth or position. Quadratic mechanisms — for voting, for funding, for session scheduling — prevent plutocratic capture while honoring differential engagement. Many small voices outweigh few large ones.
+
+## Third Space Culture
+
+The best ideas emerge between — between work and home, between disciplines, between strangers who become collaborators. We invest in the physical and digital third spaces where serendipity lives.
 
 ## Federation Over Consolidation
 
-We are one node in a web, not the center of it. We seek federation with bioregional networks, Ethereum localism communities, cooperative federations, indigenous sovereignty movements, and other r/acc-aligned commons. Many centers, one web.
+We are one node in a web, not the center of it. We seek federation with bioregional networks, Ethereum localism communities, cooperative federations, and other aligned commons. Many centers, one web.
 
 ## Knowledge as Commons
 
-Knowledge is free. Sharing it costs nothing and creates compounding value. We commit to open knowledge commoning with shared metadata standards that enable interoperability. Design global, implement local.
+Knowledge is free. Sharing it costs nothing and creates compounding value. We commit to open knowledge commoning with the graph as our shared memory. Design global, implement local.
 
 ## Leaderful, Not Leaderless
 
@@ -24,10 +32,6 @@ Authority flows by context and competence, not position. Multiple centers of lea
 ## Consent, Not Consensus
 
 We coordinate through alignment beyond agreement. Consent means no one with relevant stake has a paramount objection. It does not require enthusiasm. This enables functional pluralism — multiple strategic approaches coexisting, sharing learnings, resilient through diversity.
-
-## Post-Tragic Audacity
-
-We are collapse-aware. The crisis is real. We build anyway. Not from naive optimism but from the recognition that surrender and complicity are the only unacceptable positions. We plant seeds in soil we know may burn because the alternative is guaranteed desolation.
 
 ---
 

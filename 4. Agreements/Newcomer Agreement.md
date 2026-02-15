@@ -1,33 +1,34 @@
 ---
-lastUpdated: 2026-02-07
+lastUpdated: 2026-02-15
 membrane: 0
+kg_entity: "kg://ethboulder/agreement/newcomer"
 ---
-Welcome to the Regenerative Accelerationist Commons. You are crossing the threshold — entering a network nation of regenerators using AI to accelerate the transition from extraction to life.
+Welcome to ETH Boulder. You are crossing the threshold — entering a network nation of builders and regenerators practicing Ethereum localism in Boulder's bioregion.
 
 This document acknowledges your entry at Membrane Zero. You have read and affirm alignment with:
-- The [[.claude/a-regenerative-accelerationist-manifesto|Regenerative Accelerationist Manifesto]]
-- This [[Re-acc Commons Constitution|Constitution]]
+- The [[.claude/ethereum-localism-principles|Ethereum Localism Principles]]
+- This [[ETH Boulder Constitution|Constitution]]
 
 ---
 
 # What You Affirm
 
-By posting your introduction in `#threshold`, you affirm:
+By posting your introduction in `#welcome`, you affirm:
 
-- You have read the canonical essay and understand the core concepts
+- You have read the Ethereum Localism Principles and understand the core concepts
 - You have read this constitution and understand the membrane architecture
 - You align with the principles and values expressed in these documents
 - You commit to upholding these principles in your participation
 
 # Your Introduction
 
-Your introduction in `#threshold` should address:
+Your introduction in `#welcome` should address:
 
 | Element | What to Share |
 |---------|---------------|
 | **Who you are** | Name/handle, brief background |
-| **Where you are** | Location, bioregion, or context |
-| **What draws you** | Why re/acc resonates, what brought you here |
+| **Where you are** | Location, bioregion, relationship to Boulder |
+| **What draws you** | Why Ethereum localism resonates, what brought you here |
 | **What you bring** | Skills, interests, what you want to contribute |
 
 # What You Gain
@@ -36,8 +37,9 @@ As a [[Newcomer]], you have:
 
 | Access | Details |
 |--------|---------|
-| **Channels** | `#threshold` (write), public channels (read-only) |
-| **Observation** | Read and listen to commons activity |
+| **Channels** | `#welcome` (write), public channels (read-only) |
+| **Knowledge Graph** | Read access to public entities |
+| **Observation** | Read and listen to network activity |
 | **Pathway** | Clear path to [[Participant]] through demonstrated engagement |
 
 # What This Means
@@ -55,12 +57,12 @@ To become a [[Participant]]:
 
 ---
 
-# About the Re/acc Commons
+# About ETH Boulder
 
 ![[1. Identity/Identity Index|Identity Index]]
 
 ---
 
-*The machine breaks itself. Our work is to be building, so that when the cracks appear, something alive grows through them.*
+*Global protocols, local implementation. The machine cannot produce what we build here.*
 
-*— The Regenerative Accelerationist Commons*
+*— ETH Boulder*

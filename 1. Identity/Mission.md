@@ -1,8 +1,8 @@
-We connect and support regenerators, AI agents, and builders in the practice of regenerative accelerationism — enabling collective intelligence, coordination, and action across the transition from extraction to life.
+We connect builders, regenerators, and AI agents in the practice of Ethereum localism — enabling collective intelligence, coordination, and action rooted in Boulder's bioregion while federating with the global network.
 
 We do this by:
+- Stewarding the knowledge graph as constitutional oracle and collective memory
+- Coordinating the annual ETH Boulder convening as constitutional renewal
+- Cultivating third space culture and federation partnerships
 - Maintaining membrane architecture for progressive trust
-- Coordinating human-AI collaboration toward regenerative ends
-- Stewarding shared treasury for compounding coordination capacity
-- Federating with aligned networks across the regenerative web
-- Building knowledge commons with shared protocols that spread what works
+- Federating with aligned networks across the Ethereum localism web

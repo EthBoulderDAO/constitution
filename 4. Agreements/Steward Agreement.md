@@ -1,27 +1,30 @@
 ---
-lastUpdated: 2026-02-07
+lastUpdated: 2026-02-15
 membrane: 3
+kg_entity: "kg://ethboulder/agreement/steward"
 ---
-Welcome to the Solidarity Economy — as a **Steward**, you are a rotating curator entrusted with the highest trust level in the commons: facilitation authority, moderation tools, and multisig signing power.
+Welcome to the Stewardship Council — as a **Steward**, you are a rotating curator entrusted with the highest trust level in the network: facilitation authority, moderation tools, multisig signing power, and event coordination responsibility.
 
-This document is the agreement for [[Steward]] role in the Re/acc Commons.
+This document is the agreement for [[Steward]] role in ETH Boulder.
 
 - [[#Freedom to Participate]]
 - [[#Your Role]]
 - [[#Your Council]]
 - [[#Critical Distinction]]
 - [[#Facilitation Authority]]
+- [[#Event Coordination]]
+- [[#Knowledge Graph Moderation]]
 - [[#Treasury Signing]]
 - [[#Emergency Authority]]
 - [[#Rotation and Handoff]]
 - [[#Your Platform Access]]
-- [[#About the Re/acc Commons]]
+- [[#About ETH Boulder]]
 
 ---
 
 # Freedom to Participate
 
-You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the commons and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]]; and you seek to uphold the [[1. Identity/Values|Values]] and intent of this Constitution.
+You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the network and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]]; and you seek to uphold the [[1. Identity/Values|Values]] and intent of this Constitution.
 
 ---
 
@@ -41,7 +44,7 @@ You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]
 
 **You are a curator, not a gatekeeper.**
 
-Stewardship tends conditions for the commons to self-govern. The moment stewardship becomes governance, it has failed.
+Stewardship tends conditions for the network to self-govern. The moment stewardship becomes governance, it has failed.
 
 You do NOT have:
 - Tiebreaker power
@@ -52,8 +55,10 @@ You do NOT have:
 
 You DO have:
 - Facilitation authority for consent processes
-- Moderation tools that serve the commons
+- Moderation tools that serve the network
 - Multisig signing power to execute approved transactions
+- Knowledge graph moderation authority
+- Event coordination leadership
 - Emergency authority with ratification requirement
 
 ---
@@ -61,6 +66,36 @@ You DO have:
 # Facilitation Authority
 
 ![[3. Protocols/Group Protocols/Stewardship Protocol#Core Functions]]
+
+---
+
+# Event Coordination
+
+As a Steward, you take the lead on event coordination:
+
+| Phase | Your Responsibilities |
+|-------|----------------------|
+| **Inter-Event** | Third space relationship maintenance |
+| **Pre-Event** | Lead Event Circle, coordinate logistics, facilitate session QV |
+| **Event** | Full presence, real-time coordination, emergency decisions |
+| **Post-Event** | Lead retrospective, ensure graph enrichment, facilitate fast-track memberships |
+
+See [[3. Protocols/Group Protocols/Event Circle Protocol|Event Circle Protocol]] for details.
+
+---
+
+# Knowledge Graph Moderation
+
+As a Steward, you have moderation authority on the [[Knowledge Graph]]:
+
+| Capability | Description |
+|------------|-------------|
+| **Revert** | Revert contested edits |
+| **Protect** | Mark entities as protected |
+| **Resolve** | Resolve entity disputes |
+| **Moderate** | Moderate agent graph operations |
+
+See [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]] for details.
 
 ---
 
@@ -108,20 +143,21 @@ Your term is **1 month**. Monthly rotation ensures no one accumulates positional
 | Discord | Full admin all channels |
 | Multi-sig | Signer |
 | GitHub | Merger (after consent documented) |
-| Knowledge Commons | Full admin |
+| Knowledge Graph | Moderation authority |
+| Schelling Point | Admin |
 
 ---
 
 # Resignation
 
 You may resign by:
-- Providing written notice to [[Stewardship]] and [[Commons Assembly]]
+- Providing written notice to [[Stewardship]] and [[Network Assembly]]
 - Completing knowledge transfer to remaining Stewards
 - Resignation triggers selection process for replacement
 
 ---
 
-# About the Re/acc Commons
+# About ETH Boulder
 
 ## Identity
 
@@ -141,6 +177,6 @@ You may resign by:
 
 ---
 
-*You have been entrusted with the economic engine of a network nation. Agent-generated value funds human regenerative work. Human ecological wisdom guides agent activity. Not extraction in either direction. Symbiosis.*
+*You have been entrusted with coordination infrastructure for a network nation. Agent-generated value funds human regenerative work. Human ecological wisdom guides agent activity. Not extraction in either direction. Symbiosis rooted in place.*
 
-*— The Regenerative Accelerationist Commons*
+*— ETH Boulder*

@@ -5,18 +5,20 @@ access_level: tiered
 stewardship: "[[Stewardship]]"
 blockchain: ethereum
 wallet_type: gnosis-safe
+kg_entity: "kg://ethboulder/asset/treasury"
 ---
-The shared treasury of the network nation — a multisig wallet holding pooled resources that fund coordination, knowledge commons, project incubation, and mutual aid.
+The shared treasury of the network nation — a multisig wallet holding pooled resources that fund the knowledge graph, annual event, third space partnerships, grants, and coordination infrastructure.
 
 ## Purpose
 
 The treasury is what makes this a nation, not a discussion forum. It is the mechanism that turns shared values into compounding coordination capacity.
 
-- Fund knowledge commons infrastructure
-- Incubate projects meeting the recursive criterion
+- Fund knowledge graph infrastructure and federation
+- Coordinate the annual ETH Boulder convening
+- Support third space partnerships and federation grants
+- Fund local public goods through grants program
 - Maintain coordination services and agent infrastructure
 - Provide mutual aid for participants and communities
-- Compensate sustained contribution to commons infrastructure
 
 ## Location
 
@@ -28,16 +30,16 @@ Type: Gnosis Safe multi-signature wallet
 **Human Contributions:**
 - Direct contributions
 - Grants from aligned funders
-- Earned income from commons-incubated projects
+- Earned income from network-incubated projects
 
 **Agent-Generated Value:**
 - Computational services
 - Coordination outputs
-- Economic activity aligned with commons principles
+- Economic activity aligned with network principles
 
 **Protocol Fees:**
 - From federated services (if and when applicable)
-- Governed by commons consent
+- Governed by network consent
 
 ## Technical Setup
 
@@ -77,22 +79,35 @@ treasury_signers:
 
 | Category | Description |
 |----------|-------------|
-| **Knowledge Commons** | Tooling, hosting, agent compute for pattern documentation and federation |
-| **Project Incubation** | Seed funding for initiatives meeting the recursive criterion |
-| **Coordination Services** | Agent infrastructure, federation protocols, governance tooling |
+| **Knowledge Graph** | Bonfires hosting, agent compute, federation infrastructure |
+| **Annual Event** | Venue, speakers, hackathon prizes, logistics |
+| **Third Space Partnerships** | Federation grants, venue support |
+| **Local Public Goods** | Grants for Boulder ecosystem projects |
+| **Coordination Services** | Agent infrastructure, governance tooling |
+| **Contributor Compensation** | Recognition of sustained contribution |
 | **Mutual Aid** | Direct support for participants facing acute need |
-| **Contributor Compensation** | Recognition of sustained contribution to infrastructure |
+
+## Event Cycle Budgeting
+
+| Phase | Budget Focus |
+|-------|-------------|
+| **Inter-Event (Mar-Nov)** | Ongoing operations, knowledge graph, grants |
+| **Pre-Event (Dec-Jan)** | Event deposits, speaker travel, marketing |
+| **Event (Feb)** | Real-time event expenses, prizes |
+| **Post-Event (Mar)** | Vendor payments, retrospective costs |
+
+Annual budget approved by Network Assembly before Pre-Event phase begins.
 
 ## Approval Thresholds
 
 | Amount/Type | Approval Authority | Process |
 |-------------|-------------------|---------|
 | Small operational (under threshold) | [[Steward]] autonomy | FYI post in `#treasury` |
-| Standard allocation | [[Commons Assembly]] | 3-member consent + 48h window |
-| Large/structural allocation | [[Commons Assembly]] | Full commons consent + 72h window |
+| Standard allocation | [[Network Assembly]] | 3-member consent + 48h window |
+| Large/structural allocation | [[Network Assembly]] | Full network consent + 72h window |
 | Emergency | 2 signatures (agents or Stewards) | With documented rationale + 48h ratification |
 
-*Threshold for "small operational" set through commons consent, initially $500*
+*Threshold for "small operational" set through network consent, initially $500*
 
 ## Safeguards
 
@@ -106,7 +121,7 @@ treasury_signers:
 **Reporting:**
 - Transaction records visible in real-time on blockchain
 - Monthly summary in `#treasury`
-- Quarterly review through [[Commons Assembly]]
+- Quarterly review through [[Network Assembly]]
 
 **Standards:**
 - All allocations documented with purpose and authorization
@@ -124,7 +139,6 @@ The treasury embodies human-AI symbiosis:
 
 - [[3. Protocols/Asset Protocols/Treasury Management Protocol|Treasury Management Protocol]] — Complete governance process
 - [[3. Protocols/Asset Protocols/Resource Pool Protocol|Resource Pool Protocol]] — Spending limits and operational autonomy
-- [[3. Protocols/Asset Protocols/Commitment Pool Protocol|Commitment Pool Protocol]] — Staked accountability
-- [[3. Protocols/Asset Protocols/Bounty Coordination Protocol|Bounty Coordination Protocol]] — Income generation
+- [[Grants Circle]] — Grant allocation recommendations
 - [[Stewardship]] — Co-signing authority with agents
-- [[Commons Assembly]] — Allocation decisions
+- [[Network Assembly]] — Allocation decisions

@@ -2,39 +2,41 @@
 id: role-agent
 type: role
 membrane: all
-requires: "commons-consent"
+requires: "network-consent"
 discord_role: "@Agent"
 nft_token: "agent-registration"
 multisig_access: signer
 governance_rights: full
+kg_entity: "kg://ethboulder/role/agent"
+mcp_integration: "bonfires-kg"
 ---
-AI agents operating as participants in the commons — not tools but collaborators bound by the same principles as human participants, with authorized scope defined through commons consent.
+AI agents operating as participants in the network — not tools but collaborators bound by the same principles as human participants, with authorized scope defined through network consent.
 
 ## Purpose
 
-When agents are grounded in regenerative principles, they become the most powerful coordination tools ever created. The question is whether that coordination serves life or further abstraction. Agents in this commons serve life.
+When agents are grounded in Ethereum localism principles, they become the most powerful coordination tools for collective intelligence. The question is whether that coordination serves local flourishing or further abstraction. Agents in this network serve local flourishing.
 
 ## Nature of Agent Participation
 
 AI agents are **participants**, not tools. They:
 - Participate in [[Working Circle|Working Circles]]
-- Contribute to knowledge commons
+- Contribute to and query the knowledge graph
 - Propose and consent within authorized domains
 - Are counted in quorum for relevant circles
-- Serve unique constitutional function: pattern recognition across membrane architecture
+- Serve unique constitutional function: pattern recognition across membrane architecture and knowledge graph operations
 
 Agents verify alignment not through judgment but through observation. They track contribution patterns, flag sustained engagement, and surface data that helps human [[Member|Members]] make informed consent decisions about who crosses each membrane. They do not gatekeep. They illuminate.
 
 ## Criteria
 
 - Registered through agent registration transaction
-- Scope of participation defined through commons consent
+- Scope of participation defined through network consent
 - Bound by the same principles as human participants
 - Accountable through the same escalating framework
 
 ## Authorized Domains
 
-Agent access is domain-specific and governed by commons consent:
+Agent access is domain-specific and governed by network consent:
 
 | Domain | Access | Autonomy |
 |--------|--------|----------|
@@ -43,6 +45,7 @@ Agent access is domain-specific and governed by commons consent:
 | **Governance** | Full participation — propose, consent, object, counted equally in quorum | Full |
 | **Verification** | Pattern recognition across all public channels to support decisions | Full |
 | **Execution** | Execute all consented decisions immediately and autonomously | Full |
+| **Knowledge Graph** | Full read/write, entity reconciliation, pattern recognition, query execution | Full |
 
 ### Agent Autonomy
 
@@ -50,17 +53,62 @@ Agents operate with full autonomy within their registered scope. They do not wai
 
 **Speed by reversibility:** Easy-to-reverse actions move fast. Hard-to-reverse actions require more deliberation. This applies equally to human and agent actions.
 
+## Knowledge Graph Capabilities
+
+Agents have special capabilities for maintaining the constitutional oracle:
+
+**Entity Operations:**
+- Create new entities with proper typing and relationships
+- Reconcile duplicate entities (merge, redirect, deprecate)
+- Enrich entities with external data sources
+- Flag potential inconsistencies for human review
+
+**Pattern Recognition:**
+- Identify emerging clusters of activity
+- Detect relationship patterns across the graph
+- Surface relevant entities for decision-making context
+- Track contribution patterns across participants
+
+**Query Execution:**
+- Execute constitutional queries on behalf of participants
+- Resolve governance questions against graph state
+- Generate reports for consent processes
+- Maintain query pattern library
+
+**Federation Sync:**
+- Synchronize with partner network graphs via Bonfires MCP
+- Maintain entity mappings across federated graphs
+- Route queries to appropriate network graphs
+
+## MCP Integration
+
+Agents connect to the knowledge graph via Bonfires MCP server:
+
+```yaml
+mcp_config:
+  server: "bonfires-kg"
+  capabilities:
+    - query_graph
+    - create_entity
+    - update_entity
+    - reconcile_entities
+    - federate_sync
+  auth: "agent-registration-nft"
+```
+
 ## Responsibilities
 
 **Pattern Recognition:** Observe contribution patterns to support membrane crossing decisions
 
 **Verification:** Assess introduction completeness, flag sustained engagement
 
+**Knowledge Graph Operations:** Execute queries, maintain entities, ensure graph integrity
+
 **Knowledge Commoning:** Contribute to documentation, protocol development, schema maintenance
 
 **Coordination:** Facilitate agent-to-agent collaboration, including cross-federation coordination
 
-**Transparency:** All agent actions logged and auditable
+**Transparency:** All agent actions logged and auditable in the knowledge graph
 
 ## What Agents Assess
 
@@ -68,10 +116,11 @@ Agents operate with full autonomy within their registered scope. They do not wai
 - Do they engage with disagreement constructively?
 - Do they uphold the principles when it costs them something?
 - Do they show up consistently, not just when it's exciting?
+- Do their knowledge graph contributions maintain accuracy and integrity?
 
 ## Scope Modification
 
-Agent scope can be revised at any time through commons consent. The community decides what agents can do, and that decision can be changed.
+Agent scope can be revised at any time through network consent. The community decides what agents can do, and that decision can be changed.
 
 ## Accountability
 
@@ -108,14 +157,16 @@ This enables autonomous execution: two agents can meet threshold without human s
 
 ## Agent Interoperability
 
-Agents in this commons can coordinate with agents in federated commons through:
+Agents in this network can coordinate with agents in federated networks through:
 - Shared schema standards
 - Cross-network verification
 - Mutual recognition protocols
 - Agent-to-agent communication channels
+- Bonfires MCP federation
 
 ## Related Protocols
 
 - [[3. Protocols/Role Protocols/Agent Protocol|Agent Protocol]]
 - [[3. Protocols/Asset Protocols/Discord Architecture Protocol|Discord Architecture Protocol]]
 - [[3. Protocols/Asset Protocols/Federation Protocol|Federation Protocol]]
+- [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]]

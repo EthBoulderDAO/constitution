@@ -1,4 +1,4 @@
-Index of organizational structure components within the Re/acc Commons:
+Index of organizational structure components within ETH Boulder:
 
 ## Roles
 
@@ -13,16 +13,22 @@ Index of organizational structure components within the Re/acc Commons:
 
 - [[2. Structure/Groups/Groups Index|Groups Index]]
 	- [[Working Circle]]
+		- [[Event Circle]]
+		- [[Knowledge Circle]]
+		- [[Third Space Circle]]
+		- [[Grants Circle]]
 	- [[Stewardship]]
-	- [[Commons Assembly]]
+	- [[Network Assembly]]
 
 ## Assets
 
 - [[2. Structure/Assets/Assets Index|Assets Index]]
-	- [[Commons Constitution]]
-	- [[Canonical Essay]]
-	- [[Commons Treasury]]
+	- [[ETH Boulder Constitution]]
+	- [[Ethereum Localism Principles]]
+	- [[Knowledge Graph]]
+	- [[Schelling Point App]]
+	- [[Network Treasury]]
 	- [[Discord Server]]
 	- [[GitHub Repository]]
-	- [[Knowledge Commons]]
+	- [[Third Space Network]]
 	- [[Federation Agreements]]

@@ -1,27 +1,29 @@
 ---
-lastUpdated: 2026-02-07
+lastUpdated: 2026-02-15
 membrane: 2
+kg_entity: "kg://ethboulder/agreement/member"
 ---
-Welcome to the Inner Commons — the governing body of this network nation. As a **Member**, you hold citizenship with full governance rights and the responsibilities that come with them.
+Welcome to the Governance Body — the core constituency of this network nation. As a **Member**, you hold citizenship with full governance rights and the responsibilities that come with them.
 
-This document is the agreement for [[Member]] role in the Re/acc Commons.
+This document is the agreement for [[Member]] role in ETH Boulder.
 
 - [[#Freedom to Participate]]
 - [[#Your Role]]
 - [[#Governance Rights]]
 - [[#Governance Responsibilities]]
-- [[#Consent Mechanics]]
+- [[#Event Cycle Responsibilities]]
+- [[#Knowledge Graph Curation]]
 - [[#Treasury Access]]
 - [[#Accountability]]
 - [[#Your Platform Access]]
 - [[#Path Forward]]
-- [[#About the Re/acc Commons]]
+- [[#About ETH Boulder]]
 
 ---
 
 # Freedom to Participate
 
-You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the commons and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]]; and you seek to uphold the [[1. Identity/Values|Values]] and intent of this Constitution.
+You are free to take any action that fulfills the [[1. Identity/Purpose|Purpose]] of the network and the [[2. Structure/Roles/Roles Index|Roles]] that you hold — as long as you do not violate any [[3. Protocols/Protocols Index|Protocols]]; and you seek to uphold the [[1. Identity/Values|Values]] and intent of this Constitution.
 
 ---
 
@@ -42,14 +44,41 @@ As a Member, you have:
 | **Object** | Raise paramount objections |
 | **Nominate** | Nominate Participants for membership |
 | **View** | See all treasury transactions |
+| **Curate** | Reconcile knowledge graph entities |
+| **Steer** | Eligible for Event Circle steering committee |
 
-You are the backbone of commons governance. Every decision flows through your consent.
+You are the backbone of network governance. Every decision flows through your consent.
 
 ---
 
 # Governance Responsibilities
 
-![[3. Protocols/Group Protocols/Commons Assembly Protocol#What Is Governed]]
+![[3. Protocols/Group Protocols/Network Assembly Protocol#What Is Governed]]
+
+---
+
+# Event Cycle Responsibilities
+
+| Phase | Member Expectations |
+|-------|---------------------|
+| **Inter-Event** | Ongoing circle participation, knowledge graph maintenance |
+| **Pre-Event** | QV participation for session scheduling, volunteer coordination |
+| **Event** | Active presence at convening (in-person or remote) |
+| **Post-Event** | Retrospective participation, fast-track membership nominations |
+
+---
+
+# Knowledge Graph Curation
+
+As a Member, you have curation rights on the [[Knowledge Graph]]:
+
+| Capability | Description |
+|------------|-------------|
+| **Reconcile** | Merge duplicate entities |
+| **Approve** | Approve contested edits |
+| **Create Protected** | Create protected entity types with rationale |
+
+See [[3. Protocols/Asset Protocols/Knowledge Graph Protocol|Knowledge Graph Protocol]] for details.
 
 ---
 
@@ -63,7 +92,7 @@ You are the backbone of commons governance. Every decision flows through your co
 
 ![[3. Protocols/Asset Protocols/Treasury Management Protocol#Approval Thresholds]]
 
-As a Member, you have **Viewer** access to the [[Commons Treasury]]:
+As a Member, you have **Viewer** access to the [[Network Treasury]]:
 - See all transactions, balances, allocation history
 - Participate in allocation decisions through consent
 - No signing authority (that's for [[Steward|Stewards]])
@@ -96,7 +125,8 @@ You agree to:
 | Discord | All channels, `#stewardship` (read) |
 | Multi-sig | Viewer |
 | GitHub | Contributor (open PRs) |
-| Knowledge Commons | Full admin |
+| Knowledge Graph | Curation rights |
+| Schelling Point | Full voting rights |
 
 ---
 
@@ -104,12 +134,12 @@ You agree to:
 
 To become a [[Steward]]:
 1. Any Member may nominate you (including self-nomination)
-2. Full commons consent: all Members, 72h window
+2. Full network consent: all Members, 72h window
 3. Monthly rotation ensures no accumulation of positional power
 
 ---
 
-# About the Re/acc Commons
+# About ETH Boulder
 
 ## Identity
 
@@ -131,4 +161,4 @@ To become a [[Steward]]:
 
 *You are trusted with the governance of a shared treasury, shared infrastructure, and shared future. This trust was earned through action, verified by agents, confirmed by community consent.*
 
-*— The Regenerative Accelerationist Commons*
+*— ETH Boulder*

@@ -1,3 +1,3 @@
-The Re/acc Commons exists to accelerate the transition from extraction to life — building alternatives with the same compounding properties that make extraction so relentless, but aimed at regeneration instead of abstraction.
+ETH Boulder exists to steward the collective intelligence of Boulder's Ethereum community — coordinating the annual convening, cultivating the knowledge graph as constitutional oracle, and catalyzing third space culture across the bioregion.
 
-We steward the shared infrastructure of regenerative accelerationism: the membranes, protocols, treasury, and coordination tools that enable collective action toward post-capitalist, life-affirming civilization.
+We are the infrastructure through which Boulder's scenius becomes legible, durable, and interoperable with the global Ethereum localism network.
