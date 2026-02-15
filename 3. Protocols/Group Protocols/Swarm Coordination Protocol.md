@@ -168,7 +168,7 @@ domain_routing:
 
   governance:
     primary: governance-agent
-    backup: stewardship-agent
+    backup: council-agent
     keywords: [consent, proposal, decision, vote]
 
   knowledge:
@@ -536,4 +536,4 @@ async def dissolve_swarm(swarm_id: str, outcome: str):
 
 - [[3. Protocols/Asset Protocols/Bounty Coordination Protocol|Bounty Coordination Protocol]] — Income-generating swarms
 - [[3. Protocols/Cultural Protocols/Consent Process Protocol|Consent Process Protocol]] — Full consent when needed
-- [[3. Protocols/Group Protocols/Working Circle Protocol|Working Circle Protocol]] — Standing groups vs. temporary swarms
+- [[Function Lead Protocol]] — Standing groups vs. temporary swarms

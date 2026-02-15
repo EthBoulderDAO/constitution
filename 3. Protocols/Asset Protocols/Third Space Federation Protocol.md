@@ -51,15 +51,15 @@ Regression possible if relationship deteriorates.
 | Step | Action | Actor | Timeline |
 |------|--------|-------|----------|
 | 1 | Identify potential partner | Any participant | Ongoing |
-| 2 | Initial relationship building | Third Space Circle | 1-3 months |
+| 2 | Initial relationship building | Third Space Lead | 1-3 months |
 | 3 | Informal network use | Network members | As natural |
-| 4 | Assess partnership fit | Third Space Circle | When ready |
+| 4 | Assess partnership fit | Third Space Lead | When ready |
 
 ### Affiliation (Low Commitment)
 
 | Step | Action | Actor |
 |------|--------|-------|
-| 1 | Circle confirms mutual interest | Third Space Circle |
+| 1 | Circle confirms mutual interest | Third Space Lead |
 | 2 | Document informal understanding | Circle |
 | 3 | Add to knowledge graph as Affiliated | Circle |
 | 4 | Announce to network | Circle |
@@ -70,9 +70,9 @@ No formal consent required for affiliation.
 
 | Step | Action | Actor | Process |
 |------|--------|-------|---------|
-| 1 | Draft partnership agreement | Third Space Circle | Negotiation |
+| 1 | Draft partnership agreement | Third Space Lead | Negotiation |
 | 2 | Third space confirms terms | Partner | Agreement |
-| 3 | Submit to Network Assembly | Circle | Proposal |
+| 3 | Submit to Member Assembly | Circle | Proposal |
 | 4 | Consent process | Assembly | 3-member + 48h |
 | 5 | Sign agreement | Both parties | After consent |
 | 6 | Update knowledge graph | Agent | Automated |
@@ -82,11 +82,11 @@ No formal consent required for affiliation.
 | Step | Action | Actor | Process |
 |------|--------|-------|---------|
 | 1 | Demonstrate successful partnership | Both parties | Track record |
-| 2 | Propose federation upgrade | Third Space Circle | Proposal |
+| 2 | Propose federation upgrade | Third Space Lead | Proposal |
 | 3 | Detailed agreement negotiation | Circle + Partner | Extended |
-| 4 | Submit to Network Assembly | Circle | Full consent |
+| 4 | Submit to Member Assembly | Circle | Full consent |
 | 5 | Consent process | Assembly | Full consent + 72h |
-| 6 | Implement integration | Knowledge Circle | Technical |
+| 6 | Implement integration | Knowledge Lead | Technical |
 
 ## Agreement Elements
 
@@ -129,7 +129,7 @@ No formal consent required for affiliation.
 Third space costs included in:
 - Event budget (event-related venue costs)
 - Federation grants (ongoing partnership support)
-- Grants Circle allocations (third space development)
+- Grants allocations (third space development)
 
 ## Maintenance
 
@@ -137,7 +137,7 @@ Third space costs included in:
 
 | Step | Action | Actor | Timeline |
 |------|--------|-------|----------|
-| 1 | Gather feedback from both parties | Third Space Circle | Post-Event |
+| 1 | Gather feedback from both parties | Third Space Lead | Post-Event |
 | 2 | Assess relationship health | Circle | Post-Event |
 | 3 | Propose renewal/changes | Circle | Post-Event |
 | 4 | Consent if changes needed | Assembly | If applicable |
@@ -165,7 +165,7 @@ If relationship deteriorates:
 | Step | Action | Actor |
 |------|--------|-------|
 | 1 | Notice per agreement (typically 30 days) | Either party |
-| 2 | Transition planning | Third Space Circle |
+| 2 | Transition planning | Third Space Lead |
 | 3 | Knowledge graph update | Agent |
 | 4 | Final accounting | Treasury |
 | 5 | Document learnings | Circle |
@@ -198,6 +198,6 @@ If relationship deteriorates:
 ## Related Protocols
 
 - [[3. Protocols/Asset Protocols/Federation Protocol|Federation Protocol]] — General federation framework
-- [[Third Space Circle]] — Stewardship body
+- [[Function Leads]] — Third Space Lead stewardship
 - [[Third Space Network]] — Asset documentation
-- [[3. Protocols/Group Protocols/Event Circle Protocol|Event Circle Protocol]] — Venue coordination for events
+- [[Function Lead Protocol]] — Event Lead venue coordination
