@@ -2,7 +2,7 @@
 id: asset-schelling-point
 type: asset
 access_level: tiered
-stewardship: "[[Event Circle]]"
+stewardship: "[[Function Leads]]"
 kg_entity: "kg://ethboulder/asset/schelling-point"
 ---
 Quadratic coordination tool for session scheduling and resource allocation — enabling the network to converge on collective preferences through QV mechanisms.
@@ -24,14 +24,14 @@ Before each annual convening, participants propose and vote on sessions:
 
 | Phase | Activity |
 |-------|----------|
-| **Proposal** | Any Participant+ can propose a session |
+| **Proposal** | Any Attendee+ can propose a session |
 | **Voting** | Members allocate voice credits to sessions |
 | **Aggregation** | QV formula applied (cost = votes²) |
 | **Scheduling** | Top sessions scheduled, considering logistics |
 
 ### Quadratic Funding
 
-For grant rounds coordinated by Grants Circle:
+For grant rounds coordinated by Treasury Lead:
 
 | Phase | Activity |
 |-------|----------|
@@ -44,10 +44,10 @@ For grant rounds coordinated by Grants Circle:
 
 | Tier | Who | Permissions |
 |------|-----|-------------|
-| **View** | All [[Newcomer\|Newcomers]] | See proposals and results |
-| **Propose** | [[Participant\|Participants]]+ | Submit session proposals |
+| **View** | All [[Attendee\|Attendees]] | See proposals and results |
+| **Propose** | [[Attendee\|Attendees]]+ | Submit session proposals |
 | **Vote** | [[Member\|Members]] | Allocate voice credits |
-| **Administer** | [[Event Circle]], [[Steward\|Stewards]] | Configure rounds, resolve disputes |
+| **Administer** | Event Lead, [[Steward Council]] | Configure rounds, resolve disputes |
 
 ## Voice Credit Allocation
 
@@ -57,7 +57,7 @@ For session scheduling:
 |------|--------------|-----------|
 | **Member** | 100 | Full governance rights |
 | **Steward** | 100 | No additional weight |
-| **Agent** | 50 | Per agent registration scope |
+| **Agent** | 50 | Per agent capabilities |
 
 Credits reset each voting round. Unused credits do not carry over.
 
@@ -100,7 +100,7 @@ Session Score = Σ√(credits_allocated_by_each_voter)
 | Aspect | Detail |
 |--------|--------|
 | **Platform** | Web application |
-| **Authentication** | Wallet-based (membership NFT verification) |
+| **Authentication** | Wallet-based (membership verification) |
 | **Data Storage** | Knowledge graph integration |
 | **Results** | Published to graph and Discord |
 
@@ -114,7 +114,6 @@ Session Score = Σ√(credits_allocated_by_each_voter)
 
 ## Related Documents
 
-- [[3. Protocols/Asset Protocols/Session Proposal Protocol|Session Proposal Protocol]]
-- [[Event Circle]] — Stewardship body
-- [[Grants Circle]] — QF coordination
-- [[3. Protocols/Cultural Protocols/Event Cycle Protocol|Event Cycle Protocol]]
+- [[Session Proposal Protocol]]
+- [[Function Leads]] — Event Lead oversight
+- [[Event Cycle Protocol]]

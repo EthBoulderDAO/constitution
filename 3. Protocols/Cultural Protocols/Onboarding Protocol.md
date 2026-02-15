@@ -2,65 +2,60 @@
 id: protocol-onboarding
 type: protocol
 protocol_type: cultural
-triggers: new-participant
+triggers: event-attendance
+kg_entity: "kg://ethboulder/protocol/onboarding"
 ---
-This protocol governs how newcomers are welcomed and supported through their initial journey in the Re/acc Commons.
+This protocol governs how newcomers are welcomed and supported when entering ETH Boulder through event attendance.
 
 ## Contents
 
-- [[#Instantiation]]
+- [[#Entry Membrane]]
 - [[#Authority & Oversight]]
 - [[#Process]]
 - [[#Support Resources]]
-- [[#Completion]]
+- [[#Progression to Member]]
 - [[#Related Protocols]]
 
-## Instantiation
+## Entry Membrane
 
-**Trigger Type:** Condition-based
+ETH Boulder has a **single entry membrane**: attending an ETH Boulder event. There is no online-only path to participation.
 
-**Trigger Conditions:**
-- Individual enters Discord server
-- Individual transitions between membrane levels
+**Why event-based entry?**
+- Physical presence builds genuine community
+- Shared experience creates alignment
+- Third space culture requires co-presence
+- Localism means being local
 
 ## Authority & Oversight
 
 | Role | Authority | Accountability |
 |------|-----------|----------------|
-| Onboarding Commons Circle | Coordinate support | [[Commons Assembly]] |
-| [[Agent]] | Verify completion, provide guidance | [[Stewardship]] |
-| Existing participants | Informal mentorship | Community norms |
+| Event Lead | Verify attendance, facilitate entry | [[Steward Council]] |
+| [[Agent]] | Assist with verification, provide guidance | Sponsor Member |
+| Existing Members | Informal mentorship | Community norms |
 
 ## Process
 
-### Membrane Zero: Threshold Entry
+### Becoming an Attendee
 
 | Step | Action | Actor | Timeline |
 |------|--------|-------|----------|
-| 1 | Read [[.claude/a-regenerative-accelerationist-manifesto\|Manifesto]] | Newcomer | Self-paced |
-| 2 | Read [[Re-acc Commons Constitution\|Constitution]] | Newcomer | Self-paced |
-| 3 | Post introduction in `#threshold` | Newcomer | Self-paced |
-| 4 | Agent verifies introduction | [[Agent]] | Automated |
-| 5 | @Newcomer role assigned | Bot | Immediate |
-| 6 | Welcome message with resources | Bot | Immediate |
+| 1 | Attend ETH Boulder event | Person | During event |
+| 2 | Check in at event | Event Lead or system | During event |
+| 3 | Receive Attendee status | Automatic | Immediate |
+| 4 | Access Knowledge Graph | Automatic | Immediate |
+| 5 | Join community channels | Person | Self-paced |
 
-### Membrane One: Public Commons Entry
+No consent process required — event attendance is the single entry membrane.
 
-| Step | Action | Actor | Timeline |
-|------|--------|-------|----------|
-| 1 | Explore public channels | New Participant | Self-paced |
-| 2 | Join first [[Working Circle]] | New Participant | First 2 weeks |
-| 3 | Receive Participation NFT | Smart Contract | On verification |
-| 4 | Optional: Request mentor match | New Participant | Any time |
+### What Events Qualify
 
-### Membrane Two: Inner Commons Entry
-
-| Step | Action | Actor | Timeline |
-|------|--------|-------|----------|
-| 1 | Sign [[4. Agreements/Member Agreement\|Member Agreement]] | New Member | Immediate |
-| 2 | Receive Membership NFT | Smart Contract | On consent |
-| 3 | Orientation to governance | Onboarding Circle | 1 week |
-| 4 | Multi-sig viewer access | [[Steward]] | Within 48h |
+| Event Type | Qualifies? |
+|------------|-----------|
+| **Annual ETH Boulder** | Yes |
+| **Official ETH Boulder workshops** | Yes |
+| **Official ETH Boulder meetups** | Yes |
+| **Third space partner events** | Depends on agreement |
 
 ## Support Resources
 
@@ -68,76 +63,54 @@ This protocol governs how newcomers are welcomed and supported through their ini
 
 | Resource | Purpose | Location |
 |----------|---------|----------|
-| Manifesto | Foundational philosophy | [[.claude/a-regenerative-accelerationist-manifesto\|Manifesto]] |
-| Constitution | Governing agreement | [[Re-acc Commons Constitution]] |
-| Quick Start | Essential orientation | `#threshold` pinned |
-| FAQ | Common questions | Knowledge Commons |
+| Ethereum Localism Principles | Foundational philosophy | `.claude/ethereum-localism-principles.md` |
+| Constitution | Governing agreement | [[ETH Boulder Constitution]] |
+| Knowledge Graph | Community knowledge | Bonfires |
 
 ### Human Support
 
-- **Informal mentorship:** Any participant can offer guidance
-- **Mentor matching:** Request through Onboarding Commons Circle
-- **Welcome calls:** Periodic group onboarding sessions
+- **Informal mentorship:** Any member can offer guidance
+- **Welcome at events:** Attendees oriented during events
+- **Community channels:** Ask questions in Discord
 
 ### Agent Support
 
-- **Introduction verification:** Automated feedback on completeness
-- **Navigation assistance:** Questions answered in `#commons-floor`
-- **Pattern context:** Background on commons practices
+- **Graph navigation:** Help finding information
+- **Process guidance:** Questions about participation
+- **Pattern context:** Background on community practices
 
-## Mentorship
+## Progression to Member
 
-### Requesting a Mentor
+After becoming an Attendee, progression to Member follows:
 
-1. Post in `#commons-floor` or message Onboarding Commons Circle
-2. Circle matches with available mentor
-3. Mentor reaches out for initial conversation
-4. Relationship is informal and voluntary
+| Step | Action | Actor | Timeline |
+|------|--------|-------|----------|
+| 1 | Demonstrate ongoing participation | Attendee | Ongoing |
+| 2 | Express interest in membership | Attendee | When ready |
+| 3 | Receive nomination | Any current Member | At their discretion |
+| 4 | 48h consent window | Member Assembly | 48 hours |
+| 5 | Become Member | Upon consent | Immediate |
 
-### Mentor Guidelines
-
-- Welcome without overwhelming
-- Point to resources rather than explain everything
-- Model values through behavior
-- Remain available for questions
-- No gatekeeping or judgment
-
-## Completion
-
-**Membrane Zero complete when:**
-- Introduction verified
-- @Newcomer role assigned
-
-**Membrane One onboarding complete when:**
-- At least 2 weeks active participation
-- Joined at least one Working Circle
-- Participation NFT received
-
-**Membrane Two onboarding complete when:**
-- Member Agreement signed
-- Membership NFT received
-- Governance orientation completed
-- Multi-sig access granted
+See [[Member Protocol]] for full details.
 
 ## Special Cases
 
-### Returning Participants
+### Returning Attendees
 
-Participants returning after extended absence:
-- Abbreviated re-onboarding focused on changes
-- Review of any constitutional amendments
-- Reconnection with active circles
+Attendees returning after extended absence:
+- Attendee status persists (no re-entry needed)
+- May need to re-orient to changes
+- Membership nomination follows same process
 
-### Expedited Entry
+### Federated Entry
 
-For participants from federated networks with Trust Bridge:
-- Mutual recognition may streamline membrane crossing
-- Still complete introduction and orientation
-- NFTs minted with federation attribution
+For participants from federated networks:
+- Federation agreements may streamline entry
+- Still requires event attendance
+- Cross-network recognition honored per agreement
 
 ## Related Protocols
 
-- [[3. Protocols/Role Protocols/Newcomer Protocol|Newcomer Protocol]] — Threshold crossing
-- [[3. Protocols/Role Protocols/Participant Protocol|Participant Protocol]] — Public commons entry
-- [[3. Protocols/Role Protocols/Member Protocol|Member Protocol]] — Inner commons entry
-- [[3. Protocols/Group Protocols/Working Circle Protocol|Working Circle Protocol]] — Circle participation
+- [[Attendee Protocol]] — Attendee rights and responsibilities
+- [[Member Protocol]] — Progression to Member
+- [[Event Cycle Protocol]] — Event structure

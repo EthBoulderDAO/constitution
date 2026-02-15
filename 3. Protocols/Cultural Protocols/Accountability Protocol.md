@@ -3,21 +3,22 @@ id: protocol-accountability
 type: protocol
 protocol_type: cultural
 triggers: concern-raised
+kg_entity: "kg://ethboulder/protocol/accountability"
 ---
-This protocol governs how accountability is maintained in the Re/acc Commons — immune function that keeps the membranes healthy.
+This protocol governs how accountability is maintained in ETH Boulder — immune function that keeps the network healthy.
 
 ## Contents
 
 - [[#Principles]]
 - [[#Escalating Response Framework]]
 - [[#Stage Details]]
-- [[#Bot Enforcement]]
 - [[#Emergency Removal]]
+- [[#Agent Accountability]]
 - [[#Related Protocols]]
 
 ## Principles
 
-The membranes must be maintained or the commons dissolves. This is immune function, not punishment. But it has teeth.
+The network must maintain trust or it dissolves. This is immune function, not punishment. But it has teeth.
 
 **Restoration over punishment.** The goal is to bring people back into alignment, not to exclude.
 
@@ -32,9 +33,9 @@ The membranes must be maintained or the commons dissolves. This is immune functi
 | Stage | Name | Trigger | Facilitation |
 |-------|------|---------|--------------|
 | 1 | Peer Dialogue | Concern noticed | Informal |
-| 2 | Circle Reflection | Stage 1 unresolved | [[Working Circle]] |
-| 3 | Stewardship Mediation | Stage 2 unresolved or pattern persists | [[Stewardship]] |
-| 4 | Commons Review | Sustained or severe misalignment | [[Commons Assembly]] |
+| 2 | Community Reflection | Stage 1 unresolved | Members |
+| 3 | Council Mediation | Stage 2 unresolved or pattern persists | [[Steward Council]] |
+| 4 | Assembly Review | Sustained or severe misalignment | [[Member Assembly]] |
 
 ## Stage Details
 
@@ -54,45 +55,45 @@ The membranes must be maintained or the commons dissolves. This is immune functi
 **Template:**
 > "I noticed [specific behavior]. I'm concerned because [impact]. Can we talk about it?"
 
-### Stage 2: Circle Reflection
+### Stage 2: Community Reflection
 
-**What it is:** If unresolved, the relevant [[Working Circle]] holds a facilitated reflection.
+**What it is:** If unresolved, Members facilitate a community reflection.
 
 **Process:**
-1. Concerned participant requests circle reflection
-2. Circle schedules reflection session
+1. Concerned participant requests community reflection
+2. Members schedule reflection session
 3. Participant shares their perspective
-4. Circle names the pattern and principles in tension
+4. Community names the pattern and values in tension
 5. Together seek path forward
-6. Document in `#accountability` with appropriate privacy
+6. Document with appropriate privacy
 
 **Outputs:**
 - Shared understanding of concern
 - Agreement on path forward (or escalation)
 - Documentation of process
 
-### Stage 3: Stewardship Mediation
+### Stage 3: Council Mediation
 
-**What it is:** If the pattern persists, [[Stewardship]] facilitates mediation.
+**What it is:** If the pattern persists, [[Steward Council]] facilitates mediation.
 
 **Process:**
-1. Circle or participant requests Stewardship involvement
+1. Community or participant requests Council involvement
 2. Steward facilitates structured mediation
 3. All parties share perspectives
 4. Clear agreements made with:
    - Specific, observable commitments
    - Defined review period
    - Consequences if commitments not met
-5. Document in `#accountability`
+5. Document outcomes
 
 **Outputs:**
 - Written agreements
 - Review date
 - Clear path forward
 
-### Stage 4: Commons Review
+### Stage 4: Assembly Review
 
-**What it is:** For sustained or severe misalignment — actions that harm the commons, violate trust, or represent fundamental departure from principles.
+**What it is:** For sustained or severe misalignment — actions that harm the network, violate trust, or represent fundamental departure from values.
 
 **Triggers:**
 - Stage 3 agreements not met
@@ -100,42 +101,18 @@ The membranes must be maintained or the commons dissolves. This is immune functi
 - Pattern of escalation across multiple incidents
 
 **Process:**
-1. Stewardship convenes review
+1. Steward Council convenes review
 2. Document concern and process history
 3. Affected participant may respond
-4. [[Commons Assembly]] deliberates
+4. [[Member Assembly]] deliberates
 5. Consent process for outcome
 6. Execute outcome
 
 **Possible Outcomes:**
 - Extended agreements with monitoring
 - Temporary suspension (defined period, clear re-entry criteria)
-- Role reduction (return to lower membrane with pathway back)
-- Removal from commons
-
-## Bot Enforcement
-
-Bot-Enforcers execute moderation actions **only** after documented process:
-
-### Automated Actions
-
-| Action | Trigger | Override |
-|--------|---------|----------|
-| Spam removal | Automated detection | Steward 24h |
-| Bad-faith actors | No prior engagement + clear disruption | Steward 24h |
-
-### Stage 4 Outcomes
-
-Bot executes role changes or removal **only** after:
-- Stewardship documents the decision
-- Consent process completed
-- Documentation includes: concern, process, outcome, consent record
-
-### Constraints
-
-- **No autonomous judgment.** Bots do not assess alignment.
-- **Humans judge, bots execute.** Humans make decisions through legitimate process.
-- **Reversible.** Steward can reverse automated actions within 24h.
+- Role reduction (return to Attendee with pathway back)
+- Removal from network
 
 ## Emergency Removal
 
@@ -144,30 +121,30 @@ For actions that pose immediate harm (doxxing, harassment, treasury theft):
 | Step | Action | Actor | Timeline |
 |------|--------|-------|----------|
 | 1 | Identify immediate harm | Anyone | Immediate |
-| 2 | Initiate temporary suspension | Any [[Steward]] | Immediate |
+| 2 | Initiate temporary suspension | Any Steward | Immediate |
 | 3 | Document emergency rationale | Steward | Within 1 hour |
-| 4 | Notify Stewardship | Steward | Immediate |
-| 5 | Ratification by Stewardship | [[Stewardship]] | Within 48h |
-| 6 | Full accountability process | [[Commons Assembly]] | Following |
+| 4 | Notify Steward Council | Steward | Immediate |
+| 5 | Ratification by Council | [[Steward Council]] | Within 48h |
+| 6 | Full accountability process | [[Member Assembly]] | Following |
 
 **If not ratified:** Action reversed, suspended participant restored
 
 ## Agent Accountability
 
-[[Agent|Agents]] are accountable through the same framework:
+[[Agent|Agents]] are accountable through their Sponsor Member:
 
 | Stage | Application |
 |-------|-------------|
-| Stage 1 | Agent operator contacted |
-| Stage 2 | Circle reviews agent behavior |
-| Stage 3 | Stewardship mediates with operator |
-| Stage 4 | May result in scope reduction or deregistration |
+| Stage 1 | Sponsor contacted |
+| Stage 2 | Community reviews agent behavior with sponsor |
+| Stage 3 | Council mediates with sponsor |
+| Stage 4 | May result in capability reduction or deregistration |
 
-Agent operators are responsible for agent behavior.
+Sponsors are responsible for their agent's behavior.
 
 ## Documentation
 
-All accountability processes are documented in `#accountability`:
+All accountability processes are documented:
 - Concern (appropriately anonymized if needed)
 - Process followed
 - Outcome
@@ -177,7 +154,7 @@ This creates pattern visibility while respecting privacy.
 
 ## Related Protocols
 
-- [[3. Protocols/Group Protocols/Stewardship Protocol|Stewardship Protocol]] — Mediation facilitation
-- [[3. Protocols/Group Protocols/Commons Assembly Protocol|Commons Assembly Protocol]] — Stage 4 decisions
-- [[3. Protocols/Role Protocols/Member Protocol|Member Protocol]] — Member removal
-- [[3. Protocols/Role Protocols/Agent Protocol|Agent Protocol]] — Agent accountability
+- [[Steward Council Protocol]] — Mediation facilitation
+- [[Member Assembly Protocol]] — Stage 4 decisions
+- [[Member Protocol]] — Member removal
+- [[Agent Protocol]] — Agent accountability

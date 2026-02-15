@@ -3,9 +3,10 @@ id: protocol-steward
 type: protocol
 protocol_type: role
 governs: "[[Steward]]"
-triggers: nomination
+triggers: election
+kg_entity: "kg://ethboulder/protocol/steward"
 ---
-This protocol governs the selection, service, and rotation of [[Steward|Stewards]] through Membrane Three — entry into the Solidarity Economy with facilitation authority and treasury signing power.
+This protocol governs the election and service of [[Steward|Stewards]] — Members who serve on the [[Steward Council]] with oversight authority and emergency powers.
 
 ## Contents
 
@@ -13,10 +14,10 @@ This protocol governs the selection, service, and rotation of [[Steward|Stewards
 - [[#Authority & Oversight]]
 - [[#Eligibility]]
 - [[#Term Structure]]
-- [[#Selection Process]]
-- [[#Rotation & Handoff]]
+- [[#Election Process]]
+- [[#Service Expectations]]
+- [[#Transition & Handoff]]
 - [[#Resignation & Removal]]
-- [[#Emergency Authority]]
 - [[#Related Protocols]]
 
 ## Instantiation
@@ -24,126 +25,137 @@ This protocol governs the selection, service, and rotation of [[Steward|Stewards
 **Trigger Type:** Condition-based and Action-based (Hybrid)
 
 **Trigger Conditions:**
-- Vacancy when a Steward position becomes open (rotation or resignation)
-- Expansion when additional Steward capacity is needed
-- Regular monthly rotation cycle
+- Vacancy when a Steward seat opens (term expiration, resignation, recall)
+- Expansion when council has fewer than minimum (5) members
 
 ## Authority & Oversight
 
 | Role | Authority | Accountability |
 |------|-----------|----------------|
-| [[Member]] | Nominate candidates (including self) | [[Commons Assembly]] |
-| [[Commons Assembly]] | Grant or withhold consent | Constitution |
-| Outgoing [[Steward]] | Facilitate handoff | [[Commons Assembly]] |
+| [[Member]] | Nominate candidates (including self) | [[Member Assembly]] |
+| [[Member Assembly]] | Grant or withhold consent | Constitution |
+| [[Steward Council]] | Facilitate elections, oversee transition | [[Member Assembly]] |
 
 ## Eligibility
 
 To serve as Steward:
 - [[Member]] in good standing
-- Deep commitment to commons purpose, values, democratic accountability
-- Demonstrated facilitation capacity
-- Willingness to serve in rotating curator role
-- Not seeking to accumulate positional power
+- Demonstrated commitment to network purpose and values
+- Ability to attend council meetings
+- Willingness to serve oversight role
+- Not currently under accountability process
 
 ## Term Structure
 
 | Aspect | Detail |
 |--------|--------|
-| Term Length | 1 month |
-| Council Size | 2-3 active Stewards |
-| Rotation | Monthly handoff with knowledge transfer |
-| Re-selection | May serve again after minimum 1 month gap |
-| Limits | None (but accumulation discouraged) |
+| **Term Length** | 12 months |
+| **Council Size** | 5-7 members |
+| **Staggered** | Not all seats open simultaneously |
+| **Re-election** | May serve again after term |
+| **Limits** | None (but accumulation discouraged) |
 
-## Selection Process
+## Election Process
 
 | Step | Action | Actor | Timeline |
 |------|--------|-------|----------|
-| 1 | Open nomination period | Outgoing [[Steward]] | 1 week before rotation |
-| 2 | Nominations submitted | Any [[Member]] (including self) | 3 days |
-| 3 | Post nominees in `#proposals` | [[Steward]] | Immediate |
-| 4 | Full commons consent window | [[Commons Assembly]] | 72 hours |
-| 5 | Process objections if any | [[Stewardship]] | As needed |
-| 6 | Confirm consent, assign role | Outgoing Steward | After window closes |
-| 7 | Mint Stewardship NFT | Smart Contract | On selection |
-| 8 | Update multi-sig signers | Outgoing Steward | Within 24 hours |
-| 9 | Knowledge transfer | Both Stewards | 2-3 days overlap |
+| 1 | Announce open seat | [[Steward Council]] | When seat opens |
+| 2 | Nomination period | Any [[Member]] (including self) | 1 week |
+| 3 | Nominees confirm acceptance | Nominees | During nomination |
+| 4 | Post nominees in governance channel | [[Steward Council]] | End of nomination |
+| 5 | Consent window | [[Member Assembly]] | 48 hours |
+| 6 | Process objections if any | [[Steward Council]] | As needed |
+| 7 | Certify results | [[Steward Council]] | After window closes |
+| 8 | Transition period | New + Outgoing Steward | 2 weeks |
+
+### Nomination
+
+Any Member may nominate (including self-nomination):
+- Post in governance channel
+- Include statement of interest and qualifications
+- Nominee must confirm acceptance
 
 ### Consent Requirements
 
-Full commons consent required:
-- All [[Member|Members]] notified
-- 72-hour objection window
+All members must participate:
+- 48-hour window
 - No unresolved paramount objections
+- Multiple candidates: first to achieve consent, or ranked consent
 
-## Rotation & Handoff
+### Multiple Candidates
 
-Monthly rotation ensures no accumulation of positional power.
+If multiple candidates for one seat:
+- Run separate consent processes
+- First to achieve consent wins
+- OR: ranked consent where Assembly ranks preferences
 
-**Handoff includes:**
-- Review of active processes and pending items
-- Multi-sig access transfer (add new, remove outgoing)
-- Discord admin role transfer
-- Documentation of any in-progress accountability or governance matters
-- Introduction of new Steward in `#stewardship`
+## Service Expectations
 
-**Overlap period:** 2-3 days where both outgoing and incoming Steward have access for smooth transition.
+| Activity | Expectation |
+|----------|-------------|
+| **Council meetings** | Monthly minimum attendance |
+| **Function Lead oversight** | Monthly report review |
+| **Emergencies** | Available for urgent situations |
+| **Elections** | Facilitate when seats open |
+| **Dispute resolution** | Mediate when needed |
+
+## Transition & Handoff
+
+### Outgoing Steward
+
+| Task | Timeline |
+|------|----------|
+| **Document current state** | Before departure |
+| **Brief incoming Steward** | 2-week transition |
+| **Transfer access** | At transition end |
+| **Complete pending matters** | Before departure |
+
+### Incoming Steward
+
+| Task | Timeline |
+|------|----------|
+| **Receive briefing** | 2-week transition |
+| **Shadow council meetings** | During transition |
+| **Receive access** | At transition end |
+| **Full participation** | After transition |
 
 ## Resignation & Removal
 
 ### Resignation
 
 A Steward may resign by:
-- Providing written notice to [[Stewardship]] and [[Commons Assembly]]
-- Completing knowledge transfer to remaining Stewards
-- Resignation triggers selection process for replacement
+- Providing written notice to [[Steward Council]] and [[Member Assembly]]
+- Completing knowledge transfer
+- Resignation triggers election for replacement
 
-### Removal
+### Recall
+
+Members can recall a Steward:
+1. Member proposes recall in governance channel
+2. 72h consent window
+3. All members must participate
+4. If passed, Steward is removed
+5. Seat opens for election
+
+### Removal for Cause
 
 Grounds for removal:
-- Failure to meet facilitation responsibilities
+- Failure to meet service expectations
 - Abuse of Steward authority
-- Fiduciary breach or misuse of treasury access
-- Behavior undermining institutional integrity or trust
+- Violation of protocols or values
+- Behavior undermining trust
 
 Process:
-1. Concern raised per [[3. Protocols/Cultural Protocols/Accountability Protocol|Accountability Protocol]]
+1. Concern raised per [[Accountability Protocol]]
 2. Escalating response framework followed
-3. If Stage 4 recommends removal:
-4. Full commons consent for removal (72h window)
-5. If consent: immediate role removal, NFT burned, multi-sig access revoked
-6. Vacancy filled through selection process
-
-**Removal threshold:** Consent from all Members (can be blocked by single paramount objection)
-
-## Emergency Authority
-
-For actions posing immediate harm (doxxing, harassment, treasury theft):
-
-| Action | Authority | Requirement |
-|--------|-----------|-------------|
-| Immediate temporary suspension | Any Steward | Document rationale |
-| Post-hoc ratification | [[Stewardship]] | Within 48 hours |
-| Full accountability process | [[Commons Assembly]] | Following emergency |
-
-Emergency actions that are not ratified within 48h are automatically reversed.
-
-## Participation Cadence
-
-![[3. Protocols/Cultural Protocols/Participation Cadence Protocol#Steward]]
-
-## On-Chain Operations
-
-| Event | On-Chain Action |
-|-------|-----------------|
-| Selection | Mint time-limited Stewardship NFT |
-| Multi-sig update | Add signer, update threshold |
-| Rotation | Burn outgoing NFT, mint new, update signers |
-| Removal | Burn NFT, remove signer |
+3. If review recommends removal:
+4. Constitutional consent (72h, all members participate)
+5. If consent: immediate role removal, access revoked
+6. Seat opens for election
 
 ## Related Protocols
 
-- [[3. Protocols/Role Protocols/Member Protocol|Member Protocol]] — Previous membrane
-- [[3. Protocols/Group Protocols/Stewardship Protocol|Stewardship Protocol]] — Council operations
-- [[3. Protocols/Asset Protocols/Treasury Management Protocol|Treasury Management Protocol]] — Signing authority
-- [[3. Protocols/Cultural Protocols/Accountability Protocol|Accountability Protocol]] — Removal process
+- [[Member Protocol]] — Eligibility requirement
+- [[Steward Council Protocol]] — Council operations
+- [[Member Assembly Protocol]] — Electing body
+- [[Accountability Protocol]] — Removal process

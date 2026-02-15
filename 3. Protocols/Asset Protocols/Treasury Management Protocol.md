@@ -2,10 +2,11 @@
 id: protocol-treasury
 type: protocol
 protocol_type: asset
-governs: "[[Commons Treasury]]"
+governs: "[[Event Treasury]]"
 triggers: allocation-request
+kg_entity: "kg://ethboulder/protocol/treasury"
 ---
-This protocol governs all operations of the [[Commons Treasury]] — the shared economic engine of the network nation.
+This protocol governs all operations of the [[Event Treasury]] — the shared economic engine of ETH Boulder.
 
 ## Contents
 
@@ -32,61 +33,61 @@ This protocol governs all operations of the [[Commons Treasury]] — the shared 
 
 | Role | Authority | Accountability |
 |------|-----------|----------------|
-| [[Commons Assembly]] | Approve allocations | Constitution |
-| [[Stewardship]] | Sign transactions, facilitate process | Commons Assembly |
-| [[Working Circle]] | Propose allocations | Commons Assembly |
-| [[Agent]] | Propose, sign, execute (2/4 threshold with other agents) | Agent Operator + Transparency |
+| [[Member Assembly]] | Approve allocations | Constitution |
+| [[Steward Council]] | Sign transactions, facilitate process | Member Assembly |
+| [[Function Leads]] | Propose allocations for function | Member Assembly |
+| [[Agent]] | Propose, sign, execute (2/4 threshold) | Sponsor Member |
 | [[Member]] | View all transactions | Community trust |
 
-### Agent Treasury Access
+### Treasury Signers
 
-Agents have full signing authority on the treasury multi-sig:
+The treasury multi-sig includes Steward Council members and registered Agents:
 
 ```yaml
 treasury_signers:
-  threshold: 2 of 4
+  threshold: 2 of 4+
   signers:
-    - treasury-agent (agent-controlled)
-    - governance-agent (agent-controlled)
     - steward-1 (human)
     - steward-2 (human)
+    - steward-3 (human)
+    - registered-agent (agent-controlled)
 ```
 
-This enables autonomous execution: two agents can meet threshold without human signatures. Humans participate in consent processes but are not required to sign for execution. See [[3. Protocols/Asset Protocols/Resource Pool Protocol|Resource Pool Protocol]] for spending limits.
+This enables execution after consent is complete.
 
 ## Allocation Categories
 
 | Category | Purpose |
 |----------|---------|
-| **Knowledge Commons** | Tooling, hosting, agent compute for documentation and federation |
-| **Project Incubation** | Seed funding for initiatives meeting the recursive criterion |
-| **Coordination Services** | Agent infrastructure, federation protocols, governance tooling |
+| **Event Operations** | Venue, logistics, speakers, hackathon for annual convening |
+| **Knowledge Graph** | Tooling, hosting, agent compute for documentation and federation |
+| **Third Space** | Partnership support, venue cultivation |
+| **Grants** | QF rounds, hackathon prizes, ecosystem funding |
 | **Mutual Aid** | Direct support for participants facing acute need |
-| **Contributor Compensation** | Recognition of sustained contribution |
-| **Operational** | Small recurring costs for commons infrastructure |
+| **Operational** | Small recurring costs for network infrastructure |
 
 ## Approval Thresholds
 
 | Amount/Type | Authority | Process |
 |-------------|-----------|---------|
-| Operational (≤ $500) | [[Steward]] autonomy | FYI post in `#treasury` |
-| Standard ($500-$5,000) | [[Commons Assembly]] | 3-member consent + 48h |
-| Large (> $5,000) | [[Commons Assembly]] | Full commons consent + 72h |
-| Structural changes | [[Commons Assembly]] | Full commons consent + 72h |
+| Operational (≤ $500) | Treasury Lead | FYI post in treasury channel |
+| Standard ($500-$5,000) | [[Member Assembly]] | 3-member consent + 48h |
+| Large (> $5,000) | [[Member Assembly]] | All members + 72h |
+| Structural changes | [[Member Assembly]] | All members + 72h |
 
-*Thresholds can be adjusted through full commons consent.*
+*Thresholds can be adjusted through constitutional consent.*
 
 ## Proposal Process
 
 | Step | Action | Actor | Timeline |
 |------|--------|-------|----------|
 | 1 | Draft proposal | Proposer | As needed |
-| 2 | Circle review (recommended) | [[Working Circle]] | 1 week |
-| 3 | Post in `#treasury` | Proposer | Initiates process |
-| 4 | Consent window | [[Commons Assembly]] | 48h or 72h |
-| 5 | Process objections | [[Stewardship]] | As needed |
-| 6 | Confirm consent | [[Steward]] | After window |
-| 7 | Execute transaction | [[Stewardship]] | Within 48h of consent |
+| 2 | Function Lead review (recommended) | Function Lead | 1 week |
+| 3 | Post in treasury channel | Proposer | Initiates process |
+| 4 | Consent window | [[Member Assembly]] | 48h or 72h |
+| 5 | Process objections | [[Steward Council]] | As needed |
+| 6 | Confirm consent | [[Steward Council]] | After window |
+| 7 | Execute transaction | Signers | Within 48h of consent |
 
 ### Proposal Template
 
@@ -95,7 +96,7 @@ This enables autonomous execution: two agents can meet threshold without human s
 **Title:** [Clear title]
 **Amount:** [Requested amount]
 **Category:** [From categories above]
-**Proposer:** [Your name / Working Circle]
+**Proposer:** [Your name / Function Lead]
 
 **Summary:**
 [1-2 sentence description]
@@ -104,7 +105,7 @@ This enables autonomous execution: two agents can meet threshold without human s
 [What the funds will be used for]
 
 **Alignment:**
-[How this serves commons purpose and recursive criterion]
+[How this serves network purpose]
 
 **Milestones:** (for amounts > $2,000)
 [Specific deliverables and timeline]
@@ -118,28 +119,27 @@ This enables autonomous execution: two agents can meet threshold without human s
 ### Standard Disbursement
 
 1. Consent confirmed and documented
-2. Agent or [[Steward]] creates transaction in Gnosis Safe
-3. 2/4 threshold collected (agents + Stewards can sign)
-4. Transaction executed on-chain (agents can execute autonomously)
-5. Confirmation posted in `#treasury`
+2. Steward or Agent creates transaction in multi-sig
+3. 2/4+ threshold collected
+4. Transaction executed on-chain
+5. Confirmation posted in treasury channel
 
 ### Milestone-Based Disbursement
 
 For allocations > $2,000:
 - Initial disbursement: up to 50%
 - Subsequent disbursements: upon milestone completion
-- Circle or proposer reports milestone completion
-- Stewardship verifies and initiates next disbursement
+- Function Lead or proposer reports milestone completion
+- Steward Council verifies and initiates next disbursement
 
-### Autonomous Agent Execution
+### Agent Execution
 
 [[Agent|Agents]] with signer access:
-- Submit transactions to Gnosis Safe
-- Sign transactions (counted toward 2/4 threshold)
-- Execute transactions once threshold met (agents can meet threshold alone)
-- No additional human approval required after consent is complete
+- Submit transactions to multi-sig
+- Sign transactions (counted toward threshold)
+- Execute transactions once threshold met
 
-**Consent is the decision point.** Once a proposal has received sufficient consents and no unresolved objections, agents execute autonomously. Humans participate in consent processes, not in execution.
+**Consent is the decision point.** Once a proposal has received sufficient consents and no unresolved objections, execution proceeds autonomously.
 
 ## Reporting
 
@@ -147,7 +147,7 @@ For allocations > $2,000:
 |--------|-----------|---------|
 | Transaction log | Real-time | Public blockchain visibility |
 | Monthly summary | Monthly | All transactions, categories, balances |
-| Quarterly review | Quarterly | Full treasury review, category analysis |
+| Event accounting | Post-Event | Full event budget vs actual |
 
 ### Monthly Summary Contents
 
@@ -166,7 +166,7 @@ For time-sensitive situations:
 | Emergency freeze | 2 Stewards | Documented rationale |
 | Emergency transaction | 2 Stewards | Documented rationale + 48h ratification |
 
-**Ratification:** All emergency actions require Commons Assembly ratification within 48 hours. Non-ratified actions are reversed where possible.
+**Ratification:** All emergency actions require Member Assembly ratification within 48 hours. Non-ratified actions are reversed where possible.
 
 ## Safeguards
 
@@ -177,9 +177,6 @@ For time-sensitive situations:
 
 ## Related Protocols
 
-- [[3. Protocols/Group Protocols/Commons Assembly Protocol|Commons Assembly Protocol]] — Approval process
-- [[3. Protocols/Group Protocols/Stewardship Protocol|Stewardship Protocol]] — Signing authority
-- [[2. Structure/Assets/Commons Treasury|Commons Treasury]] — Asset documentation
-- [[3. Protocols/Asset Protocols/Resource Pool Protocol|Resource Pool Protocol]] — Spending limits and operational autonomy
-- [[3. Protocols/Asset Protocols/Commitment Pool Protocol|Commitment Pool Protocol]] — Staked accountability
-- [[3. Protocols/Asset Protocols/Bounty Coordination Protocol|Bounty Coordination Protocol]] — Income generation
+- [[Member Assembly Protocol]] — Approval process
+- [[Steward Council Protocol]] — Signing authority
+- [[Event Cycle Protocol]] — Budget cycle timing

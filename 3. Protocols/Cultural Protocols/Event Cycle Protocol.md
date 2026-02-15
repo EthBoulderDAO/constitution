@@ -32,7 +32,7 @@ The annual convening is not a conference — it is the **constitutional moment**
 │ Cultivation │ Convergence │  Convening  │   Integration     │
 │ Knowledge   │ Session QV  │ Unconference│   Retrospective   │
 │ Third Space │ Logistics   │ Hackathon   │   Graph Enrichment│
-│ Grants      │ Steward +   │ Full Focus  │   Member Fast-Track│
+│ Grants      │ Event Lead +│ Full Focus  │   Member Onboard  │
 └─────────────┴─────────────┴─────────────┴───────────────────┘
 ```
 
@@ -50,21 +50,21 @@ The annual convening is not a conference — it is the **constitutional moment**
 | **Grants** | Ongoing grant evaluation, QF rounds, impact tracking |
 | **Governance** | Normal operations, constitutional development |
 
-### Circle Activity
+### Function Lead Activity
 
-| Circle | Inter-Event Focus |
-|--------|-------------------|
-| Event Circle | Retrospective integration, early planning |
-| Knowledge Circle | Maintenance mode, federation development |
-| Third Space Circle | Relationship building, new partnerships |
-| Grants Circle | Full activity, funding rounds |
+| Lead | Inter-Event Focus |
+|------|-------------------|
+| Event Lead | Retrospective integration, early planning |
+| Knowledge Lead | Maintenance mode, federation development |
+| Third Space Lead | Relationship building, new partnerships |
+| Treasury Lead | Full activity, funding rounds |
 
 ### Participation Expectations
 
 | Role | Expectations |
 |------|-------------|
-| Members | Regular circle participation, governance |
-| Stewards | Normal rotation, facilitation |
+| Members | Regular participation, governance |
+| Steward Council | Normal rotation, facilitation |
 | Agents | Ongoing operations |
 
 ## Phase 2: Pre-Event (December - January)
@@ -86,26 +86,26 @@ The annual convening is not a conference — it is the **constitutional moment**
 
 | Area | Activities |
 |------|-----------|
-| **Event Circle** | Full activation, budget execution, logistics |
+| **Event Lead** | Full activation, budget execution, logistics |
 | **Session Scheduling** | QV voting via Schelling Point |
 | **Volunteer Coordination** | Recruitment, assignment, training |
 | **Communications** | Promotion, speaker announcements |
 
-### Circle Activity
+### Function Lead Activity
 
-| Circle | Pre-Event Focus |
-|--------|-----------------|
-| Event Circle | Maximum activity |
-| Knowledge Circle | Session entity setup, documentation prep |
-| Third Space Circle | Venue coordination, space logistics |
-| Grants Circle | Hackathon prize finalization |
+| Lead | Pre-Event Focus |
+|------|-----------------|
+| Event Lead | Maximum activity |
+| Knowledge Lead | Session entity setup, documentation prep |
+| Third Space Lead | Venue coordination, space logistics |
+| Treasury Lead | Hackathon prize finalization |
 
 ### Participation Expectations
 
 | Role | Expectations |
 |------|-------------|
 | Members | QV participation required, volunteer encouraged |
-| Stewards | Lead Event Circle, high availability |
+| Steward Council | Event Lead oversight, high availability |
 | Agents | QV processing, logistics support |
 
 ## Phase 3: Event (February - 3 days)
@@ -133,7 +133,7 @@ The annual convening is not a conference — it is the **constitutional moment**
 ### Governance During Event
 
 - **Minimal formal governance** — focus on convening
-- **Emergency authority** — Steward Lead handles real-time decisions
+- **Emergency authority** — Event Lead handles real-time decisions
 - **Documentation** — all decisions logged for post-event review
 
 ### Participation Expectations
@@ -141,7 +141,7 @@ The annual convening is not a conference — it is the **constitutional moment**
 | Role | Expectations |
 |------|-------------|
 | Members | Full presence (in-person preferred, remote accepted) |
-| Stewards | Full presence, real-time coordination |
+| Steward Council | Full presence, real-time coordination |
 | Agents | Documentation, logistics, communication |
 
 ## Phase 4: Post-Event (March)
@@ -155,8 +155,8 @@ The annual convening is not a conference — it is the **constitutional moment**
 |------|-------------------|
 | Week 1 | Rest, vendor payments, initial documentation |
 | Week 2 | Retrospective facilitation |
-| Week 3 | Knowledge graph enrichment, fast-track nominations |
-| Week 4 | Committee succession, transition to Inter-Event |
+| Week 3 | Knowledge graph enrichment, member nominations |
+| Week 4 | Lead transition, return to Inter-Event |
 
 ### Focus Areas
 
@@ -164,24 +164,25 @@ The annual convening is not a conference — it is the **constitutional moment**
 |------|-----------|
 | **Retrospective** | What worked, what didn't, what to change |
 | **Knowledge Graph** | Session entities, relationships, patterns |
-| **Membership** | Fast-track nominations for event contributors |
-| **Succession** | Event Circle steering committee transition |
+| **Membership** | Nominations for engaged Attendees |
+| **Succession** | Event Lead volunteer transitions |
 
 ### Retrospective Protocol
 
 | Step | Action | Actor |
 |------|--------|-------|
-| 1 | Collect feedback (survey + discussion) | Event Circle |
-| 2 | Synthesize themes | Steering Committee |
-| 3 | Present to Network Assembly | Steering Committee |
-| 4 | Consent on changes for next cycle | Network Assembly |
-| 5 | Document learnings in knowledge graph | Knowledge Circle |
+| 1 | Collect feedback (survey + discussion) | Event Lead |
+| 2 | Synthesize themes | Event Lead |
+| 3 | Present to Member Assembly | Event Lead |
+| 4 | Consent on changes for next cycle | Member Assembly |
+| 5 | Document learnings in knowledge graph | Knowledge Lead |
 
-### Fast-Track Membership
+### Post-Event Membership
 
-Event contributors who demonstrated strong alignment may be nominated for accelerated membership:
-- Reduced observation period (event participation counts)
-- Standard consent process still required
+Event Attendees who demonstrated strong engagement may be nominated for membership:
+- Event participation creates Attendee status automatically
+- Any Member can nominate engaged Attendees
+- Standard consent process (3 members, 48h)
 - Documented event contribution as evidence
 
 ## Governance Rhythm
@@ -193,7 +194,7 @@ Event contributors who demonstrated strong alignment may be nominated for accele
 | Inter-Event | Monthly | Normal governance |
 | Pre-Event | Bi-weekly | Budget, event decisions |
 | Event | Emergency only | Real-time issues |
-| Post-Event | Weekly | Retrospective, succession |
+| Post-Event | Weekly | Retrospective, transitions |
 
 ### Budget Cycle
 
@@ -207,7 +208,7 @@ Event contributors who demonstrated strong alignment may be nominated for accele
 
 ## Related Protocols
 
-- [[3. Protocols/Group Protocols/Event Circle Protocol|Event Circle Protocol]] — Event coordination
-- [[3. Protocols/Asset Protocols/Session Proposal Protocol|Session Proposal Protocol]] — QV scheduling
-- [[3. Protocols/Cultural Protocols/Participation Cadence Protocol|Participation Cadence Protocol]] — Expectations
-- [[3. Protocols/Group Protocols/Network Assembly Protocol|Network Assembly Protocol]] — Governance
+- [[Function Lead Protocol]] — Lead coordination
+- [[Session Proposal Protocol]] — QV scheduling
+- [[Participation Cadence Protocol]] — Expectations
+- [[Member Assembly Protocol]] — Governance

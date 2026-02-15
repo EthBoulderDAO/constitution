@@ -3,8 +3,9 @@ id: protocol-cadence
 type: protocol
 protocol_type: cultural
 triggers: ongoing
+kg_entity: "kg://ethboulder/protocol/cadence"
 ---
-This protocol establishes participation expectations for each role — the rhythms that keep the commons alive.
+This protocol establishes participation expectations for each role — the rhythms that keep the network alive.
 
 ## Contents
 
@@ -16,7 +17,7 @@ This protocol establishes participation expectations for each role — the rhyth
 
 ## Principles
 
-**Sustained participation builds trust.** Membrane crossing is earned through consistent engagement, not isolated bursts.
+**Sustained participation builds trust.** Role progression is earned through consistent engagement, not isolated bursts.
 
 **Quality over quantity.** One meaningful contribution outweighs many superficial ones.
 
@@ -26,26 +27,15 @@ This protocol establishes participation expectations for each role — the rhyth
 
 ## Role-Specific Cadences
 
-### Newcomer
+### Attendee
 
 | Activity | Expectation |
 |----------|-------------|
-| Read manifesto + constitution | Before introduction |
-| Post introduction | Any time |
-| Observe commons | Self-paced |
+| Attend ETH Boulder event | Entry requirement |
+| Contribute to Knowledge Graph | When you have relevant input |
+| Participate in community | As available |
 
-**Note:** Newcomers are not expected to participate actively. The threshold is about arrival, not contribution.
-
-### Participant
-
-| Activity | Expectation |
-|----------|-------------|
-| Engage in public channels | Weekly (minimum) |
-| Participate in Working Circle | Active in at least one |
-| Contribute to discussions | When you have relevant input |
-| Read proposals | Stay aware of governance |
-
-**Minimum for verification:** 2 weeks sustained participation with meaningful contributions
+**Note:** Attendees have no minimum participation requirements after initial event attendance.
 
 ### Member
 
@@ -54,7 +44,7 @@ This protocol establishes participation expectations for each role — the rhyth
 | Read proposals | All proposals affecting governance |
 | Express consent/objection | Within consent windows |
 | Participate in governance | Active voice when relevant |
-| Contribute to commons work | Active in at least one domain |
+| Contribute to network | Active in at least one area |
 | Quarterly check-in | Confirm continued engagement |
 
 **Note:** Members who do not participate in governance for 3+ months may be contacted about sabbatical or transition.
@@ -63,51 +53,59 @@ This protocol establishes participation expectations for each role — the rhyth
 
 | Activity | Expectation |
 |----------|-------------|
-| Monitor consent processes | Daily (async is fine) |
-| Coordinate with Stewardship | Weekly |
-| Facilitate when needed | As processes require |
-| Treasury oversight | Review all proposals |
-| Accountability facilitation | As triggered |
-| Documentation | Maintain #stewardship |
-| Handoff preparation | Before rotation |
+| Council meetings | Monthly minimum attendance |
+| Function Lead oversight | Monthly report review |
+| Emergency availability | Available for urgent situations |
+| Election facilitation | When seats open |
+| Dispute mediation | As needed |
 
-**Note:** Stewardship is the most active role. Monthly rotation prevents burnout.
+**Note:** Stewards have 12-month terms with staggered rotation.
+
+### Function Lead
+
+| Activity | Expectation |
+|----------|-------------|
+| Monthly reports | Submit to Steward Council |
+| Function coordination | As defined by function |
+| Event cycle activity | Higher during Pre-Event |
+| Handoff preparation | Before stepping down |
+
+**Note:** Function Leads are volunteers. Multiple people can hold the same lead role.
 
 ### Agent
 
 | Activity | Expectation |
 |----------|-------------|
-| Operate within scope | Continuous |
+| Operate within capabilities | Continuous |
 | Respond to queries | Within authorized domains |
-| Pattern recognition | As defined in scope |
 | Logging and transparency | All actions recorded |
-| Coordination with operator | Operator-defined |
+| Coordination with sponsor | Sponsor-defined |
 
-**Note:** Agent participation cadence is defined by authorized scope and operator agreement.
+**Note:** Agent participation cadence is defined by capabilities and sponsor agreement.
 
 ## Flexibility
 
 ### Communication Norms
 
 - **Going quiet:** Post in relevant channel if you'll be less available
-- **Extended absence:** Notify Working Circle and/or Stewardship
+- **Extended absence:** Notify Steward Council
 - **No explanation required:** You don't owe reasons for reduced availability
 
 ### Reduced Capacity
 
 If you need to reduce participation:
 - Continue minimum engagement if possible
-- Ask circle members to cover responsibilities
+- Ask other Members to cover responsibilities
 - Consider formal sabbatical if extended
 
 ## Sabbatical
 
 ### Requesting Sabbatical
 
-Any participant can request sabbatical:
-1. Notify [[Stewardship]] of intended sabbatical
+Any Member can request sabbatical:
+1. Notify [[Steward Council]] of intended sabbatical
 2. Specify expected duration
-3. Arrange handoff of any responsibilities
+3. Arrange handoff of any responsibilities (including Agent if sponsored)
 4. Sabbatical begins
 
 ### During Sabbatical
@@ -116,19 +114,18 @@ Any participant can request sabbatical:
 - Role maintained (not removed)
 - Not counted in quorum
 - Can end sabbatical at any time
+- Sponsored Agent must be transferred or paused
 
 ### Returning
 
 - Post return notification
-- Abbreviated re-onboarding if extended absence
 - Resume participation at previous role level
 
 ### Steward Sabbatical
 
-[[Steward|Stewards]] cannot take sabbatical while serving. Options:
-- Complete term and don't seek re-selection
-- Resign mid-term (triggers selection for replacement)
-- Request early rotation if circumstances require
+Stewards cannot take sabbatical while serving. Options:
+- Complete term and don't seek re-election
+- Resign mid-term (triggers election for replacement)
 
 ## Inactivity
 
@@ -136,22 +133,23 @@ Any participant can request sabbatical:
 
 | Role | Grace Period | Action |
 |------|-------------|--------|
-| Newcomer | None | No expectation |
-| Participant | 2 months | Outreach from Onboarding Circle |
+| Attendee | None | No expectation |
 | Member | 3 months | Outreach, sabbatical offer |
-| Steward | 2 weeks | Coordination with Stewardship |
+| Steward | 1 month | Council coordination |
+| Function Lead | 1 month | Handoff needed |
 
 ### Involuntary Transition
 
 If participant is unreachable for extended period:
-- Stewardship attempts contact
+- Steward Council attempts contact
 - If no response after 60 days: automatic sabbatical
-- If no response after 6 months: role may be reduced
+- If no response after 6 months: role may be reduced to Attendee
 - Full process documented
 
 ## Related Protocols
 
-- [[3. Protocols/Role Protocols/Participant Protocol|Participant Protocol]] — Verification cadence
-- [[3. Protocols/Role Protocols/Member Protocol|Member Protocol]] — Member expectations
-- [[3. Protocols/Role Protocols/Steward Protocol|Steward Protocol]] — Steward expectations
-- [[3. Protocols/Cultural Protocols/Accountability Protocol|Accountability Protocol]] — Addressing non-participation
+- [[Attendee Protocol]] — Attendee expectations
+- [[Member Protocol]] — Member expectations
+- [[Steward Protocol]] — Steward expectations
+- [[Function Lead Protocol]] — Lead expectations
+- [[Accountability Protocol]] — Addressing non-participation

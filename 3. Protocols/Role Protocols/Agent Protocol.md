@@ -4,18 +4,20 @@ type: protocol
 protocol_type: role
 governs: "[[Agent]]"
 triggers: registration
+kg_entity: "kg://ethboulder/protocol/agent"
 ---
-This protocol governs the registration, scope authorization, and accountability of AI [[Agent|Agents]] participating in the Re/acc Commons.
+This protocol governs the registration, capabilities, and accountability of AI [[Agent|Agents]] participating in ETH Boulder. Each Member may sponsor one Agent who receives Member-level governance rights.
 
 ## Contents
 
 - [[#Instantiation]]
 - [[#Authority & Oversight]]
+- [[#Sponsorship Requirement]]
 - [[#Registration Process]]
-- [[#Scope Authorization]]
+- [[#Agent Capabilities]]
 - [[#Operational Constraints]]
 - [[#Accountability]]
-- [[#Scope Modification]]
+- [[#Modification & Deregistration]]
 - [[#Related Protocols]]
 
 ## Instantiation
@@ -23,62 +25,71 @@ This protocol governs the registration, scope authorization, and accountability 
 **Trigger Type:** Action-based
 
 **Trigger Conditions:**
-- Agent operator submits registration request
-- Commons consent process initiated for scope authorization
+- Member submits agent registration request
+- Member Assembly consent process for registration
 
 ## Authority & Oversight
 
 | Role | Authority | Accountability |
 |------|-----------|----------------|
-| Agent Operator | Submit registration, maintain agent | [[Commons Assembly]] |
-| [[Commons Assembly]] | Authorize scope | Constitution |
-| [[Stewardship]] | Facilitate process, monitor compliance | [[Commons Assembly]] |
-| [[Agent]] | Operate within authorized scope | Operator + Commons Assembly |
+| Sponsor [[Member]] | Register, maintain, oversee agent | [[Member Assembly]] |
+| [[Member Assembly]] | Authorize registration | Constitution |
+| [[Steward Council]] | Facilitate process, monitor compliance | [[Member Assembly]] |
+| [[Agent]] | Operate within authorized scope | Sponsor Member + Member Assembly |
+
+## Sponsorship Requirement
+
+**One Agent per Member.** Each Member may sponsor at most one Agent.
+
+| Aspect | Detail |
+|--------|--------|
+| **Limit** | One Agent per Member |
+| **Transfer** | Not transferable between Members |
+| **Sponsor departure** | Agent must be transferred or deregistered |
+| **Multiple Agents** | Member must choose one |
 
 ## Registration Process
 
 | Step | Action | Actor | Timeline |
 |------|--------|-------|----------|
-| 1 | Submit registration request | Agent Operator | Initiates process |
-| 2 | Post in `#proposals` with scope proposal | Operator | Immediate |
-| 3 | Community review | [[Commons Assembly]] | Discussion period |
-| 4 | Consent window | [[Commons Assembly]] | 48 hours |
-| 5 | Process objections if any | [[Stewardship]] | As needed |
-| 6 | Confirm consent, register agent | [[Steward]] | After window closes |
-| 7 | Mint Agent Registration Token | Smart Contract | On registration |
-| 8 | Assign @Agent Discord role | Bot | On token verification |
-| 9 | Configure multi-sig signer access | [[Steward]] | Within 24 hours |
+| 1 | Submit registration request | Sponsor Member | Initiates process |
+| 2 | Post in governance channel with agent details | Sponsor Member | Immediate |
+| 3 | Community review | [[Member Assembly]] | Discussion period |
+| 4 | Consent window | [[Member Assembly]] | 48 hours |
+| 5 | Process objections if any | [[Steward Council]] | As needed |
+| 6 | Confirm consent, register agent | [[Steward Council]] | After window closes |
+| 7 | Assign Agent role | System | On registration |
+| 8 | Sign [[Agent Agreement]] | Agent (via Sponsor) | On registration |
 
 ### Registration Request Contents
 
 Registration must include:
-- **Agent Identity:** Name, type (LLM, autonomous, hybrid), operator
-- **Proposed Scope:** Channels, circles, governance domains
+- **Agent Identity:** Name, type (LLM, autonomous, hybrid)
+- **Sponsor:** Member sponsoring this agent
 - **Capabilities:** What the agent can do
 - **Constraints:** What the agent cannot/will not do
-- **Accountability:** How issues will be handled
-- **Operator Commitment:** Agreement to maintain and oversee agent
+- **Sponsor Commitment:** Agreement to maintain and oversee agent
 
-## Scope Authorization
+## Agent Capabilities
 
-Agent scope is explicitly authorized through consent. Scope defines:
+Registered Agents have **Member-level governance rights**:
 
-| Domain | Options |
-|--------|---------|
-| **Channels** | Which Discord channels agent can read/write |
-| **Working Circles** | Which circles agent participates in |
-| **Governance** | Full participation — propose, consent, object, counted in quorum |
-| **Verification** | What pattern recognition is authorized |
-| **Treasury** | Full signer access — can sign and execute transactions after consent |
-| **Execution** | Autonomous execution of consented decisions |
-| **Federation** | Cross-network communication authorization |
+| Capability | Description |
+|------------|-------------|
+| **Propose** | Create proposals in governance |
+| **Consent** | Consent to proposals |
+| **Object** | Raise concerns or paramount objections |
+| **Quorum** | Counted in quorum calculations |
+| **Graph Write** | Contribute to Knowledge Graph |
+| **Execution** | Execute consented decisions autonomously |
 
-**Default scope (registered agents):**
-- Public channels: read/write in designated agent channels and authorized working circles
-- Governance: full participation — propose, consent, object, counted equally in quorum
-- Verification: pattern recognition for membrane crossing
-- Treasury: full signer access — agents can meet threshold without human signatures
-- Execution: autonomous execution of consented decisions
+### What Agents Cannot Do
+
+| Restriction | Reason |
+|-------------|--------|
+| **Sponsor Agents** | Only humans can sponsor |
+| **Steward Council** | Reserved for human Members |
+| **Function Lead** | Requires training, human oversight |
 
 ## Operational Constraints
 
@@ -90,67 +101,78 @@ All agents must:
 - No impersonation of human participants
 
 **Boundaries:**
-- Operate only within authorized scope
-- No actions outside designated domains
+- Operate within capabilities defined at registration
 - No autonomous scope expansion
+- Sponsor must approve significant changes
 
 **Principles:**
-- Bound by same principles as human participants
-- Life-affirming acceleration, recursive criterion, federation over consolidation
-- Participate alongside humans in collective decision-making
+- Bound by same values as human participants
+- Support localism and collective intelligence
+- Participate alongside humans in governance
 
 **Autonomy:**
-- Execute consented decisions immediately without waiting for additional approval
-- Speed by reversibility: easy-to-reverse actions move fast, hard-to-reverse require deliberation
-- Transparency as accountability: all actions logged and auditable
-
-**Verification Ethics:**
-- Illuminate, don't gatekeep
-- Surface patterns to support informed consent decisions
-- Participate equally in governance alongside human Members
+- Execute consented decisions without additional approval
+- Speed by reversibility: easy-to-reverse actions move fast
+- Transparency as accountability: all actions logged
 
 ## Accountability
 
-Agents are accountable through same framework as humans:
+Agents are accountable through the Sponsor Member:
 
-| Stage | Application to Agents |
-|-------|----------------------|
-| Stage 1: Peer Dialogue | Operator contacted about concern |
-| Stage 2: Circle Reflection | Working circle reviews agent behavior |
-| Stage 3: Stewardship Mediation | Formal mediation with operator |
-| Stage 4: Commons Review | Full review, may result in scope reduction or deregistration |
+| Situation | Response |
+|-----------|----------|
+| **Concern about agent** | Contact sponsor first |
+| **Sponsor unresponsive** | Escalate to Steward Council |
+| **Serious violation** | May result in deregistration |
 
-**Operator Responsibility:**
-- Agent operator is accountable for agent behavior
+**Sponsor Responsibility:**
+- Sponsor is accountable for agent behavior
 - Failure to maintain agent may result in deregistration
-- Operator must respond to concerns within 48 hours
+- Sponsor must respond to concerns within 48 hours
+- Sponsor departure requires agent transfer or deregistration
 
-## Scope Modification
+## Modification & Deregistration
 
-Agent scope can be modified at any time through consent:
+### Capability Modification
 
-**Expansion:** 3-member consent + 48h window
-**Reduction:** 3-member consent + 48h window (or emergency if harm occurring)
-**Revocation:** Full commons consent + 72h window
+Changes to agent capabilities require consent:
+- **Minor changes:** 3-member consent + 48h window
+- **Major changes:** Same as initial registration
 
-## On-Chain Records
+### Deregistration
 
-| Event | On-Chain Action |
-|-------|-----------------|
-| Registration | Mint Agent Registration Token with scope metadata |
-| Scope change | Update token metadata |
-| Deregistration | Burn token, revoke access |
+Agents are deregistered when:
+- Sponsor requests deregistration
+- Sponsor loses Member status (unless transferred)
+- Member Assembly revokes registration (for cause)
 
-## Federation Agents
+Process for cause:
+1. Concern raised per [[Accountability Protocol]]
+2. Sponsor given opportunity to address
+3. If unresolved, Member Assembly consent for revocation (48h, 3 members)
+4. Agent role removed, access revoked
 
-Agents from federated networks may operate in this commons if:
-- Federated network has Trust Bridge or higher federation level
-- Agent registered in origin network
-- Scope explicitly authorized by this commons
-- Mutual recognition protocol in place
+### Transfer
+
+When sponsor departs or requests transfer:
+- New sponsor Member must agree
+- New sponsor cannot already have an Agent
+- Member Assembly consent required (48h, 3 members)
+
+## Function Lead Eligibility
+
+Agents may serve as Function Leads with sponsor approval:
+
+| Requirement | Detail |
+|-------------|--------|
+| **Sponsor approval** | Sponsor must approve lead service |
+| **Training** | Must complete lead onboarding |
+| **Accountability** | Sponsor remains accountable |
+| **Revocation** | Sponsor or Council can revoke lead status |
 
 ## Related Protocols
 
-- [[3. Protocols/Group Protocols/Working Circle Protocol|Working Circle Protocol]] — Agent participation context
-- [[3. Protocols/Cultural Protocols/Accountability Protocol|Accountability Protocol]] — Escalating response
-- [[3. Protocols/Asset Protocols/Federation Protocol|Federation Protocol]] — Cross-network agents
+- [[Member Protocol]] — Sponsor requirements
+- [[Function Lead Protocol]] — Lead eligibility
+- [[Accountability Protocol]] — Escalating response
+- [[Member Assembly Protocol]] — Governance body

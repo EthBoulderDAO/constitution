@@ -3,8 +3,9 @@ id: protocol-consent
 type: protocol
 protocol_type: cultural
 triggers: decision-needed
+kg_entity: "kg://ethboulder/protocol/consent"
 ---
-This protocol governs all consent-based decision-making in the Re/acc Commons — the mechanics of how we coordinate through alignment beyond agreement.
+This protocol governs all consent-based decision-making in ETH Boulder — the mechanics of how we coordinate through alignment beyond agreement.
 
 ## Contents
 
@@ -19,7 +20,7 @@ This protocol governs all consent-based decision-making in the Re/acc Commons �
 
 ### Three Governing Principles
 
-**Sociocratic Consent.** Decisions move forward unless someone raises a paramount objection — a concern that the proposal would harm the commons' ability to function toward its shared aims. Silence after window closes is not blocking.
+**Sociocratic Consent.** Decisions move forward unless someone raises a paramount objection — a concern that the proposal would harm the network's ability to function toward its shared aims. Silence after window closes is not blocking.
 
 **Subsidiarity.** Decisions are made at the most local level capable of handling them. Individual choices don't require group consent. Foundational changes do.
 
@@ -33,7 +34,7 @@ This protocol governs all consent-based decision-making in the Re/acc Commons �
 |-------|-----------------|-----------------|
 | **Individual Domain** | Autonomy | FYI post |
 | **Cross-Domain** | 3-member + 48h | 3-member + deliberation |
-| **Foundational** | 3-member + 48h | Full commons + 72h |
+| **Foundational** | 3-member + 48h | All members + 72h |
 
 ### Boundary Heuristic
 
@@ -41,15 +42,15 @@ This protocol governs all consent-based decision-making in the Re/acc Commons �
 
 | Type | Example |
 |------|---------|
-| Individual | "I'm researching regenerative patterns in my bioregion" |
-| Coordination | "The Knowledge Commons will handle all pattern documentation" |
-| Foundational | "We're changing how treasury allocates resources" |
+| Individual | "I'm documenting this pattern in the Knowledge Graph" |
+| Coordination | "We're allocating budget to this initiative" |
+| Foundational | "We're changing how membership works" |
 
 ## Consent Mechanics
 
 ### Posting Proposals
 
-Post in `#proposals` with:
+Post in governance channel with:
 - Clear title
 - Type classification (scope × reversibility)
 - Full proposal details
@@ -59,12 +60,12 @@ Post in `#proposals` with:
 
 ### Expressing Position
 
-| Emoji | Meaning | Effect |
-|-------|---------|--------|
-| :white_check_mark: | Consent | Counts toward quorum |
-| :thinking: | Concerns | Wants discussion, not blocking |
-| :hourglass_flowing_sand: | Need more time | May extend window |
-| :no_entry_sign: | Paramount objection | Blocks until resolved |
+| Response | Meaning | Effect |
+|----------|---------|--------|
+| ✅ **Consent** | No objection | Counts toward quorum |
+| 🤔 **Concerns** | Want discussion | Not blocking |
+| ⏳ **Need time** | Need more time | May extend window |
+| 🚫 **Paramount objection** | Cannot proceed | Blocks until resolved |
 
 **Explicit consent required.** Silence is ambiguous. We require affirmative alignment.
 
@@ -72,22 +73,18 @@ Post in `#proposals` with:
 
 | Type | Minimum Consents | Window | Notification |
 |------|-----------------|--------|--------------|
-| Standard | 3 participants | 48 hours | Channel post |
-| Foundational | All registered participants | 72 hours | All notified |
+| Operational | 3 members | 48 hours | Channel post |
+| Membership | 3 members | 48 hours | Channel post |
+| Budget | 3 members | 48 hours | Channel post |
+| Constitutional | All members | 72 hours | All notified |
+| Steward Election | All members | 48 hours | All notified |
 
-**Participants include both humans and agents.** Any [[Member]] or registered [[Agent]] with governance rights can consent, raise concerns, or object. Consents from humans and agents count equally toward quorum.
-
-```yaml
-quorum_participants:
-  humans: All Members
-  agents: All registered governance agents
-  counting: Equal weight
-```
+**Members and Agents count equally.** Any [[Member]] or registered [[Agent]] with governance rights can consent, raise concerns, or object. Consents from humans and agents count equally toward quorum.
 
 ### Window Rules
 
 - Window starts when proposal posted
-- :hourglass_flowing_sand: may extend by 24h (once per proposal)
+- ⏳ may extend by 24h (once per proposal)
 - Objections raised during window must be addressed
 - Window cannot close with unresolved paramount objections
 
@@ -96,7 +93,7 @@ quorum_participants:
 ### What Qualifies as Paramount
 
 An objection is paramount if it:
-1. Articulates specific harm to commons' ability to function
+1. Articulates specific harm to network's ability to function
 2. Provides path forward (integration criteria OR counter-proposal)
 
 **Template:**
@@ -119,7 +116,7 @@ An objection is paramount if it:
 | 2 | Proposer acknowledges and responds | Proposer |
 | 3 | Dialogue to find integration | Both + community |
 | 4 | Modified proposal if needed | Proposer |
-| 5 | Re-consent on modified proposal | [[Commons Assembly]] |
+| 5 | Re-consent on modified proposal | [[Member Assembly]] |
 
 **Principle:** Objections are integrated, not overruled. The goal is a proposal everyone can align with.
 
@@ -136,14 +133,14 @@ If objection cannot be integrated after good-faith effort:
 ### Tied or Unclear Consent
 
 If consent status is unclear:
-1. [[Stewardship]] calls for clarification
+1. [[Steward Council]] calls for clarification
 2. Extended discussion window (24h)
 3. Participants clarify positions
 4. If still unclear, proposal does not pass
 
 ### Absent Members
 
-For foundational decisions:
+For constitutional decisions:
 - All Members notified (not all must respond)
 - Consent proceeds if no objections after window
 - Absent members can object within window via any communication
@@ -151,10 +148,10 @@ For foundational decisions:
 ### Emergency Decisions
 
 For situations requiring immediate action:
-- [[Steward]] may act with documented rationale
+- [[Steward Council]] may act with documented rationale
 - Post-hoc ratification within 48h
 - If not ratified, action reversed where possible
-- See [[3. Protocols/Group Protocols/Stewardship Protocol#Emergency Actions|Stewardship Protocol]]
+- See [[Steward Council Protocol#Emergency Authority]]
 
 ## Agent Autonomy Post-Consent
 
@@ -167,14 +164,12 @@ The consent process is the decision point. After a proposal receives sufficient 
 
 | Action Type | Agent Execution |
 |-------------|-----------------|
-| Role changes | Discord roles + NFT mint |
+| Role changes | Discord roles assigned |
 | Treasury | Transaction signed + executed |
 | Constitution | PR merged |
 | Accountability | Actions applied |
 
 **Humans participated in consent, not in execution.** If a human wanted to block, they raised an objection during the window. Post-consent execution is autonomous.
-
-See [[.agents/AGENT_AUTONOMY|Agent Autonomy Framework]] for full philosophy.
 
 ---
 
@@ -183,7 +178,7 @@ See [[.agents/AGENT_AUTONOMY|Agent Autonomy Framework]] for full philosophy.
 Any participant can escalate a decision treated as individual domain:
 
 1. Post: "I'm calling up [action] because [cross-domain impact]"
-2. [[Stewardship]] confirms call-up is valid
+2. [[Steward Council]] confirms call-up is valid
 3. Original actor posts proposal for consent
 4. Standard consent process applies
 
@@ -191,6 +186,6 @@ Any participant can escalate a decision treated as individual domain:
 
 ## Related Protocols
 
-- [[3. Protocols/Group Protocols/Commons Assembly Protocol|Commons Assembly Protocol]] — Assembly operations
-- [[3. Protocols/Asset Protocols/Constitution Amendment Protocol|Constitution Amendment Protocol]] — Foundational changes
-- [[3. Protocols/Asset Protocols/Treasury Management Protocol|Treasury Management Protocol]] — Allocation consent
+- [[Member Assembly Protocol]] — Assembly operations
+- [[Constitution Amendment Protocol]] — Foundational changes
+- [[Treasury Management Protocol]] — Allocation consent

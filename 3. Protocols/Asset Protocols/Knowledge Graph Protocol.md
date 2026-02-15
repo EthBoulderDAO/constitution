@@ -60,29 +60,29 @@ Type-specific fields vary by entity type. See [[Knowledge Graph]] for complete s
 
 | Entity Type | Who Can Create | Review Required |
 |-------------|----------------|-----------------|
-| Person | Agents (on membrane crossing) | No |
-| Agent | Stewards | Network consent |
-| Role | Network Assembly | Full consent |
-| Group | Network Assembly | Standard consent |
-| Asset | Network Assembly | Standard consent |
-| Protocol | Network Assembly | Full consent |
+| Person | Agents (on event attendance) | No |
+| Agent | Members (sponsors) | Member Assembly consent |
+| Role | Member Assembly | Full consent |
+| Group | Member Assembly | Standard consent |
+| Asset | Member Assembly | Standard consent |
+| Protocol | Member Assembly | Full consent |
 | Decision | Agents (on consent completion) | No |
-| Session | Participants+ | Pre-Event only |
-| Project | Participants+ | Circle review |
-| ThirdSpace | Third Space Circle | Standard consent |
+| Session | Attendees+ | Pre-Event only |
+| Project | Attendees+ | Lead review |
+| ThirdSpace | Third Space Lead | Standard consent |
 
 ### Updating Entities
 
 | Permission Level | Can Update | Process |
 |-----------------|------------|---------|
-| Participants | Entities they created | Direct |
+| Attendees | Entities they created | Direct |
 | Members | Any non-protected entity | Direct |
-| Stewards | Protected entities | With rationale |
+| Steward Council | Protected entities | With rationale |
 | Agents | Within authorized scope | Logged |
 
 ### Protected Entities
 
-The following entities are protected and require Steward approval to modify:
+The following entities are protected and require Steward Council approval to modify:
 
 - All Role entities
 - All Protocol entities
@@ -99,7 +99,7 @@ The graph maintains a library of constitutional query patterns:
 | Query | Cypher Pattern | Purpose |
 |-------|---------------|---------|
 | `current-stewards` | `MATCH (p:Person)-[:HAS_ROLE]->(:Role {name: 'Steward', active: true})` | Who are current Stewards? |
-| `eligible-members` | `MATCH (p:Person)-[:HAS_ROLE]->(:Role {name: 'Participant'}) WHERE p.active_weeks >= 2` | Who is eligible for membership? |
+| `current-members` | `MATCH (p:Person)-[:HAS_ROLE]->(:Role {name: 'Member', active: true})` | Who are current Members? |
 | `treasury-protocols` | `MATCH (p:Protocol)-[:GOVERNS]->(:Asset {name: 'Treasury'})` | What protocols govern treasury? |
 | `consent-required` | `MATCH (d:DecisionType {name: $type})-[:REQUIRES]->(c:ConsentLevel)` | What consent for decision X? |
 | `role-requirements` | `MATCH (r:Role {name: $role})-[:REQUIRES]->(req)` | What are requirements for role Y? |
@@ -109,10 +109,10 @@ The graph maintains a library of constitutional query patterns:
 | Step | Action | Actor |
 |------|--------|-------|
 | 1 | Identify recurring constitutional question | Any participant |
-| 2 | Draft Cypher query | Knowledge Circle |
+| 2 | Draft Cypher query | Knowledge Lead |
 | 3 | Test against graph | Agent |
-| 4 | Document in query library | Knowledge Circle |
-| 5 | Submit to pattern library | Knowledge Circle |
+| 4 | Document in query library | Knowledge Lead |
+| 5 | Submit to pattern library | Knowledge Lead |
 
 ## Access Control
 
@@ -120,10 +120,10 @@ The graph maintains a library of constitutional query patterns:
 
 | Tier | Who | Permissions |
 |------|-----|-------------|
-| **Read** | Newcomers | View public entities |
-| **Write** | Participants+ | Create/edit entities |
+| **Read** | Public | View public entities |
+| **Write** | Attendees+ | Create/edit entities |
 | **Curate** | Members | Reconcile entities, approve contested edits |
-| **Moderate** | Stewards | Revert edits, protect entities, resolve disputes |
+| **Moderate** | Steward Council | Revert edits, protect entities, resolve disputes |
 | **Full** | Authorized Agents | All operations including federation sync |
 
 ### MCP Access
@@ -175,7 +175,7 @@ Federated networks synchronize via MCP:
 |--------|----------|
 | **Frequency** | Real-time for critical entities, daily for full sync |
 | **Direction** | Bidirectional with conflict detection |
-| **Mapping** | Schema mappings maintained by Knowledge Circle |
+| **Mapping** | Schema mappings maintained by Knowledge Lead |
 
 ### Sync Process
 
@@ -219,6 +219,6 @@ All changes logged with:
 
 ## Related Protocols
 
-- [[Knowledge Circle]] — Stewardship body
-- [[3. Protocols/Asset Protocols/Federation Protocol|Federation Protocol]] — Cross-network coordination
-- [[3. Protocols/Role Protocols/Agent Protocol|Agent Protocol]] — Agent graph operations
+- [[Function Lead Protocol]] — Knowledge Lead responsibilities
+- [[Federation Protocol]] — Cross-network coordination
+- [[Agent Protocol]] — Agent graph operations

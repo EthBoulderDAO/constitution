@@ -34,14 +34,14 @@ Enable collective decision-making about shared resources via:
 - Event-cycle budgeting aligned with four phases
 - Grants for local public goods and hackathon prizes
 - Federation grants for third space partners
-- Multisig wallet governance with agent co-signers
+- Multisig wallet governance
 
-# Membrane Architecture
+# Membership Architecture
 
-Maintain progressive trust boundaries that enable:
-- Identity verification without surveillance
-- Earned access through demonstrated alignment
-- Agent verification and scope governance
+Maintain event-gated membership that enables:
+- Entry through event attendance
+- Progression through demonstrated participation
+- Agent sponsorship (one per member)
 - Knowledge graph-verified permissions
 
 # Accountability
@@ -49,5 +49,5 @@ Maintain progressive trust boundaries that enable:
 Foster trust through:
 - Escalating response framework
 - Transparent process documentation
-- Peer dialogue and circle reflection
+- Peer dialogue and lead-facilitated reflection
 - Emergency protocols with ratification
